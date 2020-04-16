@@ -7,6 +7,9 @@
   "type": "object",
   "allOf": [
     {
+      "$ref": "https://raw.githubusercontent.com/smart-data-models/data-models/TMFSchemas/specs/Common/Entity.schema.json"
+    },
+    {
       "$ref": "https://fiware.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
     },
     {
