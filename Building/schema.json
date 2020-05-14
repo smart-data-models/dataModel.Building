@@ -1,16 +1,16 @@
 {
   "$schema": "http://json-schema.org/schema#",
   "$schemaVersion": "0.0",
-  "$id": "https://fiware.github.io/data-models/specs/Building/Building/schema.json",
+  "$id": "https://smart-data-models.github.io/dataModel.Building/Building/schema.json",
   "title": "FIWARE - Building schema",
   "description": "Information on a given Building",
   "type": "object",
   "allOf": [
     {
-      "$ref": "https://fiware.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
+      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
     },
     {
-      "$ref": "https://fiware.github.io/data-models/common-schema.json#/definitions/Location-Commons"
+      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
     },
     {
       "properties": {
@@ -101,7 +101,7 @@
                 "format": "uri"
               },
               {
-                "$ref": "https://fiware.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType"
+                "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType"
               }
             ]
           }
