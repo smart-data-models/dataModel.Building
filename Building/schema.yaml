@@ -5,126 +5,76 @@ Building:
     - category
     - address
   allOf:
-    - $ref: 'https://jason-fox.github.io/swagger-datamodel-test/common.yaml#/Common'
+    - $ref: 'https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/Common'
   type: object
-  description: Information on a given Building
+  description: |
+      This entity contains a harmonised description of a Building. This entity is associated with the vertical segments of smart homes, smart cities, industry and related IoT applications.
+      This data model has been partially developed in cooperation with mobile operators and the [GSMA](https://www.gsma.com/iot/iot-big-data/), compared to GSMA data model following changes are introduced:
+      -   the reference to `BuildingType` is removed, since `BuildingType` compared to
+          `category` attribute does not introduce significant information.
+      
+      -   `category` attribute is required.
+      -   `openingHours` is introduced following schema.org data model to allow
+          fine-grained on building opening times. GSMA supported this as free text in
+          the `notes` attribute (removed as well).
+      
+      -   `refSubscriptionService` is not supported, since `SubscriptionService` model
+          is not supported currently.
+      
+      ## Data Model
+      For a full description of the following attributes refer to GSMA [IoT Big Data Harmonised Data Model](https://github.com/GSMADeveloper/NGSI-LD-Entities)
+
   properties:
     address:
-      $ref: 'https://jason-fox.github.io/swagger-datamodel-test/common.yaml#/address'
+      $ref: 'https://raw.githubusercontent.com/smart-data-models/data-models/master/schema.org.yaml#/address'
     alternateName:
       x-ngsi:
         type: Property
         model: 'https://schema.org/Text'
       type: string
-      description: ''
+      description: 'Alternate Name of the Building'
     areaServed:
       x-ngsi:
         type: Property
         model: 'https://schema.org/Text'
       type: string
-      description: ''
+      description: 'Higher level area to which the building belongs to. It can be used to group buildings by district, neighbourhood, etc.'
     category:
-      x-ngsi:
-        type: Property
-      type: array
-      description: ''
-      items:
-        type: string
-        enum:
-          - apartments
-          - farm
-          - hotel
-          - house
-          - detached
-          - residential
-          - dormitory
-          - terrace
-          - houseboat
-          - bungalow
-          - static_caravan
-          - commercial
-          - office
-          - industrial
-          - retail
-          - warehouse
-          - kiosk
-          - bakehouse
-          - cathedral
-          - chapel
-          - church
-          - kindergarten
-          - mosque
-          - temple
-          - synagogue
-          - shrine
-          - civic
-          - hospital
-          - school
-          - stadium
-          - train_station
-          - transportation
-          - university
-          - grandstand
-          - public
-          - barn
-          - bridge
-          - bunker
-          - cabin
-          - carport
-          - conservatory
-          - construction
-          - cowshed
-          - digester
-          - farm_auxiliary
-          - garage
-          - garages
-          - garbage_shed
-          - greenhouse
-          - hangar
-          - hut
-          - pavilion
-          - parking
-          - riding_hall
-          - roof
-          - shed
-          - stable
-          - sty
-          - transformer_tower
-          - service
-          - ruins
-          - water_tower
+      allOf:
+        - $ref: "https://raw.githubusercontent.com/smart-data-models/data-models/master/openstreetmap.yaml#/Categories"
     dataProvider:
       x-ngsi:
         type: Property
         model: 'https://schema.org/Text'
       type: string
-      description: ''
+      description: 'Specifies the URL to information about the provider of this information'
     description:
       $ref: >-
-        https://jason-fox.github.io/swagger-datamodel-test/common.yaml#/description
+        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/description
     floorsAboveGround:
       x-ngsi:
         type: Property
         model: 'https://schema.org/Integer'
       type: integer
-      description: ''
+      description: 'Number of floors above ground within the building'
       format: int32
     floorsBelowGround:
       x-ngsi:
         type: Property
         model: 'https://schema.org/Integer'
       type: integer
-      description: ''
+      description: 'Number of floors below ground within the building'
       format: int32
     location:
-      $ref: 'https://jason-fox.github.io/swagger-datamodel-test/common.yaml#/location'
+      $ref: 'https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/location'
     name:
-      $ref: 'https://jason-fox.github.io/swagger-datamodel-test/common.yaml#/name'
+      $ref: 'https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/name'
     occupier:
       x-ngsi:
-        type: Property
+        model: "https://schema.org/URL"
+        type: Relationship
       type: array
-      description: ''
+      description: 'Link to the occupiers of the building'
       items:
         oneOf:
           - type: string
@@ -138,28 +88,23 @@ Building:
               - type: string
                 format: uri
     openingHours:
-      x-ngsi:
-        type: Property
-      type: array
-      description: ''
-      items:
-        type: string
+      $ref: 'https://raw.githubusercontent.com/smart-data-models/data-models/master/schema.org.yaml#/address'
     owner:
       x-ngsi:
         type: Property
       type: array
-      description: ''
+      description: 'The owner of this building'
       items: *ref_0
     refMap:
       x-ngsi:
-        type: Property
-        model: 'https://schema.org/URL'
+        model: "https://schema.org/URL"
+        type: Relationship
       type: string
-      description: ''
+      description: 'The URL holding a map of the building'
       format: uri
     source:
       x-ngsi:
         type: Property
         model: 'https://schema.org/Text'
       type: string
-      description: ''
+      description: 'A sequence of characters giving the source of the entity data.'
