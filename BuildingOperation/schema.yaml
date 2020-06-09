@@ -1,0 +1,145 @@
+BuildingOperation:
+  required:
+    - type
+    - id
+    - refBuilding
+    - startDate
+    - endDate
+  allOf:
+    - $ref: >-
+        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/Common
+  type: object
+  description: |
+    This entity contains a harmonised description of a generic operation (related to
+    smart buildings) applied to the referenced building. The building operation
+    contains dynamic data reported by, or associated with a building or operations
+    applicable to the building. This entity is associated with the vertical segments
+    of smart homes, smart cities, industry and related IoT applications.
+
+    This data model has been partially developed in cooperation with mobile
+    operators and the [GSMA](https://www.gsma.com/iot/iot-big-data/), compared to
+    GSMA data model the following changes are introduced:
+
+    -   `refRelatedDeviceOperation` replaces `refRelatedOperation`
+
+    **Note**: JSON Schemas only capture the NGSI simplified representation, this
+    means that to test the JSON schema examples with a
+    [FIWARE NGSI version 2](http://fiware.github.io/specifications/ngsiv2/stable)
+    API implementation, you need to use the `keyValues` mode (`options=keyValues`).
+
+    ## Data Model
+
+    For a full description of the following attributes refer to GSMA
+    [IoT Big Data Harmonised Data Model](https://github.com/GSMADeveloper/NGSI-LD-Entities)
+  properties:
+    alternateName:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Text'
+      type: string
+      description: 'Alternate Name of the Building'
+    dataProvider:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Text'
+      type: string
+      description: 'Specifies the URL to information about the provider of this
+    information'
+    dateFinished:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/DateTime'
+      type: string
+      description: 'The actual end date for the operation'
+      format: date-time
+    dateStarted:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/DateTime'
+      type: string
+      description: 'The actual start date for the operation.'
+      format: date-time
+    description:
+      $ref: >-
+        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/description
+    endDate:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/DateTime'
+      type: string
+      description: 'The planned end date for the operation.'
+      format: date-time
+    name:
+      $ref: >-
+        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/name
+    operationSequence:
+      x-ngsi:
+        type: Property
+      type: array
+      description: ''
+      items:
+        type: string
+    operationType:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Text'
+      type: string
+      description: ''
+    owner:
+      x-ngsi:
+        type: Relationship
+      type: array
+      description: ''
+      items: &ref_0
+        anyOf:
+          - type: string
+            minLength: 1
+            maxLength: 256
+            pattern: '^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$'
+          - type: string
+            format: uri
+    refRelatedBuildingOperation:
+      x-ngsi:
+        type: Relationship
+      type: array
+      description: ''
+      items:
+        oneOf:
+          - *ref_0
+          - type: string
+            format: uri
+    refRelatedDeviceOperation:
+      x-ngsi:
+        type: Relationship
+      type: array
+      description: ''
+      items:
+        oneOf:
+          - *ref_0
+          - type: string
+            format: uri
+    result:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Text'
+      type: string
+      description: ''
+    source:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Text'
+      type: string
+      description: ''
+    startDate:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/DateTime'
+      type: string
+      description: ''
+      format: date-time
+    status:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Text'
+      type: string
+      description: ''
