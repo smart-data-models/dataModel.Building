@@ -52,7 +52,7 @@ paths:
                   summary: "Normalized NGSI-LD"
                   value: 
                     - 
-                      $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.Building/master/Building/example-normalized.jsonld"
+                      $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.Building/master/Building/example-normalized-ld.jsonld"
           description: OK
       tags: 
         - ngsi-ld
