@@ -2,7 +2,7 @@
 components: 
   schemas: 
     BuildingOperation: 
-      $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.Building/master/Building/schema.yaml#/Building"
+      $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.Building/master/BuildingOperation/schema.yaml#/BuildingOperation"
 info: 
   description: ""
   title: BuildingOperation
