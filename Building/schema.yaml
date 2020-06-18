@@ -110,7 +110,7 @@ Building:
               - type: string
                 format: uri
     openingHours:
-      $ref: 'https://raw.githubusercontent.com/smart-data-models/data-models/master/schema.org.yaml#/address'
+      $ref: 'https://raw.githubusercontent.com/smart-data-models/data-models/master/schema.org.yaml#/openingHours'
     owner:
       x-ngsi:
         type: Property
