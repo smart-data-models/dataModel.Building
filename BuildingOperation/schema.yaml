@@ -125,11 +125,8 @@ BuildingOperation:
       type: string
       description: ''
     source:
-      x-ngsi:
-        type: Property
-        model: 'https://schema.org/Text'
-      type: string
-      description: ''
+      $ref: >-
+        https://raw.githubusercontent.com/smart-data-models/data-models/master/fiware-terms.yaml#/source
     startDate:
       x-ngsi:
         type: Property
