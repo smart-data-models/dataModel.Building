@@ -2,7 +2,7 @@
 components: 
   schemas: 
     BuildingOperation: 
-      $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.Building/master/BuildingOperation/schema.yaml#/BuildingOperation"
+      $ref: "https://smart-data-models.github.io/dataModel.Building/BuildingOperation/model.yaml/BuildingOperation"
 info: 
   description: |
     This entity contains a harmonised description of a generic operation (related to
@@ -49,12 +49,12 @@ paths:
                   summary: "Key-Values Pairs"
                   value: 
                     - 
-                      $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.Building/master/BuildingOperation/example.json"
+                      $ref: "https://smart-data-models.github.io/dataModel.Building/BuildingOperation/example.json"
                 normalized: 
                   summary: "Normalized NGSI-LD"
                   value: 
                     - 
-                      $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.Building/master/BuildingOperation/example-normalized-ld.jsonld"
+                      $ref: "https://smart-data-models.github.io/dataModel.Building/BuildingOperation/example-normalized-ld.jsonld"
           description: OK
       tags: 
         - ngsi-ld

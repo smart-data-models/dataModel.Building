@@ -5,7 +5,7 @@ Building:
     - category
     - address
   allOf:
-    - $ref: 'https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/Common'
+    - $ref: 'https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/Common'
   type: object
   description: |
       This entity contains a harmonised description of a Building. This entity is associated with the vertical segments of smart homes, smart cities, industry and related IoT applications.
@@ -26,7 +26,7 @@ Building:
 
   properties:
     address:
-      $ref: 'https://raw.githubusercontent.com/smart-data-models/data-models/master/schema.org.yaml#/address'
+      $ref: 'https://smart-data-models.github.io/data-models/schema.org.yaml#/address'
     alternateName:
       x-ngsi:
         type: Property
@@ -47,11 +47,11 @@ Building:
         coordinates: 
           oneOf: 
             - 
-              $ref: "https://raw.githubusercontent.com/smart-data-models/data-models/master/geojson-ld.yaml#/Polygon/allOf/1/properties/coordinates"
+              $ref: "https://smart-data-models.github.io/data-models/geojson-ld.yaml#/Polygon/allOf/1/properties/coordinates"
             - 
-              $ref: "https://raw.githubusercontent.com/smart-data-models/data-models/master/geojson-ld.yaml#/MultiPolygon/allOf/1/properties/coordinates"
+              $ref: "https://smart-data-models.github.io/data-models/geojson-ld.yaml#/MultiPolygon/allOf/1/properties/coordinates"
         type: 
-          $ref: "https://raw.githubusercontent.com/smart-data-models/data-models/master/geojson-ld.yaml#/Geometry/properties/type"
+          $ref: "https://smart-data-models.github.io/data-models/geojson-ld.yaml#/Geometry/properties/type"
       required: 
         - type
         - coordinates
@@ -63,7 +63,7 @@ Building:
         type: GeoProperty
     category:
       allOf:
-        - $ref: "https://raw.githubusercontent.com/smart-data-models/data-models/master/openstreetmap.yaml#/Categories"
+        - $ref: "https://smart-data-models.github.io/data-models/openstreetmap.yaml#/Categories"
     dataProvider:
       x-ngsi:
         type: Property
@@ -72,7 +72,7 @@ Building:
       description: 'Specifies the URL to information about the provider of this information'
     description:
       $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/description
+        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/description
     floorsAboveGround:
       x-ngsi:
         type: Property
@@ -88,9 +88,9 @@ Building:
       description: 'Number of floors below ground within the building'
       format: int32
     location:
-      $ref: 'https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/location'
+      $ref: 'https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/location'
     name:
-      $ref: 'https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/name'
+      $ref: 'https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/name'
     occupier:
       x-ngsi:
         model: "https://schema.org/URL"
@@ -110,7 +110,7 @@ Building:
               - type: string
                 format: uri
     openingHours:
-      $ref: 'https://raw.githubusercontent.com/smart-data-models/data-models/master/schema.org.yaml#/openingHours'
+      $ref: 'https://smart-data-models.github.io/data-models/schema.org.yaml#/openingHours'
     owner:
       x-ngsi:
         type: Relationship

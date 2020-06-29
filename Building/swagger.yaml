@@ -2,9 +2,9 @@
 components: 
   schemas: 
     Building: 
-      $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.Building/master/Building/schema.yaml#/Building"
+      $ref: "https://smart-data-models.github.io/dataModel.Building/Building/model.yaml/Building"
     Categories: 
-      $ref: "https://raw.githubusercontent.com/smart-data-models/data-models/master/openstreetmap.yaml#/Categories"
+      $ref: "https://smart-data-models.github.io/data-models/openstreetmap.yaml#/Categories"
 info: 
   description:  |
     This entity contains a harmonised description of a Building. This entity is associated with the vertical segments of smart homes, smart cities, industry and related IoT applications.
@@ -47,12 +47,12 @@ paths:
                   summary: "Key-Values Pairs"
                   value: 
                     - 
-                      $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.Building/master/Building/example.json"
+                      $ref: "https://smart-data-models.github.io/dataModel.Building/Building/example.json"
                 normalized: 
                   summary: "Normalized NGSI-LD"
                   value: 
                     - 
-                      $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.Building/master/Building/example-normalized-ld.jsonld"
+                      $ref: "https://smart-data-models.github.io/dataModel.Building/Building/example-normalized-ld.jsonld"
           description: OK
       tags: 
         - ngsi-ld
