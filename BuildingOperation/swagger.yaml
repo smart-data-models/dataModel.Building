@@ -2,7 +2,7 @@
 components: 
   schemas: 
     BuildingOperation: 
-      $ref: "https://smart-data-models.github.io/dataModel.Building/BuildingOperation/model.yaml/BuildingOperation"
+      $ref: "https://smart-data-models.github.io/dataModel.Building/BuildingOperation/model.yaml#/BuildingOperation"
 info: 
   description: |
     This entity contains a harmonised description of a generic operation (related to

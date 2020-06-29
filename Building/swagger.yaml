@@ -2,7 +2,7 @@
 components: 
   schemas: 
     Building: 
-      $ref: "https://smart-data-models.github.io/dataModel.Building/Building/model.yaml/Building"
+      $ref: "https://smart-data-models.github.io/dataModel.Building/Building/model.yaml#/Building"
     Categories: 
       $ref: "https://smart-data-models.github.io/data-models/openstreetmap.yaml#/Categories"
 info: 
