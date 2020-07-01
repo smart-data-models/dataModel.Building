@@ -1,8 +1,8 @@
 {
   "$schema": "http://json-schema.org/schema#",
   "$schemaVersion": "0.0",
-  "$id": "https://fiware.github.io/data-models/specs/Building/BuildingOperation/schema.json",
-  "title": "FIWARE - Building Operation schema",
+  "$id": "https://smart-data-models.github.io/dataModel.Building/BuildingOperation/schema.json",
+  "title": "Smart data models - Building Operation schema",
   "description": "Information on a given Building Operation",
   "type": "object",
   "allOf": [
