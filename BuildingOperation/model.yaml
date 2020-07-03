@@ -90,18 +90,8 @@ BuildingOperation:
       type: string
       description: ''
     owner:
-      x-ngsi:
-        type: Relationship
-      type: array
-      description: ''
-      items: &ref_0
-        anyOf:
-          - type: string
-            minLength: 1
-            maxLength: 256
-            pattern: '^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$'
-          - type: string
-            format: uri
+      $ref: >-
+        https://smart-data-models.github.io/data-models/fiware-terms.yaml#/owner
     refRelatedBuildingOperation:
       x-ngsi:
         type: Relationship
@@ -109,7 +99,10 @@ BuildingOperation:
       description: ''
       items:
         oneOf:
-          - *ref_0
+          - &ref_0 type: string
+            minLength: 1
+            maxLength: 256
+            pattern: '^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$'
           - type: string
             format: uri
     refRelatedDeviceOperation:
