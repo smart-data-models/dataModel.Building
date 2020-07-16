@@ -97,9 +97,9 @@ BuildingOperation:
         type: Relationship
       type: array
       description: ''
-      items:
+      items: &ref_0
         oneOf:
-          - &ref_0 type: string
+          - type: string 
             minLength: 1
             maxLength: 256
             pattern: '^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$'
@@ -110,11 +110,7 @@ BuildingOperation:
         type: Relationship
       type: array
       description: ''
-      items:
-        oneOf:
-          - *ref_0
-          - type: string
-            format: uri
+      items: *ref_0
     result:
       x-ngsi:
         type: Property
