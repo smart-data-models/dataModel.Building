@@ -117,6 +117,9 @@ BuildingOperation:
         model: 'https://schema.org/Text'
       type: string
       description: ''
+      enum:
+        - ok
+        - aborted
     source:
       $ref: >-
         https://smart-data-models.github.io/data-models/fiware-terms.yaml#/source
@@ -133,3 +136,9 @@ BuildingOperation:
         model: 'https://schema.org/Text'
       type: string
       description: ''
+      enum:
+        - planned
+        - ongoing
+        - finished
+        - scheduled
+        - cancelled
