@@ -66,8 +66,8 @@ Building:
           - "https://purl.org/geojson/vocab#MultiPolygon"
         type: GeoProperty
     category:
-      allOf:
-        - $ref: "https://smart-data-models.github.io/data-models/openstreetmap.yaml#/Categories"
+        $ref: >-
+        https://smart-data-models.github.io/data-models/openstreetmap.yaml#/Categories
     dataProvider:
       $ref: >-
         https://smart-data-models.github.io/data-models/fiware-terms.yaml#/dataProvider
