@@ -30,8 +30,7 @@ BuildingOperation:
     means that to test the JSON schema examples with a
     [FIWARE NGSI version 2](http://fiware.github.io/specifications/ngsiv2/stable)
     API implementation, you need to use the `keyValues` mode (`options=keyValues`).
-
-    Data Model. For a full description of the following attributes refer to GSMA
+    For a full description of the following attributes refer to GSMA
     [IoT Big Data Harmonised Data Model](https://github.com/GSMADeveloper/NGSI-LD-Entities)
   properties:
     alternateName:
