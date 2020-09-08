@@ -43,9 +43,9 @@ API implementation, you need to use the `keyValues` mode (`options=keyValues`).
 ### Incubated data models
 The list of incubated (on development) data models are:
 
-[BuildingType_incubated](https://github.com/smart-data-models/dataModel.Building/tree/master/BuildingType_incubated)
+  -[BuildingType_incubated](https://github.com/smart-data-models/dataModel.Building/tree/master/BuildingType_incubated)
 
-[Floor_incubated](https://github.com/smart-data-models/dataModel.Building/tree/master/Floor_incubated)
+  -[Floor_incubated](https://github.com/smart-data-models/dataModel.Building/tree/master/Floor_incubated)
 
 
 ### Contributors
