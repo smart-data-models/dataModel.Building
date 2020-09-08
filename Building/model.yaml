@@ -21,11 +21,9 @@ Building:
         -   `openingHours` is introduced following schema.org data model to allow
           fine-grained on building opening times. GSMA supported this as free text in
           the `notes` attribute (removed as well).
-      
         -   `refSubscriptionService` is not supported, since `SubscriptionService` model
           is not supported currently.
-      
-      Data Model. For a full description of the following attributes refer to GSMA [IoT Big Data Harmonised Data Model](https://github.com/GSMADeveloper/NGSI-LD-Entities)
+        - For a full description of the following attributes refer to GSMA [IoT Big Data Harmonised Data Model](https://github.com/GSMADeveloper/NGSI-LD-Entities)
 
   properties:
     address:
