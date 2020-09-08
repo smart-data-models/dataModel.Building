@@ -15,8 +15,7 @@ This data model has been partially developed in cooperation with mobile operator
 -   `refSubscriptionService` is not supported, since `SubscriptionService` model
     is not supported currently.
 
-## Data Model
-For a full description of the following attributes refer to GSMA [IoT Big Data Harmonised Data Model](https://github.com/GSMADeveloper/NGSI-LD-Entities)
+Data Model. For a full description of the following attributes refer to GSMA [IoT Big Data Harmonised Data Model](https://github.com/GSMADeveloper/NGSI-LD-Entities)
 
 
 Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://smart-data-models.github.io/dataModel.Building/Building/swagger.yaml)
