@@ -42,16 +42,6 @@ For a full description of the following attributes refer to GSMA
     -   Attribute type: Property. [URL](https://schema.org/URL)
     -   Optional
 
--   `dateModified` : Last update timestamp of this entity.
-
-    -   Attribute type: Property. [DateTime](https://schema.org/DateTime)
-    -   Read-Only. Automatically generated.
-
--   `dateCreated` : Entity's creation timestamp.
-
-    -   Attribute type: Property. [DateTime](https://schema.org/DateTime)
-    -   Read-Only. Automatically generated.
-
 -   `owner`
 
     -   Optional
