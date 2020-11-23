@@ -17,10 +17,11 @@
         "type": {
           "type": "string",
           "enum": ["Building"],
-          "description": "NGSI Entity type"
+          "description": "Property. NGSI Entity type"
         },
         "category": {
           "type": "array",
+          "description": "Property. ",
           "items": {
             "type": "string",
             "enum": [
@@ -94,6 +95,7 @@
         },
         "occupier": {
           "type": "array",
+          "description": "Property. ",
           "items": {
             "oneOf": [
               {
@@ -107,17 +109,21 @@
           }
         },
         "floorsAboveGround": {
-          "type": "integer"
+          "type": "integer",
+          "description": "Property. Floors above the ground level"
         },
         "floorsBelowGround": {
-          "type": "integer"
+          "type": "integer",
+          "description": "Property. Floors below the ground level"
         },
         "refMap": {
           "type": "string",
-          "format": "uri"
+          "format": "uri",
+          "description": "Relationship. Reference to the map containing the building"
         },
         "openingHours": {
           "type": "array",
+          "description": "Property. Model:'https://schema.org/openingHours'. Opening hours of this building.",
           "items": {
             "type": "string"
           }
