@@ -1,0 +1,123 @@
+BuildingOperation:
+  description: 'Information on a given Building Operation'
+  properties:
+    alternateName:
+      description: 'An alternative name for this item'
+      type: Property
+    dataProvider:
+      description: 'A sequence of characters identifying the provider of the harmonised data entity.'
+      type: Property
+    dateCreated:
+      description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'
+      format: date-time
+      type: Property
+    dateFinished:
+      description: 'The actual end date for the operation.'
+      format: date-time
+      type: Property
+      x-ngsi:
+        model: https://schema.org/DateTime
+    dateModified:
+      description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'
+      format: date-time
+      type: Property
+    dateStarted:
+      description: 'The actual start date for the operation.'
+      format: date-time
+      type: Property
+      x-ngsi:
+        model: https://schema.org/DateTime
+    description:
+      description: 'A description of this item'
+      type: Property
+    endDate:
+      description: 'The planned end date for the operation.'
+      format: date-time
+      type: Property
+      x-ngsi:
+        model: https://schema.org/DateTime
+    id:
+      anyOf: &buildingoperation_-_properties_-_owner_-_items_-_anyof
+        - description: 'Property. Identifier format of any NGSI entity'
+          maxLength: 256
+          minLength: 1
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
+          type: string
+        - description: 'Property. Identifier format of any NGSI entity'
+          format: uri
+          type: string
+    name:
+      description: 'The name of this item.'
+      type: Property
+    operationSequence:
+      description: ""
+      items:
+        type: string
+      type: Property
+    operationType:
+      description: ""
+      type: Property
+    owner:
+      description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'
+      items:
+        anyOf: *buildingoperation_-_properties_-_owner_-_items_-_anyof
+      type: Property
+    refBuilding:
+      anyOf: *buildingoperation_-_properties_-_owner_-_items_-_anyof
+    refOperator:
+      anyOf: *buildingoperation_-_properties_-_owner_-_items_-_anyof
+    refRelatedBuildingOperation:
+      description: 'Relationship. '
+      items:
+        anyOf: *buildingoperation_-_properties_-_owner_-_items_-_anyof
+      refRelatedDeviceOperation:
+        description: 'Relationship. '
+        items:
+          anyOf: *buildingoperation_-_properties_-_owner_-_items_-_anyof
+        type: array
+      type: array
+    result:
+      description: 'Result of the building operation'
+      enum:
+        - ok
+        - aborted
+      type: Property
+    seeAlso:
+      oneOf:
+        - items:
+            - format: uri
+              type: string
+          minItems: 1
+          type: array
+        - format: uri
+          type: string
+    source:
+      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'
+      type: Property
+    startDate:
+      description: 'The planned start date for the operation.'
+      format: date-time
+      type: Property
+      x-ngsi:
+        model: https://schema.org/DateTime
+    status:
+      description: ""
+      enum:
+        - planned
+        - ongoing
+        - finished
+        - scheduled
+        - cancelled
+      type: Property
+    type:
+      description: 'It has to be BuildingOperation'
+      enum:
+        - BuildingOperation
+      type: Property
+  required:
+    - type
+    - id
+    - refBuilding
+    - startDate
+    - endDate
+  type: object
