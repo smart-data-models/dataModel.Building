@@ -5,7 +5,7 @@ Entity: Building
 
 ## List of properties  
 
-`address`: The mailing address.  `alternateName`: An alternative name for this item  `areaServed`: The geographic area where a service or offered item is provided.  `category`:   `containedInPlace`:   `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity.  `dateCreated`: Entity creation timestamp. This will usually be allocated by the storage platform.  `dateModified`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  `description`: A description of this item  `floorsAboveGround`: Floors above the ground level  `floorsBelowGround`: Floors below the ground level  `id`:   `location`:   `name`: The name of this item.  `occupier`:   `openingHours`: Opening hours of this building.  `owner`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  `refMap`: Relationship. Reference to the map containing the building  `seeAlso`:   `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  `type`: NGSI Entity type    
+- `address`: The mailing address.  - `alternateName`: An alternative name for this item  - `areaServed`: The geographic area where a service or offered item is provided.  - `category`:   - `containedInPlace`:   - `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateModified`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `description`: A description of this item  - `floorsAboveGround`: Floors above the ground level  - `floorsBelowGround`: Floors below the ground level  - `id`:   - `location`:   - `name`: The name of this item.  - `occupier`:   - `openingHours`: Opening hours of this building.  - `owner`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `refMap`: Relationship. Reference to the map containing the building  - `seeAlso`:   - `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `type`: NGSI Entity type    
 This entity contains a harmonised description of a Building. This entity is associated with the vertical segments of smart homes, smart cities, industry and related IoT applications. This data model has been partially developed in cooperation with mobile operators and the [GSMA](https://www.gsma.com/iot/iot-big-data/), compared to GSMA data model following changes are introduced the reference to `BuildingType` is removed, since `BuildingType` compared to `category` attribute does not introduce significant information. `category` attribute is required. `openingHours` is introduced following schema.org data model to allow fine-grained on building opening times. GSMA supported this as free text in the `notes` attribute (removed as well). `refSubscriptionService` is not supported, since `SubscriptionService` model is not supported currently.  
 ## Data Model description of properties  
 Sorted alphabetically  
@@ -338,6 +338,7 @@ Building:
     - address    
   type: object    
 ```  
+#### Building NGSI V2 key-values Example    
 Here is an example of a Building in JSON format as key-values. This is compatible with NGSI V2 when  using `options=keyValues` and returns the context data of an individual entity.  
 ```json  
 {  
@@ -373,6 +374,7 @@ Building:
   "openingHours": ["Mo-Fr 10:00-19:00", "Sa 10:00-22:00", "Su 10:00-21:00"]  
 }  
 ```  
+#### Building NGSI V2 normalized Example    
 Here is an example of a Building in JSON format as normalized. This is compatible with NGSI V2 when  using `options=keyValues` and returns the context data of an individual entity.  
 ```json  
 {  
@@ -445,6 +447,7 @@ Building:
   }  
 }  
 ```  
+#### Building NGSI-LD key-values Example    
 Here is an example of a Building in JSON-LD format as key-values. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
 ```json  
 {"@context": ["https://schema.lab.fiware.org/ld/context",  
@@ -481,6 +484,7 @@ Building:
  "source": "http://www.example.com",  
  "type": "Building"}  
 ```  
+#### Building NGSI-LD normalized Example    
 Here is an example of a Building in JSON-LD format as normalized. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
 ```json  
 {  
