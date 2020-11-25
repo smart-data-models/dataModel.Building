@@ -5,11 +5,12 @@ Entité : Bâtiment
 
 ## Liste des biens  
 
-`address`: L'adresse postale.  `alternateName`: Un autre nom pour cet article  `areaServed`: La zone géographique où un service ou un article offert est fourni.  `category`:   `containedInPlace`:   `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  `dateCreated`: Horodatage de la création de l'entité. Il est généralement attribué par la plate-forme de stockage.  `dateModified`: Horodatage de la dernière modification de l'entité. Il est généralement attribué par la plate-forme de stockage.  `description`: Une description de cet article  `floorsAboveGround`: Planchers au-dessus du niveau du sol  `floorsBelowGround`: Planchers sous le niveau du sol  `id`:   `location`:   `name`: Le nom de cet article.  `occupier`:   `openingHours`: Heures d'ouverture de ce bâtiment.  `owner`: Une liste contenant une séquence de caractères codés en JSON faisant référence aux Ids uniques du ou des propriétaires  `refMap`: Relation. Référence à la carte contenant le bâtiment  `seeAlso`:   `source`: Une séquence de caractères donnant comme URL la source originale des données de l'entité. Il est recommandé d'utiliser le nom de domaine complet du fournisseur de la source, ou l'URL de l'objet source.  `type`: NGSI Type d'entité    
+- `address`: L'adresse postale.  - `alternateName`: Un autre nom pour cet article  - `areaServed`: La zone géographique où un service ou un article offert est fourni.  - `category`:   - `containedInPlace`:   - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Il est généralement attribué par la plate-forme de stockage.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il est généralement attribué par la plate-forme de stockage.  - `description`: Une description de cet article  - `floorsAboveGround`: Planchers au-dessus du niveau du sol  - `floorsBelowGround`: Planchers sous le niveau du sol  - `id`:   - `location`:   - `name`: Le nom de cet article.  - `occupier`:   - `openingHours`: Heures d'ouverture de ce bâtiment.  - `owner`: Une liste contenant une séquence de caractères codés en JSON faisant référence aux Ids uniques du ou des propriétaires  - `refMap`: Relation. Référence à la carte contenant le bâtiment  - `seeAlso`:   - `source`: Une séquence de caractères donnant comme URL la source originale des données de l'entité. Il est recommandé d'utiliser le nom de domaine complet du fournisseur de la source, ou l'URL de l'objet source.  - `type`: NGSI Type d'entité    
 Cette entité contient une description harmonisée d'un bâtiment. Cette entité est associée aux segments verticaux des maisons intelligentes, des villes intelligentes, de l'industrie et des applications IdO connexes. Ce modèle de données a été partiellement développé en coopération avec les opérateurs de téléphonie mobile et le [GSMA] (https://www.gsma.com/iot/iot-big-data/). Par rapport au modèle de données du GSMA, suite aux changements introduits, la référence au "type de bâtiment" est supprimée, car l'attribut "type de bâtiment" comparé à l'attribut "catégorie" n'introduit pas d'informations significatives. L'attribut "category" est obligatoire. L'attribut "openingHours" est introduit selon le modèle de données de schema.org afin de permettre une précision sur les heures d'ouverture des bâtiments. La GSMA a supporté cela en tant que texte libre dans l'attribut "notes" (supprimé également). RefSubscriptionService" n'est pas supporté, car le modèle "SubscriptionService" n'est pas supporté actuellement.  
 ## Modèle de données description des biens  
-Classement par ordre alphabétique  
-```yaml  
+Classement par ordre alphabétique (cliquez pour plus de détails)  
+<details><summary><strong>full yaml details</strong></summary>    
+```yaml  
 Building:    
   description: 'Information on a given Building'    
   properties:    
@@ -338,6 +339,9 @@ Building:
     - address    
   type: object    
 ```  
+</details>    
+## Exemples de charges utiles  
+#### Construire les valeurs clés de l'INSG V2 Exemple  
 Voici un exemple d'un bâtiment au format JSON comme valeurs clés. Il est compatible avec NGSI V2 lorsqu'il utilise "options=keyValues" et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {  
@@ -373,6 +377,7 @@ Building:
   "openingHours": ["Mo-Fr 10:00-19:00", "Sa 10:00-22:00", "Su 10:00-21:00"]  
 }  
 ```  
+#### Bâtiment NGSI V2 normalisé Exemple  
 Voici un exemple d'un bâtiment au format JSON tel que normalisé. Il est compatible avec NGSI V2 lorsqu'il utilise "options=valeurs clés" et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {  
@@ -445,6 +450,7 @@ Building:
   }  
 }  
 ```  
+#### Construire les valeurs clés de l'INSG-LD Exemple  
 Voici un exemple d'un bâtiment au format JSON-LD comme valeurs clés. Ce format est compatible avec le format JSON-LD lorsqu'il n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {"@context": ["https://schema.lab.fiware.org/ld/context",  
@@ -481,6 +487,7 @@ Building:
  "source": "http://www.example.com",  
  "type": "Building"}  
 ```  
+#### Bâtiment NGSI-LD normalisé Exemple  
 Voici un exemple d'un bâtiment au format JSON-LD tel que normalisé. Il est compatible avec le format JSON-LD lorsqu'il n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {  
