@@ -5,11 +5,12 @@ Entité : BuildingOperation
 
 ## Liste des biens  
 
-`alternateName`: Un autre nom pour cet article  `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  `dateCreated`: Horodatage de la création de l'entité. Il est généralement attribué par la plate-forme de stockage.  `dateFinished`: La date de fin effective de l'opération.  `dateModified`: Horodatage de la dernière modification de l'entité. Il est généralement attribué par la plate-forme de stockage.  `dateStarted`: La date réelle de début de l'opération.  `description`: Une description de cet article  `endDate`: La date de fin prévue pour l'opération.  `id`:   `name`: Le nom de cet article.  `operationSequence`:   `operationType`:   `owner`: Une liste contenant une séquence de caractères codés en JSON faisant référence aux Ids uniques du ou des propriétaires  `refBuilding`:   `refOperator`:   `refRelatedBuildingOperation`: Relation.  `result`: Résultat de l'opération de construction  `seeAlso`:   `source`: Une séquence de caractères donnant comme URL la source originale des données de l'entité. Il est recommandé d'utiliser le nom de domaine complet du fournisseur de la source, ou l'URL de l'objet source.  `startDate`: La date de début prévue pour l'opération.  `status`:   `type`: Il doit s'agir de BuildingOperation    
+- `alternateName`: Un autre nom pour cet article  - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Il est généralement attribué par la plate-forme de stockage.  - `dateFinished`: La date de fin effective de l'opération.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il est généralement attribué par la plate-forme de stockage.  - `dateStarted`: La date réelle de début de l'opération.  - `description`: Une description de cet article  - `endDate`: La date de fin prévue pour l'opération.  - `id`:   - `name`: Le nom de cet article.  - `operationSequence`:   - `operationType`:   - `owner`: Une liste contenant une séquence de caractères codés en JSON faisant référence aux Ids uniques du ou des propriétaires  - `refBuilding`:   - `refOperator`:   - `refRelatedBuildingOperation`: Relation.  - `result`: Résultat de l'opération de construction  - `seeAlso`:   - `source`: Une séquence de caractères donnant comme URL la source originale des données de l'entité. Il est recommandé d'utiliser le nom de domaine complet du fournisseur de la source, ou l'URL de l'objet source.  - `startDate`: La date de début prévue pour l'opération.  - `status`:   - `type`: Il doit s'agir de BuildingOperation    
 Cette entité contient une description harmonisée d'une opération générique (relative aux bâtiments intelligents) appliquée au bâtiment référencé. L'opération de bâtiment contient des données dynamiques déclarées par, ou associées à, un bâtiment ou des opérations applicables au bâtiment. Cette entité est associée aux segments verticaux des maisons intelligentes, des villes intelligentes, de l'industrie et des applications IdO connexes. Ce modèle de données a été partiellement développé en coopération avec les opérateurs de téléphonie mobile et le [GSMA] (https://www.gsma.com/iot/iot-big-data/). Par rapport au modèle de données GSMA, les changements suivants sont introduits - "refRelatedDeviceOperation" remplace "refRelatedOperation".  
 ## Modèle de données description des biens  
-Classement par ordre alphabétique  
-```yaml  
+Classement par ordre alphabétique (cliquez pour plus de détails)  
+<details><summary><strong>full yaml details</strong></summary>    
+```yaml  
 BuildingOperation:    
   description: 'Information on a given Building Operation'    
   properties:    
@@ -134,6 +135,9 @@ BuildingOperation:
     - endDate    
   type: object    
 ```  
+</details>    
+## Exemples de charges utiles  
+#### BuildingOperation NGSI V2 valeurs clés Exemple  
 Voici un exemple de BuildingOperation en format JSON comme valeurs clés. Il est compatible avec NGSI V2 lorsqu'il utilise "options=keyValues" et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {  
@@ -163,6 +167,7 @@ BuildingOperation:
   ]  
 }  
 ```  
+#### BuildingOperation NGSI V2 normalisé Exemple  
 Voici un exemple d'une opération de bâtiment au format JSON normalisé. Il est compatible avec NGSI V2 lorsqu'il utilise "options=valeurs clés" et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {  
@@ -233,6 +238,7 @@ BuildingOperation:
   }  
 }  
 ```  
+#### BuildingOperation NGSI-LD valeurs clés Exemple  
 Voici un exemple d'une opération de construction en format JSON-LD comme valeurs clés. Ce format est compatible avec le format NGSI-LD lorsqu'il n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {"@context": ["https://schema.lab.fiware.org/ld/context",  
@@ -258,6 +264,7 @@ BuildingOperation:
  "status": "finished",  
  "type": "BuildingOperation"}  
 ```  
+#### BuildingOperation NGSI-LD normalisé Exemple  
 Voici un exemple d'une opération de bâtiment au format JSON-LD tel que normalisé. Il est compatible avec le format NGSI-LD lorsqu'il n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {  
