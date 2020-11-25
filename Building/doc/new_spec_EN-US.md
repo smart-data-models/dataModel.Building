@@ -9,7 +9,8 @@ Entity: Building
 This entity contains a harmonised description of a Building. This entity is associated with the vertical segments of smart homes, smart cities, industry and related IoT applications. This data model has been partially developed in cooperation with mobile operators and the [GSMA](https://www.gsma.com/iot/iot-big-data/), compared to GSMA data model following changes are introduced the reference to `BuildingType` is removed, since `BuildingType` compared to `category` attribute does not introduce significant information. `category` attribute is required. `openingHours` is introduced following schema.org data model to allow fine-grained on building opening times. GSMA supported this as free text in the `notes` attribute (removed as well). `refSubscriptionService` is not supported, since `SubscriptionService` model is not supported currently.  
 ## Data Model description of properties  
 Sorted alphabetically  
-```yaml  
+<details><summary><strong>full yaml details</strong></summary>    
+```yaml  
 Building:    
   description: 'Information on a given Building'    
   properties:    
@@ -338,6 +339,7 @@ Building:
     - address    
   type: object    
 ```  
+</details>    
 #### Building NGSI V2 key-values Example    
 Here is an example of a Building in JSON format as key-values. This is compatible with NGSI V2 when  using `options=keyValues` and returns the context data of an individual entity.  
 ```json  
