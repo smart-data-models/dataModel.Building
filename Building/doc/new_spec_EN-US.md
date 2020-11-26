@@ -6,9 +6,11 @@ Entity: Building
 ## List of properties  
 
 - `address`: The mailing address.  - `alternateName`: An alternative name for this item  - `areaServed`: The geographic area where a service or offered item is provided.  - `category`:   - `containedInPlace`:   - `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateModified`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `description`: A description of this item  - `floorsAboveGround`: Floors above the ground level  - `floorsBelowGround`: Floors below the ground level  - `id`:   - `location`:   - `name`: The name of this item.  - `occupier`:   - `openingHours`: Opening hours of this building.  - `owner`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `refMap`: Relationship. Reference to the map containing the building  - `seeAlso`:   - `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `type`: NGSI Entity type    
+Required properties  
+- `address`  - `category`  - `id`  - `type`    
 This entity contains a harmonised description of a Building. This entity is associated with the vertical segments of smart homes, smart cities, industry and related IoT applications. This data model has been partially developed in cooperation with mobile operators and the [GSMA](https://www.gsma.com/iot/iot-big-data/), compared to GSMA data model following changes are introduced the reference to `BuildingType` is removed, since `BuildingType` compared to `category` attribute does not introduce significant information. `category` attribute is required. `openingHours` is introduced following schema.org data model to allow fine-grained on building opening times. GSMA supported this as free text in the `notes` attribute (removed as well). `refSubscriptionService` is not supported, since `SubscriptionService` model is not supported currently.  
 ## Data Model description of properties  
-Sorted alphabetically  
+Sorted alphabetically (click for details)  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 Building:    
@@ -340,6 +342,7 @@ Building:
   type: object    
 ```  
 </details>    
+## Example payloads    
 #### Building NGSI V2 key-values Example    
 Here is an example of a Building in JSON format as key-values. This is compatible with NGSI V2 when  using `options=keyValues` and returns the context data of an individual entity.  
 ```json  
@@ -377,7 +380,7 @@ Building:
 }  
 ```  
 #### Building NGSI V2 normalized Example    
-Here is an example of a Building in JSON format as normalized. This is compatible with NGSI V2 when  using `options=keyValues` and returns the context data of an individual entity.  
+Here is an example of a Building in JSON format as normalized. This is compatible with NGSI V2 when not using options and returns the context data of an individual entity.  
 ```json  
 {  
   "id": "building-a85e3da145c1",  
@@ -450,7 +453,7 @@ Building:
 }  
 ```  
 #### Building NGSI-LD key-values Example    
-Here is an example of a Building in JSON-LD format as key-values. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
+Here is an example of a Building in JSON-LD format as key-values. This is compatible with NGSI-LD when  using `options=keyValues` and returns the context data of an individual entity.  
 ```json  
 {"@context": ["https://schema.lab.fiware.org/ld/context",  
               "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"],  
