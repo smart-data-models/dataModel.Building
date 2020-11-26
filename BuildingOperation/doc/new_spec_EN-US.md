@@ -6,9 +6,11 @@ Entity: BuildingOperation
 ## List of properties  
 
 - `alternateName`: An alternative name for this item  - `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateFinished`: The actual end date for the operation.  - `dateModified`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `dateStarted`: The actual start date for the operation.  - `description`: A description of this item  - `endDate`: The planned end date for the operation.  - `id`:   - `name`: The name of this item.  - `operationSequence`:   - `operationType`:   - `owner`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `refBuilding`:   - `refOperator`:   - `refRelatedBuildingOperation`: Relationship.   - `result`: Result of the building operation  - `seeAlso`:   - `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `startDate`: The planned start date for the operation.  - `status`:   - `type`: It has to be BuildingOperation    
+Required properties  
+- `endDate`  - `id`  - `refBuilding`  - `startDate`  - `type`    
 This entity contains a harmonised description of a generic operation (related to smart buildings) applied to the referenced building. The building operation contains dynamic data reported by, or associated with a building or operations applicable to the building. This entity is associated with the vertical segments of smart homes, smart cities, industry and related IoT applications. This data model has been partially developed in cooperation with mobile operators and the [GSMA](https://www.gsma.com/iot/iot-big-data/), compared to GSMA data model the following changes are introduced - `refRelatedDeviceOperation` replaces `refRelatedOperation`  
 ## Data Model description of properties  
-Sorted alphabetically  
+Sorted alphabetically (click for details)  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 BuildingOperation:    
@@ -136,6 +138,7 @@ BuildingOperation:
   type: object    
 ```  
 </details>    
+## Example payloads    
 #### BuildingOperation NGSI V2 key-values Example    
 Here is an example of a BuildingOperation in JSON format as key-values. This is compatible with NGSI V2 when  using `options=keyValues` and returns the context data of an individual entity.  
 ```json  
@@ -167,7 +170,7 @@ BuildingOperation:
 }  
 ```  
 #### BuildingOperation NGSI V2 normalized Example    
-Here is an example of a BuildingOperation in JSON format as normalized. This is compatible with NGSI V2 when  using `options=keyValues` and returns the context data of an individual entity.  
+Here is an example of a BuildingOperation in JSON format as normalized. This is compatible with NGSI V2 when not using options and returns the context data of an individual entity.  
 ```json  
 {  
   "id": "57b912ab-eb47-4cd5-bc9d-73abece1f1b3",  
@@ -238,7 +241,7 @@ BuildingOperation:
 }  
 ```  
 #### BuildingOperation NGSI-LD key-values Example    
-Here is an example of a BuildingOperation in JSON-LD format as key-values. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
+Here is an example of a BuildingOperation in JSON-LD format as key-values. This is compatible with NGSI-LD when  using `options=keyValues` and returns the context data of an individual entity.  
 ```json  
 {"@context": ["https://schema.lab.fiware.org/ld/context",  
               "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"],  
