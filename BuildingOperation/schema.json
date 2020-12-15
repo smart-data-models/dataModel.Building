@@ -19,18 +19,46 @@
           "description": "Property. It has to be BuildingOperation"
         },
         "refBuilding": {
-          "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType"
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 256,
+              "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
+              "description": "Property. Identifier format of any NGSI entity"
+            },
+            {
+              "type": "string",
+              "format": "uri",
+              "description": "Property. Identifier format of any NGSI entity"
+            }
+          ],
+          "description": "Relationship. Model:'https://schema.org/URL'. Building reference where the operation is performed."
         },
         "refOperator": {
-          "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType"
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 256,
+              "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
+              "description": "Property. Identifier format of any NGSI entity"
+            },
+            {
+              "type": "string",
+              "format": "uri",
+              "description": "Property. Identifier format of any NGSI entity"
+            }
+          ],
+          "description": "Relationship. Model:'https://schema.org/URL'. Reference to the Operator doing the operation on the building."
         },
         "operationType": {
           "type": "string",
-          "description": "Property. "
+          "description": "Property. Model:'https://schema.org/Text'. Type of the operation on the building"
         },
         "result": {
           "type": "string",
-          "description": "Property. Result of the building operation",
+          "description": "Property. Result of the building operation. Model:'https://schema.org/Text'. Enum:'ok, aborted'",
           "enum": [
             "ok",
             "aborted"
@@ -58,34 +86,34 @@
         },
         "status": {
           "type": "string",
-          "description": "Property. ",
+          "description": "Property. Status of the operation. Model:'https://schema.org/Text'. Enum:'cancelled, finished, ongoing, planned, scheduled' ",
           "enum": [
-            "planned",
-            "ongoing",
+            "cancelled",
             "finished",
-            "scheduled",
-            "cancelled"
+            "ongoing",
+            "planned",
+            "scheduled"
           ]
         },
         "operationSequence": {
           "type": "array",
-          "description": "Property. ",
+          "description": "Property. Model:'https://schema.org/Text'. Id of the sequence of the operation when available",
           "items": {
             "type": "string"
           }
         },
         "refRelatedBuildingOperation": {
           "type": "array",
-          "description": "Relationship. ",
+          "description": "Relationship. Reference to other building operations when in sequence",
           "items": {
             "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType"
-          },
-          "refRelatedDeviceOperation": {
-            "type": "array",
-            "description": "Relationship. ",
-            "items": {
-              "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType"
-            }
+          }
+        },
+        "refRelatedDeviceOperation": {
+          "type": "array",
+          "description": "Relationship. Devices related to the current operation. Model:'https://schema.org/URL'. A list of references to an entity of type Device.",
+          "items": {
+            "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType"
           }
         }
       }
