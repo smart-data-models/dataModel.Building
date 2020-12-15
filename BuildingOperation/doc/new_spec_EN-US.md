@@ -5,7 +5,7 @@ Entity: BuildingOperation
 
 ## List of properties  
 
-- `alternateName`: An alternative name for this item  - `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateFinished`: The actual end date for the operation.  - `dateModified`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `dateStarted`: The actual start date for the operation.  - `description`: A description of this item  - `endDate`: The planned end date for the operation.  - `id`:   - `name`: The name of this item.  - `operationSequence`:   - `operationType`:   - `owner`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `refBuilding`:   - `refOperator`:   - `refRelatedBuildingOperation`: Relationship.   - `result`: Result of the building operation  - `seeAlso`:   - `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `startDate`: The planned start date for the operation.  - `status`:   - `type`: It has to be BuildingOperation    
+- `alternateName`: An alternative name for this item  - `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateFinished`: The actual end date for the operation.  - `dateModified`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `dateStarted`: The actual start date for the operation.  - `description`: A description of this item  - `endDate`: The planned end date for the operation.  - `id`: Unique identifier of the entity  - `name`: The name of this item.  - `operationSequence`: Id of the sequence of the operation when available  - `operationType`: Type of the operation on the building  - `owner`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `refBuilding`: Building reference where the operation is performed.  - `refOperator`: Reference to the Operator doing the operation on the building.  - `refRelatedBuildingOperation`: Reference to other building operations when in sequence  - `refRelatedDeviceOperation`: Devices related to the current operation. A list of references to an entity of type Device.  - `result`: Result of the building operation. Enum:'ok, aborted'  - `seeAlso`: list of uri pointing to additional resources about the item  - `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `startDate`: The planned start date for the operation.  - `status`: Status of the operation. Enum:'cancelled, finished, ongoing, planned, scheduled'   - `type`: It has to be BuildingOperation    
 Required properties  
 - `endDate`  - `id`  - `refBuilding`  - `startDate`  - `type`    
 This entity contains a harmonised description of a generic operation (related to smart buildings) applied to the referenced building. The building operation contains dynamic data reported by, or associated with a building or operations applicable to the building. This entity is associated with the vertical segments of smart homes, smart cities, industry and related IoT applications. This data model has been partially developed in cooperation with mobile operators and the [GSMA](https://www.gsma.com/iot/iot-big-data/), compared to GSMA data model the following changes are introduced - `refRelatedDeviceOperation` replaces `refRelatedOperation`  
@@ -61,43 +61,81 @@ BuildingOperation:
         - description: 'Property. Identifier format of any NGSI entity'    
           format: uri    
           type: string    
+      description: 'Unique identifier of the entity'    
+      type: Property    
     name:    
       description: 'The name of this item.'    
       type: Property    
     operationSequence:    
-      description: ""    
+      description: 'Id of the sequence of the operation when available'    
       items:    
         type: string    
       type: Property    
+      x-ngsi:    
+        model: https://schema.org/Text    
     operationType:    
-      description: ""    
+      description: 'Type of the operation on the building'    
       type: Property    
+      x-ngsi:    
+        model: https://schema.org/Text    
     owner:    
       description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
       items:    
         anyOf: *buildingoperation_-_properties_-_owner_-_items_-_anyof    
+        description: 'Property. Unique identifier of the entity'    
       type: Property    
     refBuilding:    
-      anyOf: *buildingoperation_-_properties_-_owner_-_items_-_anyof    
+      anyOf:    
+        - description: 'Property. Identifier format of any NGSI entity'    
+          maxLength: 256    
+          minLength: 1    
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+          type: string    
+        - description: 'Property. Identifier format of any NGSI entity'    
+          format: uri    
+          type: string    
+      description: 'Building reference where the operation is performed.'    
+      type: Relationship    
+      x-ngsi:    
+        model: https://schema.org/URL    
     refOperator:    
-      anyOf: *buildingoperation_-_properties_-_owner_-_items_-_anyof    
+      anyOf:    
+        - description: 'Property. Identifier format of any NGSI entity'    
+          maxLength: 256    
+          minLength: 1    
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+          type: string    
+        - description: 'Property. Identifier format of any NGSI entity'    
+          format: uri    
+          type: string    
+      description: 'Reference to the Operator doing the operation on the building.'    
+      type: Relationship    
+      x-ngsi:    
+        model: https://schema.org/URL    
     refRelatedBuildingOperation:    
-      description: 'Relationship. '    
+      description: 'Reference to other building operations when in sequence'    
       items:    
         anyOf: *buildingoperation_-_properties_-_owner_-_items_-_anyof    
-      refRelatedDeviceOperation:    
-        description: 'Relationship. '    
-        items:    
-          anyOf: *buildingoperation_-_properties_-_owner_-_items_-_anyof    
-        type: array    
-      type: array    
+        description: 'Property. Unique identifier of the entity'    
+      type: Relationship    
+    refRelatedDeviceOperation:    
+      description: 'Devices related to the current operation. A list of references to an entity of type Device.'    
+      items:    
+        anyOf: *buildingoperation_-_properties_-_owner_-_items_-_anyof    
+        description: 'Property. Unique identifier of the entity'    
+      type: Relationship    
+      x-ngsi:    
+        model: https://schema.org/URL    
     result:    
-      description: 'Result of the building operation'    
+      description: 'Result of the building operation. Enum:''ok, aborted'''    
       enum:    
         - ok    
         - aborted    
       type: Property    
+      x-ngsi:    
+        model: https://schema.org/Text    
     seeAlso:    
+      description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
         - items:    
             - format: uri    
@@ -106,6 +144,7 @@ BuildingOperation:
           type: array    
         - format: uri    
           type: string    
+      type: Property    
     source:    
       description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
       type: Property    
@@ -116,14 +155,16 @@ BuildingOperation:
       x-ngsi:    
         model: https://schema.org/DateTime    
     status:    
-      description: ""    
+      description: 'Status of the operation. Enum:''cancelled, finished, ongoing, planned, scheduled'' '    
       enum:    
-        - planned    
-        - ongoing    
-        - finished    
-        - scheduled    
         - cancelled    
+        - finished    
+        - ongoing    
+        - planned    
+        - scheduled    
       type: Property    
+      x-ngsi:    
+        model: https://schema.org/Text    
     type:    
       description: 'It has to be BuildingOperation'    
       enum:    
