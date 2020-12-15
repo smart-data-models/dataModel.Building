@@ -8,7 +8,7 @@ Entity: Building
 - `address`: The mailing address.  - `alternateName`: An alternative name for this item  - `areaServed`: The geographic area where a service or offered item is provided.  - `category`:   - `containedInPlace`:   - `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateModified`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `description`: A description of this item  - `floorsAboveGround`: Floors above the ground level  - `floorsBelowGround`: Floors below the ground level  - `id`:   - `location`:   - `name`: The name of this item.  - `occupier`:   - `openingHours`: Opening hours of this building.  - `owner`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `refMap`: Relationship. Reference to the map containing the building  - `seeAlso`:   - `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `type`: NGSI Entity type    
 Required properties  
 - `address`  - `category`  - `id`  - `type`    
-This entity contains a harmonised description of a Building. This entity is associated with the vertical segments of smart homes, smart cities, industry and related IoT applications. This data model has been partially developed in cooperation with mobile operators and the [GSMA](https://www.gsma.com/iot/iot-big-data/), compared to GSMA data model following changes are introduced the reference to `BuildingType` is removed, since `BuildingType` compared to `category` attribute does not introduce significant information. `category` attribute is required. `openingHours` is introduced following schema.org data model to allow fine-grained on building opening times. GSMA supported this as free text in the `notes` attribute (removed as well). `refSubscriptionService` is not supported, since `SubscriptionService` model is not supported currently.  
+This entity contains a harmonised description of a Building. This entity is associated with the vertical segments of smart homes, smart cities, industry and related IoT applications. This data model has been partially developed in cooperation with mobile operators and the [GSMA](https://www.gsma.com/iot/iot-big-data/), compared to GSMA data model following changes are introduced the reference to `BuildingType` is removed, since `BuildingType` compared to `category` attribute does not introduce significant information. `category` attribute is required. `openingHours` is introduced following schema.org data model to allow fine-grained on building opening times. GSMA supported this as free text in the `notes` attribute (removed as well). `refSubscriptionService` is not supported, since `SubscriptionService` model is not supported currently  
 ## Data Model description of properties  
 Sorted alphabetically (click for details)  
 <details><summary><strong>full yaml details</strong></summary>    
@@ -20,91 +20,100 @@ Building:
       description: 'The mailing address.'    
       properties:    
         addressCountry:    
+          description: 'Property. The country. For example, Spain. Model:''https://schema.org/Text'''    
           type: string    
         addressLocality:    
+          description: 'Property. The locality in which the street address is, and which is in the region. Model:''https://schema.org/Text'''    
           type: string    
         addressRegion:    
+          description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/Text'''    
           type: string    
         areaServed:    
+          description: 'Property. The geographic area where a service or offered item is provided. Model:''https://schema.org/Text'''    
           type: string    
         postOfficeBoxNumber:    
+          description: 'Property. The post office box number for PO box addresses. For example, Spain. Model:''https://schema.org/Text'''    
           type: string    
         postalCode:    
+          description: 'Property. The postal code. For example, Spain. Model:''https://schema.org/Text'''    
           type: string    
         streetAddress:    
+          description: 'Property. The street address. Model:''https://schema.org/Text'''    
           type: string    
       type: Property    
     alternateName:    
       description: 'An alternative name for this item'    
       type: Property    
     areaServed:    
-      description: 'The geographic area where a service or offered item is provided.'    
+      description: 'The geographic area where a service or offered item is provided'    
       type: Property    
+      x-ngsi:    
+        model: https://schema.org/Text    
     category:    
-      description: ""    
+      description: 'Category of the building. Enum:''apartments, bakehouse, barn, bridge, bungalow, bunker, cathedral, cabin, carport, chapel, church, civic, commercial, conservatory, construction, cowshed, detached, digester, dormitory, farm, farm_auxiliary, garage, garages, garbage_shed, grandstand, greenhouse, hangar, hospital, hotel, house, houseboat, hut, industrial, kindergarten, kiosk, mosque, office, parking, pavilion, public, residential, retail, riding_hall, roof, ruins, school, service, shed, shrine, stable, stadium, static_caravan, sty, synagogue, temple, terrace, train_station, transformer_tower, transportation, university, warehouse, water_tower'''    
       items:    
         enum:    
           - apartments    
-          - farm    
-          - hotel    
-          - house    
-          - detached    
-          - residential    
-          - dormitory    
-          - terrace    
-          - houseboat    
-          - bungalow    
-          - static_caravan    
-          - commercial    
-          - office    
-          - industrial    
-          - retail    
-          - warehouse    
-          - kiosk    
           - bakehouse    
-          - cathedral    
-          - chapel    
-          - church    
-          - kindergarten    
-          - mosque    
-          - temple    
-          - synagogue    
-          - shrine    
-          - civic    
-          - hospital    
-          - school    
-          - stadium    
-          - train_station    
-          - transportation    
-          - university    
-          - grandstand    
-          - public    
           - barn    
           - bridge    
+          - bungalow    
           - bunker    
+          - cathedral    
           - cabin    
           - carport    
+          - chapel    
+          - church    
+          - civic    
+          - commercial    
           - conservatory    
           - construction    
           - cowshed    
+          - detached    
           - digester    
+          - dormitory    
+          - farm    
           - farm_auxiliary    
           - garage    
           - garages    
           - garbage_shed    
+          - grandstand    
           - greenhouse    
           - hangar    
+          - hospital    
+          - hotel    
+          - house    
+          - houseboat    
           - hut    
-          - pavilion    
+          - industrial    
+          - kindergarten    
+          - kiosk    
+          - mosque    
+          - office    
           - parking    
+          - pavilion    
+          - public    
+          - residential    
+          - retail    
           - riding_hall    
           - roof    
-          - shed    
-          - stable    
-          - sty    
-          - transformer_tower    
-          - service    
           - ruins    
+          - school    
+          - service    
+          - shed    
+          - shrine    
+          - stable    
+          - stadium    
+          - static_caravan    
+          - sty    
+          - synagogue    
+          - temple    
+          - terrace    
+          - train_station    
+          - transformer_tower    
+          - transportation    
+          - university    
+          - warehouse    
           - water_tower    
         type: string    
       type: Property    
@@ -272,9 +281,13 @@ Building:
     floorsAboveGround:    
       description: 'Floors above the ground level'    
       type: Property    
+      x-ngsi:    
+        model: https://schema.org/Number    
     floorsBelowGround:    
       description: 'Floors below the ground level'    
       type: Property    
+      x-ngsi:    
+        model: https://schema.org/Number    
     id:    
       anyOf: &anyof    
         - description: 'Property. Identifier format of any NGSI entity'    
@@ -285,6 +298,8 @@ Building:
         - description: 'Property. Identifier format of any NGSI entity'    
           format: uri    
           type: string    
+      description: 'Unique identifier of the entity'    
+      type: Property    
     location:    
       $id: https://geojson.org/schema/Geometry.json    
       $schema: "http://json-schema.org/draft-07/schema#"    
@@ -294,13 +309,16 @@ Building:
       description: 'The name of this item.'    
       type: Property    
     occupier:    
-      description: ""    
+      description: 'Person or entity using the building'    
       items:    
         oneOf:    
           - format: uri    
             type: string    
           - anyOf: *anyof    
-      type: Property    
+            description: 'Property. Unique identifier of the entity'    
+      type: Relationship    
+      x-ngsi:    
+        model: https://schema.org/URL    
     openingHours:    
       description: 'Opening hours of this building.'    
       items:    
@@ -312,12 +330,22 @@ Building:
       description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
       items:    
         anyOf: *anyof    
+        description: 'Property. Unique identifier of the entity'    
       type: Property    
     refMap:    
-      description: 'Relationship. Reference to the map containing the building'    
-      format: uri    
-      type: string    
+      anyOf:    
+        - description: 'Property. Identifier format of any NGSI entity'    
+          maxLength: 256    
+          minLength: 1    
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+          type: string    
+        - description: 'Property. Identifier format of any NGSI entity'    
+          format: uri    
+          type: string    
+      description: 'Reference to the map containing the building'    
+      type: Relationship    
     seeAlso:    
+      description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
         - items:    
             - format: uri    
@@ -326,6 +354,7 @@ Building:
           type: array    
         - format: uri    
           type: string    
+      type: Property    
     source:    
       description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
       type: Property    
