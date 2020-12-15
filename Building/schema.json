@@ -16,76 +16,78 @@
       "properties": {
         "type": {
           "type": "string",
-          "enum": ["Building"],
+          "enum": [
+            "Building"
+          ],
           "description": "Property. NGSI Entity type"
         },
         "category": {
           "type": "array",
-          "description": "Property. ",
+          "description": "Property. Category of the building. Enum:'apartments, bakehouse, barn, bridge, bungalow, bunker, cathedral, cabin, carport, chapel, church, civic, commercial, conservatory, construction, cowshed, detached, digester, dormitory, farm, farm_auxiliary, garage, garages, garbage_shed, grandstand, greenhouse, hangar, hospital, hotel, house, houseboat, hut, industrial, kindergarten, kiosk, mosque, office, parking, pavilion, public, residential, retail, riding_hall, roof, ruins, school, service, shed, shrine, stable, stadium, static_caravan, sty, synagogue, temple, terrace, train_station, transformer_tower, transportation, university, warehouse, water_tower'",
           "items": {
             "type": "string",
             "enum": [
               "apartments",
-              "farm",
-              "hotel",
-              "house",
-              "detached",
-              "residential",
-              "dormitory",
-              "terrace",
-              "houseboat",
-              "bungalow",
-              "static_caravan",
-              "commercial",
-              "office",
-              "industrial",
-              "retail",
-              "warehouse",
-              "kiosk",
               "bakehouse",
-              "cathedral",
-              "chapel",
-              "church",
-              "kindergarten",
-              "mosque",
-              "temple",
-              "synagogue",
-              "shrine",
-              "civic",
-              "hospital",
-              "school",
-              "stadium",
-              "train_station",
-              "transportation",
-              "university",
-              "grandstand",
-              "public",
               "barn",
               "bridge",
+              "bungalow",
               "bunker",
+              "cathedral",
               "cabin",
               "carport",
+              "chapel",
+              "church",
+              "civic",
+              "commercial",
               "conservatory",
               "construction",
               "cowshed",
+              "detached",
               "digester",
+              "dormitory",
+              "farm",
               "farm_auxiliary",
               "garage",
               "garages",
               "garbage_shed",
+              "grandstand",
               "greenhouse",
               "hangar",
+              "hospital",
+              "hotel",
+              "house",
+              "houseboat",
               "hut",
-              "pavilion",
+              "industrial",
+              "kindergarten",
+              "kiosk",
+              "mosque",
+              "office",
               "parking",
+              "pavilion",
+              "public",
+              "residential",
+              "retail",
               "riding_hall",
               "roof",
-              "shed",
-              "stable",
-              "sty",
-              "transformer_tower",
-              "service",
               "ruins",
+              "school",
+              "service",
+              "shed",
+              "shrine",
+              "stable",
+              "stadium",
+              "static_caravan",
+              "sty",
+              "synagogue",
+              "temple",
+              "terrace",
+              "train_station",
+              "transformer_tower",
+              "transportation",
+              "university",
+              "warehouse",
               "water_tower"
             ]
           }
@@ -95,7 +97,7 @@
         },
         "occupier": {
           "type": "array",
-          "description": "Property. ",
+          "description": "Relationship. Person or entity using the building. Model:'https://schema.org/URL'",
           "items": {
             "oneOf": [
               {
@@ -110,15 +112,27 @@
         },
         "floorsAboveGround": {
           "type": "integer",
-          "description": "Property. Floors above the ground level"
+          "description": "Property. Floors above the ground level. Model:'https://schema.org/Number'"
         },
         "floorsBelowGround": {
           "type": "integer",
-          "description": "Property. Floors below the ground level"
+          "description": "Property. Floors below the ground level. Model:'https://schema.org/Number'"
         },
         "refMap": {
-          "type": "string",
-          "format": "uri",
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 256,
+              "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
+              "description": "Property. Identifier format of any NGSI entity"
+            },
+            {
+              "type": "string",
+              "format": "uri",
+              "description": "Property. Identifier format of any NGSI entity"
+            }
+          ],
           "description": "Relationship. Reference to the map containing the building"
         },
         "openingHours": {
@@ -131,5 +145,10 @@
       }
     }
   ],
-  "required": ["type", "id", "category", "address"]
+  "required": [
+    "type",
+    "id",
+    "category",
+    "address"
+  ]
 }
