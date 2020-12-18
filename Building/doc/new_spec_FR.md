@@ -1,12 +1,14 @@
 Entité : Bâtiment  
 =================  
-Cette spécification est une **version temporelle**. Elle est générée automatiquement à partir des propriétés documentées décrites dans le schema.json condensé dans le fichier `model.yaml`. Un fichier temporaire `nouveau_modèle.yaml` a été créé dans chaque modèle de données pour éviter d'avoir un impact sur les scripts existants. Ainsi, la spécification sera incomplète tant que le fichier schema.json n'est pas mis à jour au nouveau format (documentation des propriétés). Une fois mis à jour, le fichier `model.yaml` (`nouveau_model.yaml`) doit être mis à jour également (automatiquement) . Plus d'informations dans ce [lien](https://github.com/smart-data-models/data-models/blob/master/specs/warning_message_new_spec.md). Tant qu'il s'agit d'un format provisoire, tout [feedback est le bienvenu dans ce formulaire](https://smartdatamodels.org/index.php/submit-an-issue-2/) en choisissant l'option "Feedback sur la nouvelle spécification".  
+[Licence ouverte] (https://github.com/smart-data-models//dataModel.Building/blob/master/Building/LICENSE.md)  
 Description globale : **Information sur un bâtiment donné**  
 
 ## Liste des biens  
 
-- `address`: L'adresse postale.  - `alternateName`: Un autre nom pour cet article  - `areaServed`: La zone géographique où un service ou un article offert est fourni.  - `category`:   - `containedInPlace`:   - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Il est généralement attribué par la plate-forme de stockage.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il est généralement attribué par la plate-forme de stockage.  - `description`: Une description de cet article  - `floorsAboveGround`: Planchers au-dessus du niveau du sol  - `floorsBelowGround`: Planchers sous le niveau du sol  - `id`:   - `location`:   - `name`: Le nom de cet article.  - `occupier`:   - `openingHours`: Heures d'ouverture de ce bâtiment.  - `owner`: Une liste contenant une séquence de caractères codés en JSON faisant référence aux Ids uniques du ou des propriétaires  - `refMap`: Relation. Référence à la carte contenant le bâtiment  - `seeAlso`:   - `source`: Une séquence de caractères donnant comme URL la source originale des données de l'entité. Il est recommandé d'utiliser le nom de domaine complet du fournisseur de la source, ou l'URL de l'objet source.  - `type`: NGSI Type d'entité    
-Cette entité contient une description harmonisée d'un bâtiment. Cette entité est associée aux segments verticaux des maisons intelligentes, des villes intelligentes, de l'industrie et des applications IdO connexes. Ce modèle de données a été partiellement développé en coopération avec les opérateurs de téléphonie mobile et le [GSMA] (https://www.gsma.com/iot/iot-big-data/). Par rapport au modèle de données du GSMA, suite aux changements introduits, la référence au "type de bâtiment" est supprimée, car l'attribut "type de bâtiment" comparé à l'attribut "catégorie" n'introduit pas d'informations significatives. L'attribut "category" est obligatoire. L'attribut "openingHours" est introduit selon le modèle de données de schema.org afin de permettre une précision sur les heures d'ouverture des bâtiments. La GSMA a supporté cela en tant que texte libre dans l'attribut "notes" (supprimé également). RefSubscriptionService" n'est pas supporté, car le modèle "SubscriptionService" n'est pas supporté actuellement.  
+- `address`: L'adresse postale.  - `alternateName`: Un autre nom pour cet article  - `areaServed`: La zone géographique où un service ou un article offert est fourni  - `category`: Catégorie de l'immeuble. Enum :Appartements, fournil, grange, pont, bungalow, bunker, cathédrale, cabane, abri d'auto, chapelle, église, municipal, commercial, conservatoire, construction, étable, isolé, digesteur, dortoir, ferme, ferme auxiliaire, garage, garages, hangar à ordures, tribune, serre, hangar, hôpital, hôtel, maison, péniche, cabane, industriel, jardin d'enfants, kiosque, mosquée, bureau, parking, pavillon, public, résidentiel, commerce, manège, toit, ruines, école, service, hangar, sanctuaire, écurie, stade, caravane statique, orgelet, synagogue, temple, terrasse, gare, tour de transformation, transport, université, entrepôt, tour d'eau  - `containedInPlace`:   - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Il est généralement attribué par la plate-forme de stockage.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il est généralement attribué par la plate-forme de stockage.  - `description`: Une description de cet article  - `floorsAboveGround`: Planchers au-dessus du niveau du sol  - `floorsBelowGround`: Planchers sous le niveau du sol  - `id`: Identifiant unique de l'entité  - `location`:   - `name`: Le nom de cet article.  - `occupier`: Personne ou entité utilisant le bâtiment  - `openingHours`: Heures d'ouverture de ce bâtiment.  - `owner`: Une liste contenant une séquence de caractères codés en JSON faisant référence aux Ids uniques du ou des propriétaires  - `refMap`: Référence à la carte contenant le bâtiment  - `seeAlso`: liste d'uri pointant vers des ressources supplémentaires sur le sujet  - `source`: Une séquence de caractères donnant comme URL la source originale des données de l'entité. Il est recommandé d'utiliser le nom de domaine complet du fournisseur de la source, ou l'URL de l'objet source.  - `type`: NGSI Type d'entité    
+Propriétés requises  
+- `address`  - `category`  - `id`  - `type`    
+Cette entité contient une description harmonisée d'un bâtiment. Cette entité est associée aux segments verticaux des maisons intelligentes, des villes intelligentes, de l'industrie et des applications IdO connexes. Ce modèle de données a été partiellement développé en coopération avec les opérateurs de téléphonie mobile et le [GSMA] (https://www.gsma.com/iot/iot-big-data/). Par rapport au modèle de données du GSMA, suite aux changements introduits, la référence au "type de bâtiment" est supprimée, car l'attribut "type de bâtiment" comparé à l'attribut "catégorie" n'introduit pas d'informations significatives. L'attribut "category" est obligatoire. L'attribut "openingHours" est introduit selon le modèle de données de schema.org afin de permettre une précision sur les heures d'ouverture des bâtiments. La GSMA a supporté cela en tant que texte libre dans l'attribut "notes" (supprimé également). RefSubscriptionService n'est pas supporté, car le modèle SubscriptionService n'est pas supporté actuellement.  
 ## Modèle de données description des biens  
 Classement par ordre alphabétique (cliquez pour plus de détails)  
 <details><summary><strong>full yaml details</strong></summary>    
@@ -18,91 +20,100 @@ Building:
       description: 'The mailing address.'    
       properties:    
         addressCountry:    
+          description: 'Property. The country. For example, Spain. Model:''https://schema.org/Text'''    
           type: string    
         addressLocality:    
+          description: 'Property. The locality in which the street address is, and which is in the region. Model:''https://schema.org/Text'''    
           type: string    
         addressRegion:    
+          description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/Text'''    
           type: string    
         areaServed:    
+          description: 'Property. The geographic area where a service or offered item is provided. Model:''https://schema.org/Text'''    
           type: string    
         postOfficeBoxNumber:    
+          description: 'Property. The post office box number for PO box addresses. For example, Spain. Model:''https://schema.org/Text'''    
           type: string    
         postalCode:    
+          description: 'Property. The postal code. For example, Spain. Model:''https://schema.org/Text'''    
           type: string    
         streetAddress:    
+          description: 'Property. The street address. Model:''https://schema.org/Text'''    
           type: string    
       type: Property    
     alternateName:    
       description: 'An alternative name for this item'    
       type: Property    
     areaServed:    
-      description: 'The geographic area where a service or offered item is provided.'    
+      description: 'The geographic area where a service or offered item is provided'    
       type: Property    
+      x-ngsi:    
+        model: https://schema.org/Text    
     category:    
-      description: ""    
+      description: 'Category of the building. Enum:''apartments, bakehouse, barn, bridge, bungalow, bunker, cathedral, cabin, carport, chapel, church, civic, commercial, conservatory, construction, cowshed, detached, digester, dormitory, farm, farm_auxiliary, garage, garages, garbage_shed, grandstand, greenhouse, hangar, hospital, hotel, house, houseboat, hut, industrial, kindergarten, kiosk, mosque, office, parking, pavilion, public, residential, retail, riding_hall, roof, ruins, school, service, shed, shrine, stable, stadium, static_caravan, sty, synagogue, temple, terrace, train_station, transformer_tower, transportation, university, warehouse, water_tower'''    
       items:    
         enum:    
           - apartments    
-          - farm    
-          - hotel    
-          - house    
-          - detached    
-          - residential    
-          - dormitory    
-          - terrace    
-          - houseboat    
-          - bungalow    
-          - static_caravan    
-          - commercial    
-          - office    
-          - industrial    
-          - retail    
-          - warehouse    
-          - kiosk    
           - bakehouse    
-          - cathedral    
-          - chapel    
-          - church    
-          - kindergarten    
-          - mosque    
-          - temple    
-          - synagogue    
-          - shrine    
-          - civic    
-          - hospital    
-          - school    
-          - stadium    
-          - train_station    
-          - transportation    
-          - university    
-          - grandstand    
-          - public    
           - barn    
           - bridge    
+          - bungalow    
           - bunker    
+          - cathedral    
           - cabin    
           - carport    
+          - chapel    
+          - church    
+          - civic    
+          - commercial    
           - conservatory    
           - construction    
           - cowshed    
+          - detached    
           - digester    
+          - dormitory    
+          - farm    
           - farm_auxiliary    
           - garage    
           - garages    
           - garbage_shed    
+          - grandstand    
           - greenhouse    
           - hangar    
+          - hospital    
+          - hotel    
+          - house    
+          - houseboat    
           - hut    
-          - pavilion    
+          - industrial    
+          - kindergarten    
+          - kiosk    
+          - mosque    
+          - office    
           - parking    
+          - pavilion    
+          - public    
+          - residential    
+          - retail    
           - riding_hall    
           - roof    
-          - shed    
-          - stable    
-          - sty    
-          - transformer_tower    
-          - service    
           - ruins    
+          - school    
+          - service    
+          - shed    
+          - shrine    
+          - stable    
+          - stadium    
+          - static_caravan    
+          - sty    
+          - synagogue    
+          - temple    
+          - terrace    
+          - train_station    
+          - transformer_tower    
+          - transportation    
+          - university    
+          - warehouse    
           - water_tower    
         type: string    
       type: Property    
@@ -270,9 +281,13 @@ Building:
     floorsAboveGround:    
       description: 'Floors above the ground level'    
       type: Property    
+      x-ngsi:    
+        model: https://schema.org/Number    
     floorsBelowGround:    
       description: 'Floors below the ground level'    
       type: Property    
+      x-ngsi:    
+        model: https://schema.org/Number    
     id:    
       anyOf: &anyof    
         - description: 'Property. Identifier format of any NGSI entity'    
@@ -283,6 +298,8 @@ Building:
         - description: 'Property. Identifier format of any NGSI entity'    
           format: uri    
           type: string    
+      description: 'Unique identifier of the entity'    
+      type: Property    
     location:    
       $id: https://geojson.org/schema/Geometry.json    
       $schema: "http://json-schema.org/draft-07/schema#"    
@@ -292,13 +309,16 @@ Building:
       description: 'The name of this item.'    
       type: Property    
     occupier:    
-      description: ""    
+      description: 'Person or entity using the building'    
       items:    
         oneOf:    
           - format: uri    
             type: string    
           - anyOf: *anyof    
-      type: Property    
+            description: 'Property. Unique identifier of the entity'    
+      type: Relationship    
+      x-ngsi:    
+        model: https://schema.org/URL    
     openingHours:    
       description: 'Opening hours of this building.'    
       items:    
@@ -310,12 +330,22 @@ Building:
       description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
       items:    
         anyOf: *anyof    
+        description: 'Property. Unique identifier of the entity'    
       type: Property    
     refMap:    
-      description: 'Relationship. Reference to the map containing the building'    
-      format: uri    
-      type: string    
+      anyOf:    
+        - description: 'Property. Identifier format of any NGSI entity'    
+          maxLength: 256    
+          minLength: 1    
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+          type: string    
+        - description: 'Property. Identifier format of any NGSI entity'    
+          format: uri    
+          type: string    
+      description: 'Reference to the map containing the building'    
+      type: Relationship    
     seeAlso:    
+      description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
         - items:    
             - format: uri    
@@ -324,6 +354,7 @@ Building:
           type: array    
         - format: uri    
           type: string    
+      type: Property    
     source:    
       description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
       type: Property    
@@ -378,7 +409,7 @@ Building:
 }  
 ```  
 #### Bâtiment NGSI V2 normalisé Exemple  
-Voici un exemple d'un bâtiment au format JSON tel que normalisé. Il est compatible avec NGSI V2 lorsqu'il utilise "options=valeurs clés" et renvoie les données de contexte d'une entité individuelle.  
+Voici un exemple d'un bâtiment au format JSON tel que normalisé. Ce format est compatible avec la version 2 du NGSI lorsqu'il n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {  
   "id": "building-a85e3da145c1",  
@@ -451,7 +482,7 @@ Building:
 }  
 ```  
 #### Construire les valeurs clés de l'INSG-LD Exemple  
-Voici un exemple d'un bâtiment au format JSON-LD comme valeurs clés. Ce format est compatible avec le format JSON-LD lorsqu'il n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
+Voici un exemple d'un bâtiment au format JSON-LD comme valeurs clés. Il est compatible avec le format NGSI-LD lorsqu'il utilise "options=keyValues" et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {"@context": ["https://schema.lab.fiware.org/ld/context",  
               "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"],  
