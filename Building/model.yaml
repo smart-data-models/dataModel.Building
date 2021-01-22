@@ -1,125 +1,356 @@
----
-# Copyright (c) 2020 Contributors to Smart-Data-Models
-# see https://github.com/smart-data-models/dataModel.Building
-
 Building:
+  description: 'Information on a given Building'
+  properties:
+    address:
+      description: 'The mailing address.'
+      properties:
+        addressCountry:
+          description: 'Property. The country. For example, Spain. Model:''https://schema.org/Text'''
+          type: string
+        addressLocality:
+          description: 'Property. The locality in which the street address is, and which is in the region. Model:''https://schema.org/Text'''
+          type: string
+        addressRegion:
+          description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/Text'''
+          type: string
+        areaServed:
+          description: 'Property. The geographic area where a service or offered item is provided. Model:''https://schema.org/Text'''
+          type: string
+        postOfficeBoxNumber:
+          description: 'Property. The post office box number for PO box addresses. For example, Spain. Model:''https://schema.org/Text'''
+          type: string
+        postalCode:
+          description: 'Property. The postal code. For example, Spain. Model:''https://schema.org/Text'''
+          type: string
+        streetAddress:
+          description: 'Property. The street address. Model:''https://schema.org/Text'''
+          type: string
+      type: Property
+    alternateName:
+      description: 'An alternative name for this item'
+      type: Property
+    areaServed:
+      description: 'The geographic area where a service or offered item is provided'
+      type: Property
+      x-ngsi:
+        model: https://schema.org/Text
+    category:
+      description: 'Category of the building. Enum:''apartments, bakehouse, barn, bridge, bungalow, bunker, cathedral, cabin, carport, chapel, church, civic, commercial, conservatory, construction, cowshed, detached, digester, dormitory, farm, farm_auxiliary, garage, garages, garbage_shed, grandstand, greenhouse, hangar, hospital, hotel, house, houseboat, hut, industrial, kindergarten, kiosk, mosque, office, parking, pavilion, public, residential, retail, riding_hall, roof, ruins, school, service, shed, shrine, stable, stadium, static_caravan, sty, synagogue, temple, terrace, train_station, transformer_tower, transportation, university, warehouse, water_tower'''
+      items:
+        enum:
+          - apartments
+          - bakehouse
+          - barn
+          - bridge
+          - bungalow
+          - bunker
+          - cathedral
+          - cabin
+          - carport
+          - chapel
+          - church
+          - civic
+          - commercial
+          - conservatory
+          - construction
+          - cowshed
+          - detached
+          - digester
+          - dormitory
+          - farm
+          - farm_auxiliary
+          - garage
+          - garages
+          - garbage_shed
+          - grandstand
+          - greenhouse
+          - hangar
+          - hospital
+          - hotel
+          - house
+          - houseboat
+          - hut
+          - industrial
+          - kindergarten
+          - kiosk
+          - mosque
+          - office
+          - parking
+          - pavilion
+          - public
+          - residential
+          - retail
+          - riding_hall
+          - roof
+          - ruins
+          - school
+          - service
+          - shed
+          - shrine
+          - stable
+          - stadium
+          - static_caravan
+          - sty
+          - synagogue
+          - temple
+          - terrace
+          - train_station
+          - transformer_tower
+          - transportation
+          - university
+          - warehouse
+          - water_tower
+        type: string
+      type: Property
+    containedInPlace:
+      $id: https://geojson.org/schema/Geometry.json
+      $schema: "http://json-schema.org/draft-07/schema#"
+      oneOf: &building_-_properties_-_location_-_oneof
+        - properties:
+            bbox:
+              items:
+                type: number
+              minItems: 4
+              type: array
+            coordinates:
+              items:
+                type: number
+              minItems: 2
+              type: array
+            type:
+              enum:
+                - Point
+              type: string
+          required:
+            - type
+            - coordinates
+          title: 'GeoJSON Point'
+          type: object
+        - properties:
+            bbox:
+              items:
+                type: number
+              minItems: 4
+              type: array
+            coordinates:
+              items:
+                items:
+                  type: number
+                minItems: 2
+                type: array
+              minItems: 2
+              type: array
+            type:
+              enum:
+                - LineString
+              type: string
+          required:
+            - type
+            - coordinates
+          title: 'GeoJSON LineString'
+          type: object
+        - properties:
+            bbox:
+              items:
+                type: number
+              minItems: 4
+              type: array
+            coordinates:
+              items:
+                items:
+                  items:
+                    type: number
+                  minItems: 2
+                  type: array
+                minItems: 4
+                type: array
+              type: array
+            type:
+              enum:
+                - Polygon
+              type: string
+          required:
+            - type
+            - coordinates
+          title: 'GeoJSON Polygon'
+          type: object
+        - properties:
+            bbox:
+              items:
+                type: number
+              minItems: 4
+              type: array
+            coordinates:
+              items:
+                items:
+                  type: number
+                minItems: 2
+                type: array
+              type: array
+            type:
+              enum:
+                - MultiPoint
+              type: string
+          required:
+            - type
+            - coordinates
+          title: 'GeoJSON MultiPoint'
+          type: object
+        - properties:
+            bbox:
+              items:
+                type: number
+              minItems: 4
+              type: array
+            coordinates:
+              items:
+                items:
+                  items:
+                    type: number
+                  minItems: 2
+                  type: array
+                minItems: 2
+                type: array
+              type: array
+            type:
+              enum:
+                - MultiLineString
+              type: string
+          required:
+            - type
+            - coordinates
+          title: 'GeoJSON MultiLineString'
+          type: object
+        - properties:
+            bbox:
+              items:
+                type: number
+              minItems: 4
+              type: array
+            coordinates:
+              items:
+                items:
+                  items:
+                    items:
+                      type: number
+                    minItems: 2
+                    type: array
+                  minItems: 4
+                  type: array
+                type: array
+              type: array
+            type:
+              enum:
+                - MultiPolygon
+              type: string
+          required:
+            - type
+            - coordinates
+          title: 'GeoJSON MultiPolygon'
+          type: object
+      title: 'GeoJSON Geometry'
+    dataProvider:
+      description: 'A sequence of characters identifying the provider of the harmonised data entity.'
+      type: Property
+    dateCreated:
+      description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'
+      format: date-time
+      type: Property
+    dateModified:
+      description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'
+      format: date-time
+      type: Property
+    description:
+      description: 'A description of this item'
+      type: Property
+    floorsAboveGround:
+      description: 'Floors above the ground level'
+      type: Property
+      x-ngsi:
+        model: https://schema.org/Number
+    floorsBelowGround:
+      description: 'Floors below the ground level'
+      type: Property
+      x-ngsi:
+        model: https://schema.org/Number
+    id:
+      anyOf: &anyof
+        - description: 'Property. Identifier format of any NGSI entity'
+          maxLength: 256
+          minLength: 1
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
+          type: string
+        - description: 'Property. Identifier format of any NGSI entity'
+          format: uri
+          type: string
+      description: 'Unique identifier of the entity'
+      type: Property
+    location:
+      $id: https://geojson.org/schema/Geometry.json
+      $schema: "http://json-schema.org/draft-07/schema#"
+      oneOf: *building_-_properties_-_location_-_oneof
+      title: 'GeoJSON Geometry'
+    name:
+      description: 'The name of this item.'
+      type: Property
+    occupier:
+      description: 'Person or entity using the building'
+      items:
+        oneOf:
+          - format: uri
+            type: string
+          - anyOf: *anyof
+            description: 'Property. Unique identifier of the entity'
+      type: Relationship
+      x-ngsi:
+        model: https://schema.org/URL
+    openingHours:
+      description: 'Opening hours of this building.'
+      items:
+        type: string
+      type: Property
+      x-ngsi:
+        model: https://schema.org/openingHours
+    owner:
+      description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'
+      items:
+        anyOf: *anyof
+        description: 'Property. Unique identifier of the entity'
+      type: Property
+    refMap:
+      anyOf:
+        - description: 'Property. Identifier format of any NGSI entity'
+          maxLength: 256
+          minLength: 1
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
+          type: string
+        - description: 'Property. Identifier format of any NGSI entity'
+          format: uri
+          type: string
+      description: 'Reference to the map containing the building'
+      type: Relationship
+    seeAlso:
+      description: 'list of uri pointing to additional resources about the item'
+      oneOf:
+        - items:
+            - format: uri
+              type: string
+          minItems: 1
+          type: array
+        - format: uri
+          type: string
+      type: Property
+    source:
+      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'
+      type: Property
+    type:
+      description: 'NGSI Entity type'
+      enum:
+        - Building
+      type: Property
   required:
     - type
     - id
     - category
     - address
-  allOf:
-    - $ref: 'https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/Common'
   type: object
-  description: |
-      This entity contains a harmonised description of a Building. This entity is associated with the vertical segments of smart homes, smart cities, industry and related IoT applications.
-      This data model has been partially developed in cooperation with mobile operators and the [GSMA](https://www.gsma.com/iot/iot-big-data/), compared to GSMA data model following changes are introduced:
-        -   the reference to `BuildingType` is removed, since `BuildingType` compared to
-          `category` attribute does not introduce significant information.
-      
-        -   `category` attribute is required.
-        -   `openingHours` is introduced following schema.org data model to allow
-          fine-grained on building opening times. GSMA supported this as free text in
-          the `notes` attribute (removed as well).
-        -   `refSubscriptionService` is not supported, since `SubscriptionService` model
-          is not supported currently.
-        - For a full description of the following attributes refer to GSMA [IoT Big Data Harmonised Data Model](https://github.com/GSMADeveloper/NGSI-LD-Entities)
-
-  properties:
-    address:
-      $ref: 'https://smart-data-models.github.io/data-models/schema.org.yaml#/address'
-    alternateName:
-      x-ngsi:
-        type: Property
-        model: 'https://schema.org/Text'
-      type: string
-      description: 'Alternate Name of the Building'
-    areaServed:
-      x-ngsi:
-        type: Property
-        model: 'https://schema.org/Text'
-      type: string
-      description: 'Higher level area to which the building belongs to. It can be used to group buildings by district, neighbourhood, etc.'
-    containedInPlace:
-      description: "The enclosing area the Building lies within"
-      externalDocs: 
-        url: "http://geojson.org/geojson-spec.html#geometry-objects"
-      properties: 
-        coordinates: 
-          oneOf: 
-            - 
-              $ref: "https://smart-data-models.github.io/data-models/geojson-ld.yaml#/Polygon/allOf/1/properties/coordinates"
-            - 
-              $ref: "https://smart-data-models.github.io/data-models/geojson-ld.yaml#/MultiPolygon/allOf/1/properties/coordinates"
-        type: 
-          $ref: "https://smart-data-models.github.io/data-models/geojson-ld.yaml#/Geometry/properties/type"
-      required: 
-        - type
-        - coordinates
-      type: object
-      x-ngsi: 
-        model: 
-          - "https://purl.org/geojson/vocab#Polygon"
-          - "https://purl.org/geojson/vocab#MultiPolygon"
-        type: GeoProperty
-    category:
-      $ref: >-
-        https://smart-data-models.github.io/data-models/openstreetmap.yaml#/Categories
-    dataProvider:
-      $ref: >-
-        https://smart-data-models.github.io/data-models/fiware-terms.yaml#/dataProvider
-    description:
-      $ref: >-
-        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/description
-    floorsAboveGround:
-      x-ngsi:
-        type: Property
-        model: 'https://schema.org/Integer'
-      type: integer
-      description: 'Number of floors above ground within the building'
-      format: int32
-    floorsBelowGround:
-      x-ngsi:
-        type: Property
-        model: 'https://schema.org/Integer'
-      type: integer
-      description: 'Number of floors below ground within the building'
-      format: int32
-    location:
-      $ref: 'https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/location'
-    name:
-      $ref: 'https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/name'
-    occupier:
-      x-ngsi:
-        model: "https://schema.org/URL"
-        type: Relationship
-      type: array
-      description: 'Link to the occupiers of the building'
-      items:
-        oneOf:
-          - type: string
-            format: uri
-          - &ref_0
-            anyOf:
-              - type: string
-                minLength: 1
-                maxLength: 256
-                pattern: '^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$'
-              - type: string
-                format: uri
-    openingHours:
-      $ref: >-
-        https://smart-data-models.github.io/data-models/schema.org.yaml#/openingHours
-    owner:
-      $ref: >-
-        https://smart-data-models.github.io/data-models/fiware-terms.yaml#/owner
-    refMap:
-      x-ngsi:
-        model: "https://schema.org/URL"
-        type: Relationship
-      type: string
-      description: 'The URL holding a map of the building'
-      format: uri
-    source:
-      $ref: >-
-        https://smart-data-models.github.io/data-models/fiware-terms.yaml#/source
