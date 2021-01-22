@@ -1,141 +1,164 @@
----
-# Copyright (c) 2020 Contributors to Smart-Data-Models
-# see https://github.com/smart-data-models/dataModel.Building
-
 BuildingOperation:
+  description: 'Information on a given Building Operation'
+  properties:
+    alternateName:
+      description: 'An alternative name for this item'
+      type: Property
+    dataProvider:
+      description: 'A sequence of characters identifying the provider of the harmonised data entity.'
+      type: Property
+    dateCreated:
+      description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'
+      format: date-time
+      type: Property
+    dateFinished:
+      description: 'The actual end date for the operation.'
+      format: date-time
+      type: Property
+      x-ngsi:
+        model: https://schema.org/DateTime
+    dateModified:
+      description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'
+      format: date-time
+      type: Property
+    dateStarted:
+      description: 'The actual start date for the operation.'
+      format: date-time
+      type: Property
+      x-ngsi:
+        model: https://schema.org/DateTime
+    description:
+      description: 'A description of this item'
+      type: Property
+    endDate:
+      description: 'The planned end date for the operation.'
+      format: date-time
+      type: Property
+      x-ngsi:
+        model: https://schema.org/DateTime
+    id:
+      anyOf: &buildingoperation_-_properties_-_owner_-_items_-_anyof
+        - description: 'Property. Identifier format of any NGSI entity'
+          maxLength: 256
+          minLength: 1
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
+          type: string
+        - description: 'Property. Identifier format of any NGSI entity'
+          format: uri
+          type: string
+      description: 'Unique identifier of the entity'
+      type: Property
+    name:
+      description: 'The name of this item.'
+      type: Property
+    operationSequence:
+      description: 'Id of the sequence of the operation when available'
+      items:
+        type: string
+      type: Property
+      x-ngsi:
+        model: https://schema.org/Text
+    operationType:
+      description: 'Type of the operation on the building'
+      type: Property
+      x-ngsi:
+        model: https://schema.org/Text
+    owner:
+      description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'
+      items:
+        anyOf: *buildingoperation_-_properties_-_owner_-_items_-_anyof
+        description: 'Property. Unique identifier of the entity'
+      type: Property
+    refBuilding:
+      anyOf:
+        - description: 'Property. Identifier format of any NGSI entity'
+          maxLength: 256
+          minLength: 1
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
+          type: string
+        - description: 'Property. Identifier format of any NGSI entity'
+          format: uri
+          type: string
+      description: 'Building reference where the operation is performed.'
+      type: Relationship
+      x-ngsi:
+        model: https://schema.org/URL
+    refOperator:
+      anyOf:
+        - description: 'Property. Identifier format of any NGSI entity'
+          maxLength: 256
+          minLength: 1
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
+          type: string
+        - description: 'Property. Identifier format of any NGSI entity'
+          format: uri
+          type: string
+      description: 'Reference to the Operator doing the operation on the building.'
+      type: Relationship
+      x-ngsi:
+        model: https://schema.org/URL
+    refRelatedBuildingOperation:
+      description: 'Reference to other building operations when in sequence'
+      items:
+        anyOf: *buildingoperation_-_properties_-_owner_-_items_-_anyof
+        description: 'Property. Unique identifier of the entity'
+      type: Relationship
+    refRelatedDeviceOperation:
+      description: 'Devices related to the current operation. A list of references to an entity of type Device.'
+      items:
+        anyOf: *buildingoperation_-_properties_-_owner_-_items_-_anyof
+        description: 'Property. Unique identifier of the entity'
+      type: Relationship
+      x-ngsi:
+        model: https://schema.org/URL
+    result:
+      description: 'Result of the building operation. Enum:''ok, aborted'''
+      enum:
+        - ok
+        - aborted
+      type: Property
+      x-ngsi:
+        model: https://schema.org/Text
+    seeAlso:
+      description: 'list of uri pointing to additional resources about the item'
+      oneOf:
+        - items:
+            - format: uri
+              type: string
+          minItems: 1
+          type: array
+        - format: uri
+          type: string
+      type: Property
+    source:
+      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'
+      type: Property
+    startDate:
+      description: 'The planned start date for the operation.'
+      format: date-time
+      type: Property
+      x-ngsi:
+        model: https://schema.org/DateTime
+    status:
+      description: 'Status of the operation. Enum:''cancelled, finished, ongoing, planned, scheduled'' '
+      enum:
+        - cancelled
+        - finished
+        - ongoing
+        - planned
+        - scheduled
+      type: Property
+      x-ngsi:
+        model: https://schema.org/Text
+    type:
+      description: 'It has to be BuildingOperation'
+      enum:
+        - BuildingOperation
+      type: Property
   required:
     - type
     - id
     - refBuilding
     - startDate
     - endDate
-  allOf:
-    - $ref: >-
-        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/Common
   type: object
-  description: |
-    This entity contains a harmonised description of a generic operation (related to
-    smart buildings) applied to the referenced building. The building operation
-    contains dynamic data reported by, or associated with a building or operations
-    applicable to the building. This entity is associated with the vertical segments
-    of smart homes, smart cities, industry and related IoT applications.
-
-    This data model has been partially developed in cooperation with mobile
-    operators and the [GSMA](https://www.gsma.com/iot/iot-big-data/), compared to
-    GSMA data model the following changes are introduced:
-
-    -   `refRelatedDeviceOperation` replaces `refRelatedOperation`
-
-      **Note**: JSON Schemas only capture the NGSI simplified representation, this
-    means that to test the JSON schema examples with a
-    [FIWARE NGSI version 2](http://fiware.github.io/specifications/ngsiv2/stable)
-    API implementation, you need to use the `keyValues` mode (`options=keyValues`).
-      For a full description of the following attributes refer to GSMA
-    [IoT Big Data Harmonised Data Model](https://github.com/GSMADeveloper/NGSI-LD-Entities)
-  properties:
-    alternateName:
-      x-ngsi:
-        type: Property
-        model: 'https://schema.org/Text'
-      type: string
-      description: 'Alternate Name of the Building'
-    dataProvider:
-      x-ngsi:
-        type: Property
-        model: 'https://schema.org/Text'
-      type: string
-      description: 'Specifies the URL to information about the provider of this
-    information'
-    dateFinished:
-      x-ngsi:
-        type: Property
-        model: 'https://schema.org/DateTime'
-      type: string
-      description: 'The actual end date for the operation'
-      format: date-time
-    dateStarted:
-      x-ngsi:
-        type: Property
-        model: 'https://schema.org/DateTime'
-      type: string
-      description: 'The actual start date for the operation.'
-      format: date-time
-    description:
-      $ref: >-
-        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/description
-    endDate:
-      x-ngsi:
-        type: Property
-        model: 'https://schema.org/DateTime'
-      type: string
-      description: 'The planned end date for the operation.'
-      format: date-time
-    name:
-      $ref: >-
-        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/name
-    operationSequence:
-      x-ngsi:
-        type: Property
-      type: array
-      description: ''
-      items:
-        type: string
-    operationType:
-      x-ngsi:
-        type: Property
-        model: 'https://schema.org/Text'
-      type: string
-      description: ''
-    owner:
-      $ref: >-
-        https://smart-data-models.github.io/data-models/fiware-terms.yaml#/owner
-    refRelatedBuildingOperation:
-      x-ngsi:
-        type: Relationship
-      type: array
-      description: ''
-      items: &ref_0
-        oneOf:
-          - type: string 
-            minLength: 1
-            maxLength: 256
-            pattern: '^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$'
-          - type: string
-            format: uri
-    refRelatedDeviceOperation:
-      x-ngsi:
-        type: Relationship
-      type: array
-      description: ''
-      items: *ref_0
-    result:
-      x-ngsi:
-        type: Property
-        model: 'https://schema.org/Text'
-      type: string
-      description: ''
-      enum:
-        - ok
-        - aborted
-    source:
-      $ref: >-
-        https://smart-data-models.github.io/data-models/fiware-terms.yaml#/source
-    startDate:
-      x-ngsi:
-        type: Property
-        model: 'https://schema.org/DateTime'
-      type: string
-      description: ''
-      format: date-time
-    status:
-      x-ngsi:
-        type: Property
-        model: 'https://schema.org/Text'
-      type: string
-      description: ''
-      enum:
-        - planned
-        - ongoing
-        - finished
-        - scheduled
-        - cancelled
