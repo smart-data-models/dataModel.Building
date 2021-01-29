@@ -2,7 +2,7 @@ Building:
   description: 'Information on a given Building'
   properties:
     address:
-      description: 'The mailing address.'
+      description: 'Property. The mailing address.'
       properties:
         addressCountry:
           description: 'Property. The country. For example, Spain. Model:''https://schema.org/Text'''
