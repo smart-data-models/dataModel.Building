@@ -2,7 +2,7 @@
   "$schema": "http://json-schema.org/schema#",
   "$schemaVersion": "0.0",
   "$id": "https://smart-data-models.github.io/dataModel.Building/Building/schema.json",
-  "title": "FIWARE - Building schema",
+  "title": "Smart Data Models- Building schema",
   "description": "Information on a given Building",
   "type": "object",
   "allOf": [
@@ -141,6 +141,12 @@
           "items": {
             "type": "string"
           }
+        },
+        "collapseRisk": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "description": "Property. Model:'https://schema.org/Number'. probability of collapse of the building, including internal, external or total collapse. "
         }
       }
     }
