@@ -146,7 +146,17 @@
           "type": "number",
           "minimum": 0,
           "maximum": 1,
-          "description": "Property. Model:'https://schema.org/Number'. probability of collapse of the building, including internal, external or total collapse. "
+          "description": "Property. Model:'https://schema.org/Number'. Probability of total collapse of the building."
+        },
+        "peopleCapacity": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Property. Model:'https://schema.org/Number'. Allowed people present at the building"
+        },
+        "peopleOccupancy": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Property. Model:'https://schema.org/Number'. People present at the building"
         }
       }
     }
