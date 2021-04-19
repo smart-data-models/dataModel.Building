@@ -1,7 +1,7 @@
 Entität: VibrationsObserved  
 ===========================  
 [Offene Lizenz](https://github.com/smart-data-models//dataModel.Building/blob/master/VibrationsObserved/LICENSE.md)  
-Globale Beschreibung: **Die Schwingungen, die an einem bestimmten Ort beobachtet werden.**  
+Globale Beschreibung: **Die an einem bestimmten Ort beobachteten Schwingungen.**  
 
 ## Liste der Eigenschaften  
 
