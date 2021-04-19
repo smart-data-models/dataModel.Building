@@ -2,7 +2,7 @@
 
 ## Description 
 
-Information on a given Building
+Visit model.yaml for further info on the description
 ### Specification
 
 Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://smart-data-models.github.io/dataModel.Building/Building/swagger.yaml)

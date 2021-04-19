@@ -1,33 +1,19 @@
 ---
-# Copyright (c) 2020 Contributors to Smart-Data-Models
-# see https://github.com/smart-data-models/dataModel.Building
+# Copyleft (c) 2021 Contributors to Smart Data Models initiative
+# 
 
 
-components: 
+components:
   schemas: 
     Building: 
       $ref: "https://smart-data-models.github.io/dataModel.Building/Building/model.yaml#/Building"
-    Categories: 
-      $ref: "https://smart-data-models.github.io/data-models/openstreetmap.yaml#/Categories"
-info: 
+info:
   description:  |
-    This entity contains a harmonised description of a Building. This entity is associated with the vertical segments of smart homes, smart cities, industry and related IoT applications.
-    This data model has been partially developed in cooperation with mobile operators and the [GSMA](https://www.gsma.com/iot/iot-big-data/), compared to GSMA data model following changes are introduced:
-    -   the reference to `BuildingType` is removed, since `BuildingType` compared to
-        `category` attribute does not introduce significant information.
-
-    -   `category` attribute is required.
-    -   `openingHours` is introduced following schema.org data model to allow
-        fine-grained on building opening times. GSMA supported this as free text in
-        the `notes` attribute (removed as well).
-
-    -   `refSubscriptionService` is not supported, since `SubscriptionService` model
-        is not supported currently.
+    Information on a given Building
   title: Building
   version: "1.0.0"
 openapi: "3.0.0"
 
-# These paths are merely representative.
 paths: 
   /ngsi-ld/v1/entities: 
     get: 
@@ -62,5 +48,5 @@ paths:
         - ngsi-ld
 tags: 
   - 
-    description: "NGSI-LD Linked-data Format\n"
+    description: "NGSI-LD Linked-data Format"
     name: ngsi-ld
