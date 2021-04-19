@@ -8,6 +8,8 @@ The following entity types are available:
 
 - [BuildingOperation](https://github.com/smart-data-models/dataModel.Building/blob/master/BuildingOperation/README.md). Information on a given Building Operation
 
+- [VibrationsObserved](https://github.com/smart-data-models/dataModel.Building/blob/master/VibrationsObserved/README.md). The vibrations observed in a specific place.
+
 
 
 ### Incubated data models
