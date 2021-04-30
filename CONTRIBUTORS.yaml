@@ -15,9 +15,23 @@ contributors:
  project: 
  comments: 
 -
+ name: Marc
+ surname: Fajula
+ mail: marc.fajula.soldevila@everis.com
+ organization: Everis
+ project:
+ comments:
+-
  name: Jason
  surname: Fox
  mail:
  organization: FIWARE Foundation 
  project: 
- comments: 
+ comments:
+-
+ name: David
+ surname: Garcia Esteller
+ mail: david.garcia.esteller@everis.com
+ organization: Everis
+ project:
+ comments:
