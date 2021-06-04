@@ -539,7 +539,7 @@ Building:
 </details>    
 ## Exemples de charges utiles  
 #### Exemple de construction de valeurs clés NGSI-v2  
-Voici un exemple d'un bâtiment au format JSON-LD en tant que valeurs-clés. Ceci est compatible avec NGSI-v2 lorsque l'on utilise `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
+Voici un exemple d'un bâtiment au format JSON-LD en tant que valeurs-clés. Ceci est compatible avec NGSI-v2 en utilisant `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
 ```json  
 {  
   "id": "building-a85e3da145c1",  
