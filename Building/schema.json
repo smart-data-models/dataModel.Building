@@ -1,6 +1,6 @@
 {
     "$schema": "http://json-schema.org/schema#",
-    "$schemaVersion": "0.0.1",
+    "$schemaVersion": "0.0.2",
     "$id": "https://smart-data-models.github.io/dataModel.Building/Building/schema.json",
     "title": "Smart Data Models- Building schema",
     "description": "Information on a given Building",
@@ -93,7 +93,7 @@
                     }
                 },
                 "containedInPlace": {
-                    "$ref": "http://geojson.org/schema/Geometry.json#"
+                    "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons/properties/location"
                 },
                 "occupier": {
                     "type": "array",
