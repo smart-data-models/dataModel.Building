@@ -1,6 +1,7 @@
 Entität: BuildingOperation  
 ==========================  
 [Offene Lizenz](https://github.com/smart-data-models//dataModel.Building/blob/master/BuildingOperation/LICENSE.md)  
+[Dokument automatisch generiert](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 Globale Beschreibung: **Informationen zu einem bestimmten Gebäudebetrieb**  
 
 ## Liste der Eigenschaften  
@@ -8,7 +9,7 @@ Entität: BuildingOperation
 - `alternateName`: Ein alternativer Name für diesen Artikel  - `dataProvider`: Eine Folge von Zeichen, die den Anbieter der harmonisierten Dateneinheit identifiziert.  - `dateCreated`: Zeitstempel der Entitätserstellung. Dieser wird normalerweise von der Speicherplattform zugewiesen.  - `dateFinished`: Das tatsächliche Enddatum für den Vorgang.  - `dateModified`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `dateStarted`: Das tatsächliche Startdatum für den Vorgang.  - `description`: Eine Beschreibung dieses Artikels  - `endDate`: Das geplante Enddatum für den Vorgang.  - `id`: Eindeutiger Bezeichner der Entität  - `name`: Der Name dieses Elements.  - `operationSequence`: Id der Sequenz des Vorgangs, wenn verfügbar  - `operationType`: Art der Operation am Gebäude  - `owner`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Ids der Eigentümer verweist  - `refBuilding`: Gebäudereferenz, in der der Vorgang ausgeführt wird.  - `refOperator`: Verweis auf den Bediener, der den Vorgang am Gebäude durchführt.  - `refRelatedBuildingOperation`: Verweis auf andere Bauvorgänge, wenn in Folge  - `refRelatedDeviceOperation`: Geräte, die sich auf den aktuellen Vorgang beziehen. Eine Liste von Verweisen auf eine Entität vom Typ Gerät.  - `result`: Ergebnis des Bauvorgangs. Enum:'ok, abgebrochen'  - `seeAlso`: Liste von uri, die auf zusätzliche Ressourcen über das Element verweist  - `source`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL zum Quellobjekt.  - `startDate`: Das geplante Startdatum für den Betrieb.  - `status`: Status des Vorgangs. Enum:'abgebrochen, beendet, laufend, geplant, vorgesehen'  - `type`: Es muss BuildingOperation sein    
 Erforderliche Eigenschaften  
 - `endDate`  - `id`  - `refBuilding`  - `startDate`  - `type`    
-Diese Einheit enthält eine harmonisierte Beschreibung eines generischen Vorgangs (bezogen auf intelligente Gebäude), der auf das referenzierte Gebäude angewendet wird. Der Gebäudebetrieb enthält dynamische Daten, die von einem Gebäude oder von auf das Gebäude anwendbaren Vorgängen gemeldet werden oder damit verbunden sind. Diese Entität ist mit den vertikalen Segmenten von Smart Homes, Smart Cities, Industrie und verwandten IoT-Anwendungen verbunden. Dieses Datenmodell wurde teilweise in Zusammenarbeit mit Mobilfunkbetreibern und der [GSMA] (https://www.gsma.com/iot/iot-big-data/) entwickelt. Im Vergleich zum GSMA-Datenmodell wurden die folgenden Änderungen eingeführt - `refRelatedDeviceOperation` ersetzt `refRelatedOperation`.  
+Diese Einheit enthält eine harmonisierte Beschreibung eines generischen Vorgangs (bezogen auf intelligente Gebäude), der auf das referenzierte Gebäude angewendet wird. Der Gebäudebetrieb enthält dynamische Daten, die von einem Gebäude oder von auf das Gebäude anwendbaren Vorgängen gemeldet werden oder damit verbunden sind. Diese Entität ist mit den vertikalen Segmenten von Smart Homes, Smart Cities, Industrie und verwandten IoT-Anwendungen verbunden. Dieses Datenmodell wurde teilweise in Zusammenarbeit mit Mobilfunkbetreibern und der [GSMA] (https://www.gsma.com/iot/iot-big-data/) entwickelt. Im Vergleich zum GSMA-Datenmodell wurden die folgenden Änderungen eingeführt - `refRelatedDeviceOperation` ersetzt `refRelatedOperation`  
 ## Datenmodell Beschreibung der Eigenschaften  
 Alphabetisch sortiert (für Details anklicken)  
 <details><summary><strong>full yaml details</strong></summary>    
@@ -138,8 +139,8 @@ BuildingOperation:
       description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
         - items:    
-            - format: uri    
-              type: string    
+            format: uri    
+            type: string    
           minItems: 1    
           type: array    
         - format: uri    

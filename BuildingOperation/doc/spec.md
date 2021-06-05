@@ -1,6 +1,7 @@
 Entity: BuildingOperation  
 =========================  
 [Open License](https://github.com/smart-data-models//dataModel.Building/blob/master/BuildingOperation/LICENSE.md)  
+[document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 Global description: **Information on a given Building Operation**  
 
 ## List of properties  
@@ -138,8 +139,8 @@ BuildingOperation:
       description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
         - items:    
-            - format: uri    
-              type: string    
+            format: uri    
+            type: string    
           minItems: 1    
           type: array    
         - format: uri    
@@ -180,8 +181,8 @@ BuildingOperation:
 ```  
 </details>    
 ## Example payloads    
-#### BuildingOperation NGSI V2 key-values Example    
-Here is an example of a BuildingOperation in JSON format as key-values. This is compatible with NGSI V2 when  using `options=keyValues` and returns the context data of an individual entity.  
+#### BuildingOperation NGSI-v2 key-values Example    
+Here is an example of a BuildingOperation in JSON-LD format as key-values. This is compatible with NGSI-v2 when  using `options=keyValues` and returns the context data of an individual entity.  
 ```json  
 {  
   "id": "57b912ab-eb47-4cd5-bc9d-73abece1f1b3",  
@@ -210,8 +211,8 @@ BuildingOperation:
   ]  
 }  
 ```  
-#### BuildingOperation NGSI V2 normalized Example    
-Here is an example of a BuildingOperation in JSON format as normalized. This is compatible with NGSI V2 when not using options and returns the context data of an individual entity.  
+#### BuildingOperation NGSI-v2 normalized Example    
+Here is an example of a BuildingOperation in JSON-LD format as normalized. This is compatible with NGSI-v2 when not using options and returns the context data of an individual entity.  
 ```json  
 {  
   "id": "57b912ab-eb47-4cd5-bc9d-73abece1f1b3",  
@@ -284,117 +285,140 @@ BuildingOperation:
 #### BuildingOperation NGSI-LD key-values Example    
 Here is an example of a BuildingOperation in JSON-LD format as key-values. This is compatible with NGSI-LD when  using `options=keyValues` and returns the context data of an individual entity.  
 ```json  
-{"@context": ["https://schema.lab.fiware.org/ld/context",  
-              "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"],  
- "createdAt": "2016-08-08T10:18:16Z",  
- "dataProvider": "OperatorA",  
- "dateFinished": {"@type": "DateTime", "@value": "2016-08-20T10:18:16Z"},  
- "dateStarted": {"@type": "DateTime", "@value": "2016-08-08T10:18:16Z"},  
- "description": "Air conditioning levels reduced due to out of hours",  
- "endDate": {"@type": "DateTime", "@value": "2016-08-20T10:18:16Z"},  
- "id": "urn:ngsi-ld:BuildingOperation:57b912ab-eb47-4cd5-bc9d-73abece1f1b3",  
- "modifiedAt": "2016-08-08T10:18:16Z",  
- "operationSequence": ["fan_power%3D0", "set_temperature%3D24"],  
- "operationType": "airConditioning",  
- "refBuilding": "urn:ngsi-ld:Building:building-a85e3da145c1",  
- "refRelatedBuildingOperation": ["urn:ngsi-ld:BuildingOperation:b4fb8bff-1a8f-455f-8cc0-ca43c069f865",  
-                                 "urn:ngsi-ld:BuildingOperation:55c24793-3437-4157-9bda-667c9e1531fc"],  
- "refRelatedDeviceOperation": ["urn:ngsi-ld:DeviceOperation:36744245-6716-4a28-84c7-0e3d7520f143",  
-                               "urn:ngsi-ld:DeviceOperation:33b2b713-9223-40a5-87a0-3f80a1264a6c"],  
- "result": "ok",  
- "source": "http://www.example.com",  
- "startDate": {"@type": "DateTime", "@value": "2016-08-08T10:18:16Z"},  
- "status": "finished",  
- "type": "BuildingOperation"}  
+{  
+  "id": "urn:ngsi-ld:BuildingOperation:57b912ab-eb47-4cd5-bc9d-73abece1f1b3",  
+  "type": "BuildingOperation",  
+  "modifiedAt": "2016-08-08T10:18:16Z",  
+  "createdAt": "2016-08-08T10:18:16Z",  
+  "status": {  
+    "type": "Property",  
+    "value": "finished"  
+  },  
+  "startDate": {  
+    "type": "Property",  
+    "value": {  
+      "@type": "DateTime",  
+      "@value": "2016-08-08T10:18:16Z"  
+    }  
+  },  
+  "operationSequence": {  
+    "type": "Property",  
+    "value": [  
+      "fan_power%3D0",  
+      "set_temperature%3D24"  
+    ]  
+  },  
+  "endDate": {  
+    "type": "Property",  
+    "value": {  
+      "@type": "DateTime",  
+      "@value": "2016-08-20T10:18:16Z"  
+    }  
+  },  
+  "description": {  
+    "type": "Property",  
+    "value": "Air conditioning levels reduced due to out of hours"  
+  },  
+  "refRelatedDeviceOperation": {  
+    "type": "Relationship",  
+    "object": [  
+      "urn:ngsi-ld:DeviceOperation:36744245-6716-4a28-84c7-0e3d7520f143",  
+      "urn:ngsi-ld:DeviceOperation:33b2b713-9223-40a5-87a0-3f80a1264a6c"  
+    ]  
+  },  
+  "refRelatedBuildingOperation": {  
+    "type": "Relationship",  
+    "object": [  
+      "urn:ngsi-ld:BuildingOperation:b4fb8bff-1a8f-455f-8cc0-ca43c069f865",  
+      "urn:ngsi-ld:BuildingOperation:55c24793-3437-4157-9bda-667c9e1531fc"  
+    ]  
+  },  
+  "source": {  
+    "type": "Property",  
+    "value": "http://www.example.com"  
+  },  
+  "refBuilding": {  
+    "type": "Relationship",  
+    "object": "urn:ngsi-ld:Building:building-a85e3da145c1"  
+  },  
+  "result": {  
+    "type": "Property",  
+    "value": "ok"  
+  },  
+  "operationType": {  
+    "type": "Property",  
+    "value": "airConditioning"  
+  },  
+  "dateStarted": {  
+    "type": "Property",  
+    "value": {  
+      "@type": "DateTime",  
+      "@value": "2016-08-08T10:18:16Z"  
+    }  
+  },  
+  "dateFinished": {  
+    "type": "Property",  
+    "value": {  
+      "@type": "DateTime",  
+      "@value": "2016-08-20T10:18:16Z"  
+    }  
+  },  
+  "dataProvider": {  
+    "type": "Property",  
+    "value": "OperatorA"  
+  },  
+  "@context": [  
+    "https://smartdatamodels.org/context.jsonld",  
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+  ]  
+}  
 ```  
 #### BuildingOperation NGSI-LD normalized Example    
 Here is an example of a BuildingOperation in JSON-LD format as normalized. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
 ```json  
 {  
-    "id": "urn:ngsi-ld:BuildingOperation:57b912ab-eb47-4cd5-bc9d-73abece1f1b3",  
-    "type": "BuildingOperation",  
-    "modifiedAt": "2016-08-08T10:18:16Z",  
-    "createdAt": "2016-08-08T10:18:16Z",  
-    "status": {  
-        "type": "Property",  
-        "value": "finished"  
-    },  
-    "startDate": {  
-        "type": "Property",  
-        "value": {  
-            "@type": "DateTime",  
-            "@value": "2016-08-08T10:18:16Z"  
-        }  
-    },  
-    "operationSequence": {  
-        "type": "Property",  
-        "value": [  
-            "fan_power%3D0",  
-            "set_temperature%3D24"  
-        ]  
-    },  
-    "endDate": {  
-        "type": "Property",  
-        "value": {  
-            "@type": "DateTime",  
-            "@value": "2016-08-20T10:18:16Z"  
-        }  
-    },  
-    "description": {  
-        "type": "Property",  
-        "value": "Air conditioning levels reduced due to out of hours"  
-    },  
-    "refRelatedDeviceOperation": {  
-        "type": "Relationship",  
-        "object": [  
-            "urn:ngsi-ld:DeviceOperation:36744245-6716-4a28-84c7-0e3d7520f143",  
-            "urn:ngsi-ld:DeviceOperation:33b2b713-9223-40a5-87a0-3f80a1264a6c"  
-        ]  
-    },  
-    "refRelatedBuildingOperation": {  
-        "type": "Relationship",  
-        "object": [  
-            "urn:ngsi-ld:BuildingOperation:b4fb8bff-1a8f-455f-8cc0-ca43c069f865",  
-            "urn:ngsi-ld:BuildingOperation:55c24793-3437-4157-9bda-667c9e1531fc"  
-        ]  
-    },  
-    "source": {  
-        "type": "Property",  
-        "value": "http://www.example.com"  
-    },  
-    "refBuilding": {  
-        "type": "Relationship",  
-        "object": "urn:ngsi-ld:Building:building-a85e3da145c1"  
-    },  
-    "result": {  
-        "type": "Property",  
-        "value": "ok"  
-    },  
-    "operationType": {  
-        "type": "Property",  
-        "value": "airConditioning"  
-    },  
-    "dateStarted": {  
-        "type": "Property",  
-        "value": {  
-            "@type": "DateTime",  
-            "@value": "2016-08-08T10:18:16Z"  
-        }  
-    },  
-    "dateFinished": {  
-        "type": "Property",  
-        "value": {  
-            "@type": "DateTime",  
-            "@value": "2016-08-20T10:18:16Z"  
-        }  
-    },  
-    "dataProvider": {  
-        "type": "Property",  
-        "value": "OperatorA"  
-    },  
-    "@context": [  
-        "https://schema.lab.fiware.org/ld/context",  
-        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-    ]  
+  "@context": [  
+    "https://smartdatamodels.org/context.jsonld",  
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+  ],  
+  "createdAt": "2016-08-08T10:18:16Z",  
+  "dataProvider": "OperatorA",  
+  "dateFinished": {  
+    "@type": "DateTime",  
+    "@value": "2016-08-20T10:18:16Z"  
+  },  
+  "dateStarted": {  
+    "@type": "DateTime",  
+    "@value": "2016-08-08T10:18:16Z"  
+  },  
+  "description": "Air conditioning levels reduced due to out of hours",  
+  "endDate": {  
+    "@type": "DateTime",  
+    "@value": "2016-08-20T10:18:16Z"  
+  },  
+  "id": "urn:ngsi-ld:BuildingOperation:57b912ab-eb47-4cd5-bc9d-73abece1f1b3",  
+  "modifiedAt": "2016-08-08T10:18:16Z",  
+  "operationSequence": [  
+    "fan_power%3D0",  
+    "set_temperature%3D24"  
+  ],  
+  "operationType": "airConditioning",  
+  "refBuilding": "urn:ngsi-ld:Building:building-a85e3da145c1",  
+  "refRelatedBuildingOperation": [  
+    "urn:ngsi-ld:BuildingOperation:b4fb8bff-1a8f-455f-8cc0-ca43c069f865",  
+    "urn:ngsi-ld:BuildingOperation:55c24793-3437-4157-9bda-667c9e1531fc"  
+  ],  
+  "refRelatedDeviceOperation": [  
+    "urn:ngsi-ld:DeviceOperation:36744245-6716-4a28-84c7-0e3d7520f143",  
+    "urn:ngsi-ld:DeviceOperation:33b2b713-9223-40a5-87a0-3f80a1264a6c"  
+  ],  
+  "result": "ok",  
+  "source": "http://www.example.com",  
+  "startDate": {  
+    "@type": "DateTime",  
+    "@value": "2016-08-08T10:18:16Z"  
+  },  
+  "status": "finished",  
+  "type": "BuildingOperation"  
 }  
 ```  

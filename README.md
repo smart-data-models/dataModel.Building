@@ -17,11 +17,13 @@ The list of incubated (on development) data models are:
 
   - [BuildingType_incubated](https://github.com/smart-data-models/dataModel.Building/tree/master/BuildingType_incubated)
 
+  - [Enclosure_incubated](https://github.com/smart-data-models/dataModel.Building/tree/master/Enclosure_incubated)
+
   - [Floor_incubated](https://github.com/smart-data-models/dataModel.Building/tree/master/Floor_incubated)
 
 
 ### Contributors
-[Link](https://github.com/smart-data-models/dataModel.Building/blob/master/CONTRIBUTORS.yaml) to the 3 current contributors of the data models of this Subject.
+[Link](https://github.com/smart-data-models/dataModel.Building/blob/master/CONTRIBUTORS.yaml) to the 5 current contributors of the data models of this Subject.
 
 
 ### Contribution
