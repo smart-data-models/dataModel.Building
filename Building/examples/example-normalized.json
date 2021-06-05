@@ -2,20 +2,28 @@
   "id": "building-a85e3da145c1",
   "type": "Building",
   "category": {
-    "value": ["office"]
+    "type": "Array",
+    "value": [
+      "office"
+    ]
   },
   "floorsBelowGround": {
+    "type": "Integer",
     "value": 0
   },
   "description": {
+    "type": "Text",
     "value": "Office block"
   },
   "floorsAboveGround": {
+    "type": "Integer",
     "value": 7
   },
   "occupier": {
     "type": "Relationship",
-    "value": ["9830f692-7677-11e6-838b-4f9fb3dc5a4f"]
+    "value": [
+      "9830f692-7677-11e6-838b-4f9fb3dc5a4f"
+    ]
   },
   "mapUrl": {
     "type": "URL",
@@ -26,13 +34,37 @@
     "value": "2016-08-08T10:18:16Z"
   },
   "source": {
+    "type": "Text",
     "value": "http://www.example.com"
   },
   "location": {
     "type": "geo:json",
     "value": {
       "type": "Polygon",
-      "coordinates": [[[100, 0], [101, 0], [101, 1], [100, 1], [100, 0]]]
+      "coordinates": [
+        [
+          [
+            100,
+            0
+          ],
+          [
+            101,
+            0
+          ],
+          [
+            101,
+            1
+          ],
+          [
+            100,
+            1
+          ],
+          [
+            100,
+            0
+          ]
+        ]
+      ]
     }
   },
   "address": {
@@ -51,9 +83,15 @@
     ]
   },
   "openingHours": {
-    "value": ["Mo-Fr 10:00-19:00", "Sa 10:00-22:00", "Su 10:00-21:00"]
+    "type": "Array",
+    "value": [
+      "Mo-Fr 10:00-19:00",
+      "Sa 10:00-22:00",
+      "Su 10:00-21:00"
+    ]
   },
   "dataProvider": {
+    "type": "Text",
     "value": "OperatorA"
   },
   "dateModified": {
@@ -61,9 +99,33 @@
     "value": "2016-08-08T10:18:16Z"
   },
   "containedInPlace": {
+    "type": "geo:json",
     "value": {
       "type": "Polygon",
-      "coordinates": [[[100, 0], [101, 0], [101, 1], [100, 1], [100, 0]]]
+      "coordinates": [
+        [
+          [
+            100,
+            0
+          ],
+          [
+            101,
+            0
+          ],
+          [
+            101,
+            1
+          ],
+          [
+            100,
+            1
+          ],
+          [
+            100,
+            0
+          ]
+        ]
+      ]
     }
   }
 }
