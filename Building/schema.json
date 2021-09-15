@@ -3,5 +3,6 @@
     "$schemaVersion": "0.0.2",
     "modelTags": "",
     "$id": "https://smart-data-models.github.io/dataModel.Building/Building/schema.json",
-    "title": "Smart Data Models- Building schema"
+    "title": "Smart Data Models- Building schema",
+    "description": "Information on a given Building"
 }
