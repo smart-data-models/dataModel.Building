@@ -3,5 +3,6 @@
     "$schemaVersion": "0.0.1",
     "modelTags": "",
     "$id": "https://smart-data-models.github.io/dataModel.Building/VibrationsObserved/schema.json",
-    "title": " Smart Data Models - vibrations Observed"
+    "title": " Smart Data Models - vibrations Observed",
+    "description": "The vibrations observed in a specific place."
 }
