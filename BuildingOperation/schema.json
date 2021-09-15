@@ -4,5 +4,6 @@
     "modelTags": "",
     "$id": "https://smart-data-models.github.io/dataModel.Building/BuildingOperation/schema.json",
     "title": "Smart data models - Building Operation schema",
-    "description": "Information on a given Building Operation"
+    "description": "Information on a given Building Operation",
+    "type": "object"
 }
