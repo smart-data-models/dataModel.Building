@@ -33,5 +33,10 @@
                 }
             }
         }
+    ],
+    "required": [
+        "id",
+        "dateObserved",
+        "accelerationMeasured"
     ]
 }
