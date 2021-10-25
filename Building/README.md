@@ -6,7 +6,7 @@ Version: 0.0.2
 Information on a given Building
 ### Specification
 
-Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://github.com/smart-data-models/dataModel.Building/blob/master/Building/swagger.yaml)
+Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://raw.githubusercontent.com/smart-data-models/dataModel.Building/master/Building/swagger.yaml)
 
 Link to the [specification](https://github.com/smart-data-models/dataModel.Building/blob/master/Building/doc/spec.md)
 
