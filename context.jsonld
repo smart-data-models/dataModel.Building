@@ -11,7 +11,7 @@
         "dateCreated": "https://smartdatamodels.org/dateCreated",
         "dateFinished": "https://smartdatamodels.org/dataModel.Building/dateFinished",
         "dateModified": "https://smartdatamodels.org/dateModified",
-        "dateObserved": "https://smartdatamodels.org/dataModel.Building/dateObserved",
+        "dateObserved": "https://smartdatamodels.org/dateObserved",
         "dateStarted": "https://smartdatamodels.org/dataModel.Building/dateStarted",
         "description": "http://purl.org/dc/terms/description",
         "endDate": "https://smartdatamodels.org/dataModel.Building/endDate",
