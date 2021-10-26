@@ -1,5 +1,6 @@
 Building:
   description: 'Information on a given Building'
+  modelTags: ""
   properties:
     address:
       description: 'The mailing address'
@@ -410,3 +411,4 @@ Building:
     - category
     - address
   type: object
+  version: 0.0.2
