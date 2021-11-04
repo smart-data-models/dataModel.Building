@@ -20,6 +20,7 @@
         "id": "@id",
         "location": "ngsi-ld:location",
         "name": "https://smartdatamodels.org/name",
+        "ngsi-ld": "https://uri.etsi.org/ngsi-ld/",
         "occupier": "https://smartdatamodels.org/dataModel.Building/occupier",
         "openingHours": "https://smartdatamodels.org/dataModel.Building/openingHours",
         "operationSequence": "https://smartdatamodels.org/dataModel.Building/operationSequence",
