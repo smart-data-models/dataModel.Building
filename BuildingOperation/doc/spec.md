@@ -19,39 +19,52 @@ BuildingOperation:
   properties:    
     alternateName:    
       description: 'An alternative name for this item'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     dataProvider:    
       description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     dateCreated:    
       description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'    
       format: date-time    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     dateFinished:    
       description: 'The actual end date for the operation.'    
       format: date-time    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/DateTime    
+        type: Property    
     dateModified:    
       description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'    
       format: date-time    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     dateStarted:    
       description: 'The actual start date for the operation.'    
       format: date-time    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/DateTime    
+        type: Property    
     description:    
       description: 'A description of this item'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     endDate:    
       description: 'The planned end date for the operation.'    
       format: date-time    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/DateTime    
+        type: Property    
     id:    
       anyOf: &buildingoperation_-_properties_-_owner_-_items_-_anyof    
         - description: 'Property. Identifier format of any NGSI entity'    
@@ -63,28 +76,35 @@ BuildingOperation:
           format: uri    
           type: string    
       description: 'Unique identifier of the entity'    
-      type: Property    
+      x-ngsi:    
+        type: Property    
     name:    
       description: 'The name of this item.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     operationSequence:    
       description: 'Id of the sequence of the operation when available'    
       items:    
         type: string    
-      type: Property    
+      type: array    
       x-ngsi:    
         model: https://schema.org/Text    
+        type: Property    
     operationType:    
       description: 'Type of the operation on the building'    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/Text    
+        type: Property    
     owner:    
       description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
       items:    
         anyOf: *buildingoperation_-_properties_-_owner_-_items_-_anyof    
         description: 'Property. Unique identifier of the entity'    
-      type: Property    
+      type: array    
+      x-ngsi:    
+        type: Property    
     refBuilding:    
       anyOf:    
         - description: 'Property. Identifier format of any NGSI entity'    
@@ -96,9 +116,9 @@ BuildingOperation:
           format: uri    
           type: string    
       description: 'Building reference where the operation is performed.'    
-      type: Relationship    
       x-ngsi:    
         model: https://schema.org/URL    
+        type: Relationship    
     refOperator:    
       anyOf:    
         - description: 'Property. Identifier format of any NGSI entity'    
@@ -110,31 +130,35 @@ BuildingOperation:
           format: uri    
           type: string    
       description: 'Reference to the Operator doing the operation on the building.'    
-      type: Relationship    
       x-ngsi:    
         model: https://schema.org/URL    
+        type: Relationship    
     refRelatedBuildingOperation:    
       description: 'Reference to other building operations when in sequence'    
       items:    
         anyOf: *buildingoperation_-_properties_-_owner_-_items_-_anyof    
         description: 'Property. Unique identifier of the entity'    
-      type: Relationship    
+      type: array    
+      x-ngsi:    
+        type: Relationship    
     refRelatedDeviceOperation:    
       description: 'Devices related to the current operation. A list of references to an entity of type Device.'    
       items:    
         anyOf: *buildingoperation_-_properties_-_owner_-_items_-_anyof    
         description: 'Property. Unique identifier of the entity'    
-      type: Relationship    
+      type: array    
       x-ngsi:    
         model: https://schema.org/URL    
+        type: Relationship    
     result:    
       description: 'Result of the building operation. Enum:''ok, aborted'''    
       enum:    
         - ok    
         - aborted    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/Text    
+        type: Property    
     seeAlso:    
       description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
@@ -145,16 +169,20 @@ BuildingOperation:
           type: array    
         - format: uri    
           type: string    
-      type: Property    
+      x-ngsi:    
+        type: Property    
     source:    
       description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     startDate:    
       description: 'The planned start date for the operation.'    
       format: date-time    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/DateTime    
+        type: Property    
     status:    
       description: 'Status of the operation. Enum:''cancelled, finished, ongoing, planned, scheduled'' '    
       enum:    
@@ -163,14 +191,17 @@ BuildingOperation:
         - ongoing    
         - planned    
         - scheduled    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/Text    
+        type: Property    
     type:    
       description: 'It has to be BuildingOperation'    
       enum:    
         - BuildingOperation    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
   required:    
     - type    
     - id    
