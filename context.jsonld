@@ -5,7 +5,7 @@
         "alternateName": "https://smartdatamodels.org/alternateName",
         "areaServed": "https://smartdatamodels.org/areaServed",
         "buildingTypeChildren": "https://smartdatamodels.org/dataModel.Building/buildingTypeChildren",
-        "buildingTypeParent ": "https://smartdatamodels.org/dataModel.Building/buildingTypeParent ",
+        "buildingTypeParent": "https://smartdatamodels.org/dataModel.Building/buildingTypeParent",
         "category": "https://smartdatamodels.org/dataModel.Building/category",
         "collapseRisk": "https://smartdatamodels.org/dataModel.Building/collapseRisk",
         "containedInPlace": "https://smartdatamodels.org/dataModel.Building/containedInPlace",
