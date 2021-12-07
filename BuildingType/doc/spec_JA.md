@@ -6,7 +6,7 @@
 
 ## プロパティのリスト  
 
-- `address`: 郵送先住所  - `alternateName`: このアイテムの別称  - `areaServed`: サービスや提供されるアイテムが提供される地理的なエリア  - `buildingTypeChildren`: 階層構造の中でこのエンティティのすぐ下に位置する、子ビルディングタイプへの参照。  - `buildingTypeParent`: このタイプのベースとなっている上位のビルディングタイプエンティティを参照します。  - `dataProvider`: 調和されたデータ・エンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `dateModified`: エンティティが最後に変更された時のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `description`: このアイテムの説明  - `id`: エンティティのユニークな識別子  - `location`: アイテムへのGeojson参照。Point、LineString、Polygon、MultiPoint、MultiLineString、MultiPolygonのいずれかです。  - `name`: このアイテムの名前です。  - `owner`: オーナーのIDを参照するJSONエンコードされた文字列を含むリスト  - `root`: これが BuildingType 階層のルートであることを示す論理的な指標。True はルートであることを示し、False はルートでないことを示す。  - `seeAlso`: アイテムに関する追加リソースを示すuriのリスト  - `source`: エンティティデータのオリジナルソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `type`: NGSI Entityの識別子。BuildingTypeでなければならない。    
+- `address`: 郵送先住所  - `alternateName`: このアイテムの別称  - `areaServed`: サービスや提供されるアイテムが提供される地理的なエリア  - `buildingTypeChildren`: 階層構造の中でこのエンティティのすぐ下に位置する、子ビルディングタイプへの参照。  - `buildingTypeParent`: このタイプのベースとなっている上位のビルディングタイプエンティティを参照します。  - `dataProvider`: 調和されたデータ・エンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `dateModified`: エンティティが最後に変更された時のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `description`: このアイテムの説明  - `id`: エンティティのユニークな識別子  - `location`: アイテムへのGeojson参照。Point、LineString、Polygon、MultiPoint、MultiLineString、MultiPolygonのいずれかです。  - `name`: このアイテムの名前です。  - `owner`: オーナーのIDを参照するJSONエンコードされた文字列を含むリスト  - `root`: これが BuildingType 階層のルートであることを示す論理的な指標。True はルートであることを示し、False はルートでないことを示す。  - `seeAlso`: アイテムに関する追加リソースを示すuriのリスト  - `source`: エンティティデータのオリジナルソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `type`: NGSI エンティティの識別子。BuildingTypeでなければならない。    
 必須項目  
 - `id`  - `type`    
 このデータモデルは、GSMAのIoTプロジェクト（https://www.gsma.com/iot/iot-big-data/）の原型となるものです。スマートデータモデルの要件を満たすために、いくつかのマイナーな調整が行われています。  
@@ -69,11 +69,11 @@ BuildingType:
       x-ngsi:    
         type: Relationship    
     buildingTypeParent:    
-      'anyOf ':    
-        - 'description ': 'Property. Identifier format of any NGSI entity '    
-          'maxLength ': 256    
-          'minLength ': 1    
-          'pattern ': ^[\w\-\.\{\}\$\+\*\[\]`|~^@!:\\]+$    
+      anyOf:    
+        - description: 'Property. Identifier format of any NGSI entity'    
+          maxLength: 256    
+          minLength: 1    
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!:\\]+$    
           type: string    
         - description: 'Property. Identifier format of any NGSI entity'    
           format: uri    
@@ -320,7 +320,7 @@ BuildingType:
   x-license-url: https://github.com/smart-data-models/dataModel.Building/blob/master/BuildingType/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.Building/BuildingType/schema.json    
   x-model-tags: GSMA    
-  x-version: 0.0.2    
+  x-version: 0.0.3    
 ```  
 </details>    
 ## ペイロードの例  
