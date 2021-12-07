@@ -6,7 +6,7 @@ Entität: GebäudeTyp
 
 ## Liste der Eigenschaften  
 
-- `address`: Die Postanschrift  - `alternateName`: Ein alternativer Name für diesen Artikel  - `areaServed`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  - `buildingTypeChildren`: Verweis auf untergeordnete Gebäudetypen, d. h. unmittelbar unter dieser Einheit in der Hierarchie.  - `buildingTypeParent `: Verweist auf alle übergeordneten Gebäudetyp-Entitäten, auf denen dieser Typ basiert.  - `dataProvider`: Eine Folge von Zeichen zur Identifizierung des Anbieters der harmonisierten Dateneinheit.  - `dateCreated`: Zeitstempel der Entitätserstellung. Dieser wird in der Regel von der Speicherplattform zugewiesen.  - `dateModified`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `description`: Eine Beschreibung dieses Artikels  - `id`: Eindeutiger Bezeichner der Entität  - `location`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `name`: Der Name dieses Artikels.  - `owner`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Kennungen der Eigentümer verweist  - `root`: Ein logischer Indikator dafür, dass es sich um die Wurzel einer BuildingType-Hierarchie handelt. true bedeutet, dass es sich um die Wurzel handelt, false bedeutet, dass es sich nicht um die Wurzel handelt.  - `seeAlso`: Liste von URLs, die auf zusätzliche Ressourcen zu dem Artikel verweisen  - `source`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL des Quellobjekts.  - `type`: NGSI Entity-Bezeichner. Er muss BuildingType sein    
+- `address`: Die Postanschrift  - `alternateName`: Ein alternativer Name für diesen Artikel  - `areaServed`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  - `buildingTypeChildren`: Verweis auf untergeordnete Gebäudetypen, d. h. unmittelbar unter dieser Einheit in der Hierarchie.  - `buildingTypeParent`: Verweist auf alle übergeordneten Gebäudetyp-Entitäten, auf denen dieser Typ basiert.  - `dataProvider`: Eine Folge von Zeichen zur Identifizierung des Anbieters der harmonisierten Dateneinheit.  - `dateCreated`: Zeitstempel der Entitätserstellung. Dieser wird in der Regel von der Speicherplattform zugewiesen.  - `dateModified`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `description`: Eine Beschreibung dieses Artikels  - `id`: Eindeutiger Bezeichner der Entität  - `location`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `name`: Der Name dieses Artikels.  - `owner`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Kennungen der Eigentümer verweist  - `root`: Ein logischer Indikator dafür, dass es sich um die Wurzel einer BuildingType-Hierarchie handelt. true bedeutet, dass es sich um die Wurzel handelt, false bedeutet, dass es sich nicht um die Wurzel handelt.  - `seeAlso`: Liste von URLs, die auf zusätzliche Ressourcen zu dem Artikel verweisen  - `source`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL des Quellobjekts.  - `type`: NGSI Entity-Bezeichner. Er muss BuildingType sein    
 Erforderliche Eigenschaften  
 - `id`  - `type`    
 Dieses Datenmodell stammt aus dem ursprünglichen GSMA IoT-Projekt, https://www.gsma.com/iot/iot-big-data/. Es wurden einige kleinere Anpassungen vorgenommen, um den Anforderungen intelligenter Datenmodelle zu entsprechen.  
@@ -68,7 +68,7 @@ BuildingType:
       type: array    
       x-ngsi:    
         type: Relationship    
-    'buildingTypeParent ':    
+    buildingTypeParent:    
       'anyOf ':    
         - 'description ': 'Property. Identifier format of any NGSI entity '    
           'maxLength ': 256    
@@ -320,7 +320,7 @@ BuildingType:
   x-license-url: https://github.com/smart-data-models/dataModel.Building/blob/master/BuildingType/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.Building/BuildingType/schema.json    
   x-model-tags: GSMA    
-  x-version: 0.0.1    
+  x-version: 0.0.2    
 ```  
 </details>    
 ## Beispiel-Nutzlasten  
@@ -448,4 +448,4 @@ BuildingType:
   }  
 }  
 ```  
-Siehe [FAQ 10](https://smartdatamodels.org/index.php/faqs/), um eine Antwort auf die Frage zu erhalten, wie man mit Größeneinheiten umgeht
+Siehe [FAQ 10] (https://smartdatamodels.org/index.php/faqs/), um eine Antwort auf die Frage zu erhalten, wie man mit Größeneinheiten umgeht  
