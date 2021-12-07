@@ -69,11 +69,11 @@ BuildingType:
       x-ngsi:    
         type: Relationship    
     buildingTypeParent:    
-      'anyOf ':    
-        - 'description ': 'Property. Identifier format of any NGSI entity '    
-          'maxLength ': 256    
-          'minLength ': 1    
-          'pattern ': ^[\w\-\.\{\}\$\+\*\[\]`|~^@!:\\]+$    
+      anyOf:    
+        - description: 'Property. Identifier format of any NGSI entity'    
+          maxLength: 256    
+          minLength: 1    
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!:\\]+$    
           type: string    
         - description: 'Property. Identifier format of any NGSI entity'    
           format: uri    
@@ -320,7 +320,7 @@ BuildingType:
   x-license-url: https://github.com/smart-data-models/dataModel.Building/blob/master/BuildingType/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.Building/BuildingType/schema.json    
   x-model-tags: GSMA    
-  x-version: 0.0.2    
+  x-version: 0.0.3    
 ```  
 </details>    
 ## Example payloads    
