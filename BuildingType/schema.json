@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "$schemaVersion": "0.0.2",
+  "$schemaVersion": "0.0.3",
   "modelTags": "GSMA",
   "$id": "https://smart-data-models.github.io/dataModel.Building/BuildingType/schema.json",
   "title": "Smart Data models - BuildingType schema",
