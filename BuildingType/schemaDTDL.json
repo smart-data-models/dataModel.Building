@@ -23,9 +23,9 @@
             "comment": "The geographic area where a service or offered item is provided"
         },
         {
-            "name": "buildingTypeParent ",
+            "name": "buildingTypeParent",
             "writable": true,
-            "displayName": "buildingTypeParent "
+            "displayName": "buildingTypeParent"
         },
         {
             "name": "dataProvider",
