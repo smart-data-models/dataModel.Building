@@ -1,23 +1,24 @@
 {
-  "@context": [
-    "https://schema.lab.fiware.org/ld/context",
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
-  ],
-  "id": "urn:ngsi-ld:VibrationsObserved-Sevilla-1",
-  "type": "VibrationsObserved",
-  "name": "Sevilla vibrations",
-  "address": {
-    "addressCountry": "ES",
-    "addressLocality": "Sevilla"
-  },
-  "location": {
-    "type": "Point",
-    "coordinates": [
-      37.3984759,
-      -5.9904124
+    "id": "urn:ngsi-ld:VibrationsObserved-Sevilla-1",
+    "type": "VibrationsObserved",
+    "accelerationMeasured": 1.3,
+    "address": {
+        "addressCountry": "ES",
+        "addressLocality": "Sevilla"
+    },
+    "dataProvider": "IMU-Station-123",
+    "dateObserved": "2021-03-08T09:45:00Z",
+    "location": {
+        "type": "Point",
+        "coordinates": [
+            37.3984759,
+            -5.9904124
+        ]
+    },
+    "name": "Sevilla vibrations",
+    "@context": [
+        "https://schema.lab.fiware.org/ld/context",
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Building/master/context.jsonld"
     ]
-  },
-  "dataProvider": "IMU-Station-123",
-  "dateObserved": "2021-03-08T09:45:00Z",
-  "accelerationMeasured": 1.3
 }
