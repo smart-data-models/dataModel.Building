@@ -34,6 +34,7 @@
         "value": "https://source.example.com"
     },
     "@context": [
-        "https://smart-data-models.github.io/dataModel.Building/context.jsonld"
+        "https://smart-data-models.github.io/dataModel.Building/context.jsonld",
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Building/master/context.jsonld"
     ]
 }
