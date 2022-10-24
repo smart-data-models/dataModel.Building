@@ -1,17 +1,32 @@
-エンティティBuildingOperation  
-=======================  
+<!-- 10-Header -->  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+エンティティBuildingOperation  
+=======================<!-- /10-Header -->  
+<!-- 15-License -->  
 [オープンライセンス](https://github.com/smart-data-models//dataModel.Building/blob/master/BuildingOperation/LICENSE.md)  
-[document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-グローバルな説明。**与えられたビルディングオペレーションに関する情報**。  
+[ドキュメント自動生成](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+<!-- /15-License -->  
+<!-- 20-Description -->  
+グローバルな記述です。**指定されたビルディング操作に関する情報**。  
+バージョン: 0.0.1  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
-## プロパティのリスト  
+## プロパティ一覧  
 
-- `alternateName`: このアイテムの別称  - `dataProvider`: 調和されたデータ・エンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `dateFinished`: オペレーションの実際の終了日です。  - `dateModified`: エンティティが最後に変更された時のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `dateStarted`: 操作の実際の開始日です。  - `description`: このアイテムの説明  - `endDate`: 操作の終了予定日。  - `id`: エンティティのユニークな識別子  - `name`: このアイテムの名前です。  - `operationSequence`: 利用可能な場合には、操作のシーケンスのID  - `operationType`: 建物に対する操作の種類  - `owner`: オーナーのIDを参照するJSONエンコードされた文字列を含むリスト  - `refBuilding`: 操作が行われる建物のリファレンス。  - `refOperator`: 建物に対して操作を行うオペレーターのこと。  - `refRelatedBuildingOperation`: 他の建物の操作を順番に行う場合の参照  - `refRelatedDeviceOperation`: 現在の操作に関連するデバイス。デバイスタイプのエンティティへの参照のリストです。  - `result`: ビルディング操作の結果。Enum:'ok, aborted'  - `seeAlso`: アイテムに関する追加リソースを示すuriのリスト  - `source`: エンティティデータのオリジナルソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `startDate`: 操作の開始予定日。  - `status`: 操作のステータス。Enum:'cancelled, finished, ongoing, planned, scheduled'  - `type`: BuildingOperationである必要があります。    
-必須項目  
-- `endDate`  - `id`  - `refBuilding`  - `startDate`  - `type`    
-このエンティティには、参照された建物に適用される（スマートビルディングに関連する）一般的な操作の調和された記述が含まれています。建物操作は、建物または建物に適用される操作によって報告された、またはそれに関連する動的データを含みます。このエンティティは、スマートホーム、スマートシティ、産業、および関連するIoTアプリケーションの垂直セグメントに関連付けられています。このデータモデルは、携帯電話事業者と[GSMA](https://www.gsma.com/iot/iot-big-data/)の協力を得て部分的に開発されたもので、GSMAのデータモデルと比較して、以下の変更点が導入されています - `refRelatedOperation`の代わりに`refRelatedDeviceOperation`が採用されています。  
-## データモデルによるプロパティの記述  
-アルファベット順（クリックすると詳細が表示されます）  
+<sup><sub>[*] 属性にタイプがない場合、複数のタイプまたは異なるフォーマット/パターンを持つ可能性があるためです</sub></sup>。  
+- `alternateName[string]`: この項目の別称  - `dataProvider[string]`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated[string]`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateFinished[string]`: 操作の実際の終了日。  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `dateModified[string]`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateStarted[string]`: 実際の運用開始日。  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `description[string]`: このアイテムの説明  - `endDate[string]`: 運用終了予定日。  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `id[*]`: エンティティの一意な識別子  - `name[string]`: このアイテムの名称です。  - `operationSequence[array]`: 可能な場合は、操作のシーケンスの ID  . Model: [https://schema.org/Text](https://schema.org/Text)- `operationType[string]`: 建物に対する操作の種類  . Model: [https://schema.org/Text](https://schema.org/Text)- `owner[array]`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリスト  - `refBuilding[*]`: 操作が行われる建物の参照。  . Model: [https://schema.org/URL](https://schema.org/URL)- `refOperator[*]`: 建物に対して操作を行うオペレーターを指す。  . Model: [https://schema.org/URL](https://schema.org/URL)- `refRelatedBuildingOperation[array]`: 他のビルディングオペレーションを順次参照する場合  - `refRelatedDeviceOperation[array]`: 現在の操作に関連するデバイス。Device 型のエンティティへの参照のリスト。  . Model: [https://schema.org/URL](https://schema.org/URL)- `result[string]`: 建築操作の結果。Enum:'ok, aborted'  . Model: [https://schema.org/Text](https://schema.org/Text)- `seeAlso[*]`: 項目に関する追加リソースを指すURIのリスト。  - `source[string]`: エンティティデータの元のソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `startDate[string]`: 運用開始予定日。  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `status[string]`: 操作のステータス。Enum:'cancelled, finished, ongoing, planned, scheduled'.  . Model: [https://schema.org/Text](https://schema.org/Text)- `type[string]`: BuildingOperationである必要があります。  <!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
+必要なプロパティ  
+- `endDate`  - `id`  - `refBuilding`  - `startDate`  - `type`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
+このエンティティは、参照される建物に適用される（スマートビルに関連する）一般的な操作の調和された記述を含んでいる。建物操作は、建物によって報告された、または建物に関連する動的データ、または建物に適用される操作を含む。このエンティティは、スマートホーム、スマートシティ、産業、および関連するIoTアプリケーションの垂直セグメントに関連するものである。このデータモデルは、モバイル通信事業者と[GSMA](https://www.gsma.com/iot/iot-big-data/)の協力により一部開発されました。GSMAデータモデルと比較して、以下の変更が導入されています - `refRelatedDeviceOperation` は `refRelatedOperation` を置き換えます。  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
+## プロパティのデータモデル記述  
+アルファベット順に並びます（クリックで詳細へ）  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 BuildingOperation:    
@@ -217,9 +232,14 @@ BuildingOperation:
   x-version: 0.0.1    
 ```  
 </details>    
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
 ## ペイロードの例  
-#### BuildingOperation NGSI-v2 key-valuesの例。  
-JSON-LD形式でBuildingOperationをkey-valuesにした例を紹介します。これは`options=keyValues`を使用した場合のNGSI-v2との互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### BuildingOperation NGSI-v2 key-value 例  
+ここでは、BuildingOperationをJSON-LD形式でkey-valuesにした例を示す。これは、`options=keyValues` を使用した場合に NGSI-v2 と互換性があり、個々のエンティティのコンテキストデータを返す。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "57b912ab-eb47-4cd5-bc9d-73abece1f1b3",  
@@ -248,8 +268,10 @@ BuildingOperation:
   ]  
 }  
 ```  
+</details>  
 #### BuildingOperation NGSI-v2 正規化例  
-ここでは、正規化されたJSON-LD形式のBuildingOperationの例を示します。これは、オプションを使用しない場合のNGSI-v2との互換性があり、個々のエンティティのコンテキストデータを返します。  
+以下は、BuildingOperationをJSON-LD形式で正規化した例である。これは、オプションを使用しない場合、NGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "57b912ab-eb47-4cd5-bc9d-73abece1f1b3",  
@@ -319,144 +341,156 @@ BuildingOperation:
   }  
 }  
 ```  
-#### BuildingOperation NGSI-LDのキーバリューの例  
-JSON-LD形式でBuildingOperationをkey-valuesにした例を紹介します。これは`options=keyValues`を使用した場合のNGSI-LDとの互換性があり、個々のエンティティのコンテキストデータを返します。  
+</details>  
+#### BuildingOperation NGSI-LD key-value 例  
+BuildingOperationをJSON-LD形式でkey-valuesにした例です。これは `options=keyValues` を使用した場合に NGSI-LD と互換性があり、個々のエンティティのコンテキストデータを返す。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "id": "urn:ngsi-ld:BuildingOperation:57b912ab-eb47-4cd5-bc9d-73abece1f1b3",  
-  "type": "BuildingOperation",  
-  "modifiedAt": "2016-08-08T10:18:16Z",  
-  "createdAt": "2016-08-08T10:18:16Z",  
-  "status": {  
-    "type": "Property",  
-    "value": "finished"  
-  },  
-  "startDate": {  
-    "type": "Property",  
-    "value": {  
-      "@type": "DateTime",  
-      "@value": "2016-08-08T10:18:16Z"  
-    }  
-  },  
-  "operationSequence": {  
-    "type": "Property",  
-    "value": [  
-      "fan_power%3D0",  
-      "set_temperature%3D24"  
+    "id": "urn:ngsi-ld:BuildingOperation:57b912ab-eb47-4cd5-bc9d-73abece1f1b3",  
+    "type": "BuildingOperation",  
+    "createdAt": "2016-08-08T10:18:16Z",  
+    "dataProvider": {  
+        "type": "Property",  
+        "value": "OperatorA"  
+    },  
+    "dateFinished": {  
+        "type": "Property",  
+        "value": {  
+            "@type": "DateTime",  
+            "@value": "2016-08-20T10:18:16Z"  
+        }  
+    },  
+    "dateStarted": {  
+        "type": "Property",  
+        "value": {  
+            "@type": "DateTime",  
+            "@value": "2016-08-08T10:18:16Z"  
+        }  
+    },  
+    "description": {  
+        "type": "Property",  
+        "value": "Air conditioning levels reduced due to out of hours"  
+    },  
+    "endDate": {  
+        "type": "Property",  
+        "value": {  
+            "@type": "DateTime",  
+            "@value": "2016-08-20T10:18:16Z"  
+        }  
+    },  
+    "modifiedAt": "2016-08-08T10:18:16Z",  
+    "operationSequence": {  
+        "type": "Property",  
+        "value": [  
+            "fan_power%3D0",  
+            "set_temperature%3D24"  
+        ]  
+    },  
+    "operationType": {  
+        "type": "Property",  
+        "value": "airConditioning"  
+    },  
+    "refBuilding": {  
+        "type": "Relationship",  
+        "object": "urn:ngsi-ld:Building:building-a85e3da145c1"  
+    },  
+    "refRelatedBuildingOperation": {  
+        "type": "Relationship",  
+        "object": [  
+            "urn:ngsi-ld:BuildingOperation:b4fb8bff-1a8f-455f-8cc0-ca43c069f865",  
+            "urn:ngsi-ld:BuildingOperation:55c24793-3437-4157-9bda-667c9e1531fc"  
+        ]  
+    },  
+    "refRelatedDeviceOperation": {  
+        "type": "Relationship",  
+        "object": [  
+            "urn:ngsi-ld:DeviceOperation:36744245-6716-4a28-84c7-0e3d7520f143",  
+            "urn:ngsi-ld:DeviceOperation:33b2b713-9223-40a5-87a0-3f80a1264a6c"  
+        ]  
+    },  
+    "result": {  
+        "type": "Property",  
+        "value": "ok"  
+    },  
+    "source": {  
+        "type": "Property",  
+        "value": "http://www.example.com"  
+    },  
+    "startDate": {  
+        "type": "Property",  
+        "value": {  
+            "@type": "DateTime",  
+            "@value": "2016-08-08T10:18:16Z"  
+        }  
+    },  
+    "status": {  
+        "type": "Property",  
+        "value": "finished"  
+    },  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Building/master/context.jsonld"  
     ]  
-  },  
-  "endDate": {  
-    "type": "Property",  
-    "value": {  
-      "@type": "DateTime",  
-      "@value": "2016-08-20T10:18:16Z"  
-    }  
-  },  
-  "description": {  
-    "type": "Property",  
-    "value": "Air conditioning levels reduced due to out of hours"  
-  },  
-  "refRelatedDeviceOperation": {  
-    "type": "Relationship",  
-    "object": [  
-      "urn:ngsi-ld:DeviceOperation:36744245-6716-4a28-84c7-0e3d7520f143",  
-      "urn:ngsi-ld:DeviceOperation:33b2b713-9223-40a5-87a0-3f80a1264a6c"  
-    ]  
-  },  
-  "refRelatedBuildingOperation": {  
-    "type": "Relationship",  
-    "object": [  
-      "urn:ngsi-ld:BuildingOperation:b4fb8bff-1a8f-455f-8cc0-ca43c069f865",  
-      "urn:ngsi-ld:BuildingOperation:55c24793-3437-4157-9bda-667c9e1531fc"  
-    ]  
-  },  
-  "source": {  
-    "type": "Property",  
-    "value": "http://www.example.com"  
-  },  
-  "refBuilding": {  
-    "type": "Relationship",  
-    "object": "urn:ngsi-ld:Building:building-a85e3da145c1"  
-  },  
-  "result": {  
-    "type": "Property",  
-    "value": "ok"  
-  },  
-  "operationType": {  
-    "type": "Property",  
-    "value": "airConditioning"  
-  },  
-  "dateStarted": {  
-    "type": "Property",  
-    "value": {  
-      "@type": "DateTime",  
-      "@value": "2016-08-08T10:18:16Z"  
-    }  
-  },  
-  "dateFinished": {  
-    "type": "Property",  
-    "value": {  
-      "@type": "DateTime",  
-      "@value": "2016-08-20T10:18:16Z"  
-    }  
-  },  
-  "dataProvider": {  
-    "type": "Property",  
-    "value": "OperatorA"  
-  },  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ]  
 }  
 ```  
-#### BuildingOperation NGSI-LDの正規化例  
-ここでは、JSON-LD形式のBuildingOperationを正規化した例を示します。これは、オプションを使用しない場合のNGSI-LDとの互換性があり、個々のエンティティのコンテキストデータを返します。  
+</details>  
+#### BuildingOperation NGSI-LD 正規化例  
+以下は、BuildingOperationをJSON-LD形式で正規化した例である。これはオプションを使用しない場合のNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ],  
-  "createdAt": "2016-08-08T10:18:16Z",  
-  "dataProvider": "OperatorA",  
-  "dateFinished": {  
-    "@type": "DateTime",  
-    "@value": "2016-08-20T10:18:16Z"  
-  },  
-  "dateStarted": {  
-    "@type": "DateTime",  
-    "@value": "2016-08-08T10:18:16Z"  
-  },  
-  "description": "Air conditioning levels reduced due to out of hours",  
-  "endDate": {  
-    "@type": "DateTime",  
-    "@value": "2016-08-20T10:18:16Z"  
-  },  
-  "id": "urn:ngsi-ld:BuildingOperation:57b912ab-eb47-4cd5-bc9d-73abece1f1b3",  
-  "modifiedAt": "2016-08-08T10:18:16Z",  
-  "operationSequence": [  
-    "fan_power%3D0",  
-    "set_temperature%3D24"  
-  ],  
-  "operationType": "airConditioning",  
-  "refBuilding": "urn:ngsi-ld:Building:building-a85e3da145c1",  
-  "refRelatedBuildingOperation": [  
-    "urn:ngsi-ld:BuildingOperation:b4fb8bff-1a8f-455f-8cc0-ca43c069f865",  
-    "urn:ngsi-ld:BuildingOperation:55c24793-3437-4157-9bda-667c9e1531fc"  
-  ],  
-  "refRelatedDeviceOperation": [  
-    "urn:ngsi-ld:DeviceOperation:36744245-6716-4a28-84c7-0e3d7520f143",  
-    "urn:ngsi-ld:DeviceOperation:33b2b713-9223-40a5-87a0-3f80a1264a6c"  
-  ],  
-  "result": "ok",  
-  "source": "http://www.example.com",  
-  "startDate": {  
-    "@type": "DateTime",  
-    "@value": "2016-08-08T10:18:16Z"  
-  },  
-  "status": "finished",  
-  "type": "BuildingOperation"  
+    "id": "urn:ngsi-ld:BuildingOperation:57b912ab-eb47-4cd5-bc9d-73abece1f1b3",  
+    "type": "BuildingOperation",  
+    "createdAt": "2016-08-08T10:18:16Z",  
+    "dataProvider": "OperatorA",  
+    "dateFinished": {  
+        "@type": "DateTime",  
+        "@value": "2016-08-20T10:18:16Z"  
+    },  
+    "dateStarted": {  
+        "@type": "DateTime",  
+        "@value": "2016-08-08T10:18:16Z"  
+    },  
+    "description": "Air conditioning levels reduced due to out of hours",  
+    "endDate": {  
+        "@type": "DateTime",  
+        "@value": "2016-08-20T10:18:16Z"  
+    },  
+    "modifiedAt": "2016-08-08T10:18:16Z",  
+    "operationSequence": [  
+        "fan_power%3D0",  
+        "set_temperature%3D24"  
+    ],  
+    "operationType": "airConditioning",  
+    "refBuilding": "urn:ngsi-ld:Building:building-a85e3da145c1",  
+    "refRelatedBuildingOperation": [  
+        "urn:ngsi-ld:BuildingOperation:b4fb8bff-1a8f-455f-8cc0-ca43c069f865",  
+        "urn:ngsi-ld:BuildingOperation:55c24793-3437-4157-9bda-667c9e1531fc"  
+    ],  
+    "refRelatedDeviceOperation": [  
+        "urn:ngsi-ld:DeviceOperation:36744245-6716-4a28-84c7-0e3d7520f143",  
+        "urn:ngsi-ld:DeviceOperation:33b2b713-9223-40a5-87a0-3f80a1264a6c"  
+    ],  
+    "result": "ok",  
+    "source": "http://www.example.com",  
+    "startDate": {  
+        "@type": "DateTime",  
+        "@value": "2016-08-08T10:18:16Z"  
+    },  
+    "status": "finished",  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Building/master/context.jsonld"  
+    ]  
 }  
 ```  
-マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
+マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
