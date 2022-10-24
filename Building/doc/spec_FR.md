@@ -1,23 +1,36 @@
-Entité : Building  
-=================  
+<!-- 10-Header -->  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+Entité : Building  
+=================<!-- /10-Header -->  
+<!-- 15-License -->  
 [Licence ouverte] (https://github.com/smart-data-models//dataModel.Building/blob/master/Building/LICENSE.md)  
 [document généré automatiquement] (https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+<!-- /15-License -->  
+<!-- 20-Description -->  
 Description globale : **Information sur un bâtiment donné**  
 version : 0.0.2  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
 ## Liste des propriétés  
 
-- `address`: L'adresse postale  - `alternateName`: Un nom alternatif pour cet élément  - `areaServed`: La zone géographique où un service ou un article offert est fourni  - `category`: Catégorie du bâtiment. Enum :'appartements, fournil, grange, pont, bungalow, bunker, cathédrale, cabane, abri de voiture, chapelle, église, civique, commercial, conservatoire, construction, étable, détaché, digesteur, dortoir, ferme, ferme_auxiliaire, garage, garages, abri à bagages, tribune, serre, hangar, hôpital, hôtel, maison, bateau-maison, cabane, industriel, jardin d'enfants, kiosque, mosquée, bureau, parking, pavillon, public, résidentiel, commerce de détail, manège, toit, ruines, école, service, hangar, sanctuaire, écurie, stade, statique_caravane, sty, synagogue, temple, terrasse, gare, tour_transformateur, transport, université, entrepôt, château d'eau'.  - `collapseRisk`: Probabilité d'un effondrement total du bâtiment.  - `containedInPlace`: Référence Geojson à l'élément. Il peut s'agir d'un point, d'une ligne, d'un polygone, d'un point multiple, d'une ligne multiple ou d'un polygone multiple.  - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Celui-ci sera généralement attribué par la plateforme de stockage.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il sera généralement attribué par la plateforme de stockage.  - `description`: Une description de cet article  - `floorsAboveGround`: Étages au-dessus du niveau du sol  - `floorsBelowGround`: Étages sous le niveau du sol  - `id`: Identifiant unique de l'entité  - `location`: Référence Geojson à l'élément. Il peut s'agir d'un point, d'une ligne, d'un polygone, d'un point multiple, d'une ligne multiple ou d'un polygone multiple.  - `name`: Le nom de cet élément.  - `occupier`: Personne ou entité utilisant le bâtiment  - `openingHours`: Heures d'ouverture de ce bâtiment.  - `owner`: Une liste contenant une séquence de caractères codée en JSON référençant les identifiants uniques du ou des propriétaires.  - `peopleCapacity`: Personnes autorisées présentes dans le bâtiment  - `peopleOccupancy`: Personnes présentes dans le bâtiment  - `refMap`: Référence à la carte contenant le bâtiment  - `seeAlso`: liste d'uri pointant vers des ressources supplémentaires sur l'élément  - `source`: Une séquence de caractères donnant la source originale des données de l'entité sous forme d'URL. Il est recommandé d'utiliser le nom de domaine entièrement qualifié du fournisseur source ou l'URL de l'objet source.  - `type`: NGSI Type d'entité    
+<sup><sub>[*] S'il n'y a pas de type dans un attribut, c'est parce qu'il pourrait avoir plusieurs types ou différents formats/modèles</sub></sup>.  
+- `address[object]`: L'adresse postale  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: Un nom alternatif pour cet élément  - `areaServed[string]`: La zone géographique où un service ou un article offert est fourni  . Model: [https://schema.org/Text](https://schema.org/Text)- `category[array]`: Catégorie du bâtiment. Enum :'appartements, fournil, grange, pont, bungalow, bunker, cathédrale, cabane, abri de voiture, chapelle, église, civique, commercial, conservatoire, construction, étable, détaché, digesteur, dortoir, ferme, ferme_auxiliaire, garage, garages, abri à bagages, tribune, serre, hangar, hôpital, hôtel, maison, bateau-maison, cabane, industriel, jardin d'enfants, kiosque, mosquée, bureau, parking, pavillon, public, résidentiel, commerce de détail, manège, toit, ruines, école, service, hangar, sanctuaire, écurie, stade, caravane statique, stylo, synagogue, temple, terrasse, gare, tour de transformateur, transport, université, entrepôt, château d'eau'.  - `collapseRisk[number]`: Probabilité d'effondrement total du bâtiment.  . Model: [https://schema.org/Number](https://schema.org/Number)- `containedInPlace[*]`: Référence Geojson à l'élément. Il peut s'agir d'un point, d'une ligne, d'un polygone, d'un point multiple, d'une ligne multiple ou d'un polygone multiple.  - `dataProvider[string]`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated[string]`: Horodatage de la création de l'entité. Celui-ci sera généralement attribué par la plateforme de stockage.  - `dateModified[string]`: Horodatage de la dernière modification de l'entité. Il sera généralement attribué par la plateforme de stockage.  - `description[string]`: Une description de cet article  - `floorsAboveGround[integer]`: Étages au-dessus du niveau du sol  . Model: [https://schema.org/Number](https://schema.org/Number)- `floorsBelowGround[integer]`: Étages sous le niveau du sol  . Model: [https://schema.org/Number](https://schema.org/Number)- `id[*]`: Identifiant unique de l'entité  - `location[*]`: Référence Geojson à l'élément. Il peut s'agir d'un point, d'une ligne, d'un polygone, d'un point multiple, d'une ligne multiple ou d'un polygone multiple.  - `name[string]`: Le nom de cet élément.  - `occupier[array]`: Personne ou entité utilisant le bâtiment  . Model: [https://schema.org/URL](https://schema.org/URL)- `openingHours[array]`: Heures d'ouverture de ce bâtiment.  . Model: [https://schema.org/openingHours](https://schema.org/openingHours)- `owner[array]`: Une liste contenant une séquence de caractères codée en JSON référençant les identifiants uniques du ou des propriétaires.  - `peopleCapacity[number]`: Personnes autorisées présentes dans le bâtiment  . Model: [https://schema.org/Number](https://schema.org/Number)- `peopleOccupancy[number]`: Personnes présentes dans le bâtiment  . Model: [https://schema.org/Number](https://schema.org/Number)- `refMap[*]`: Référence à la carte contenant le bâtiment  - `seeAlso[*]`: liste d'uri pointant vers des ressources supplémentaires sur l'article  - `source[string]`: Une séquence de caractères donnant la source originale des données de l'entité sous forme d'URL. Il est recommandé d'utiliser le nom de domaine entièrement qualifié du fournisseur source ou l'URL de l'objet source.  - `type[string]`: NGSI Type d'entité  <!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
 Propriétés requises  
-- `address`  - `category`  - `id`  - `type`    
-Cette entité contient une description harmonisée d'un bâtiment. Cette entité est associée aux segments verticaux des maisons intelligentes, des villes intelligentes, de l'industrie et des applications IoT connexes. Ce modèle de données a été partiellement développé en coopération avec les opérateurs mobiles et le [GSMA] (https://www.gsma.com/iot/iot-big-data/). Les modifications suivantes ont été apportées au modèle de données du GSMA la référence au `BuildingType` est supprimée, car l'attribut `BuildingType` comparé à l'attribut `category` n'introduit pas d'informations significatives. L'attribut `category` est obligatoire. L'attribut `openingHours` est introduit conformément au modèle de données de schema.org pour permettre une granularité fine des heures d'ouverture des bâtiments. La GSMA a soutenu cette information en tant que texte libre dans l'attribut `notes` (supprimé également). `refSubscriptionService` n'est pas pris en charge, car le modèle `SubscriptionService` ne l'est pas actuellement.  
+- `address`  - `category`  - `id`  - `type`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
+Cette entité contient une description harmonisée d'un bâtiment. Cette entité est associée aux segments verticaux des maisons intelligentes, des villes intelligentes, de l'industrie et des applications IoT connexes. Ce modèle de données a été partiellement développé en coopération avec les opérateurs mobiles et le [GSMA] (https://www.gsma.com/iot/iot-big-data/). Les modifications suivantes ont été apportées au modèle de données du GSMA la référence au `BuildingType` est supprimée, car l'attribut `BuildingType` comparé à l'attribut `category` n'introduit pas d'informations significatives. L'attribut `category` est obligatoire. L'attribut `openingHours` a été introduit conformément au modèle de données schema.org, afin de permettre une granularité fine des heures d'ouverture des bâtiments. La GSMA l'a soutenu en tant que texte libre dans l'attribut `notes` (supprimé également). `refSubscriptionService` n'est pas pris en charge, car le modèle `SubscriptionService` ne l'est pas actuellement.  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
 ## Description des propriétés du modèle de données  
 Classés par ordre alphabétique (cliquez pour plus de détails)  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 Building:    
   description: 'Information on a given Building'    
-  modelTags: ""    
   properties:    
     address:    
       description: 'The mailing address'    
@@ -428,12 +441,22 @@ Building:
     - category    
     - address    
   type: object    
-  version: 0.0.2    
+  x-derived-from: ""    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-license-url: https://github.com/smart-data-models/dataModel.Building/blob/master/Building/LICENSE.md    
+  x-model-schema: https://smart-data-models.github.io/dataModel.Building/Building/schema.json    
+  x-model-tags: ""    
+  x-version: 0.0.2    
 ```  
 </details>    
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
 ## Exemples de charges utiles  
 #### Exemple de construction de valeurs clés NGSI-v2  
 Voici un exemple d'un bâtiment au format JSON-LD en tant que valeurs-clés. Ceci est compatible avec NGSI-v2 en utilisant `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "building-a85e3da145c1",  
@@ -522,8 +545,10 @@ Building:
   ]  
 }  
 ```  
+</details>  
 #### Construction de la NGSI-v2 normalisée Exemple  
 Voici un exemple d'un bâtiment au format JSON-LD tel que normalisé. Ce format est compatible avec NGSI-v2 lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "building-a85e3da145c1",  
@@ -657,237 +682,249 @@ Building:
   }  
 }  
 ```  
+</details>  
 #### Construction de valeurs clés NGSI-LD Exemple  
-Voici un exemple d'un bâtiment au format JSON-LD en tant que valeurs-clés. Ceci est compatible avec NGSI-LD quand on utilise `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
+Voici un exemple d'un bâtiment au format JSON-LD en tant que valeurs-clés. Ceci est compatible avec NGSI-LD lorsque vous utilisez `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "id": "urn:ngsi-ld:Building:building-a85e3da145c1",  
-  "type": "Building",  
-  "modifiedAt": "2016-08-08T10:18:16Z",  
-  "createdAt": "2016-08-08T10:18:16Z",  
-  "category": "office",  
-  "floorsBelowGround": 0,  
-  "description": "Office block",  
-  "floorsAboveGround": 7,  
-  "occupier": [  
-    "urn:ngsi-ld:Person:9830f692-7677-11e6-838b-4f9fb3dc5a4f"  
-  ],  
-  "mapUrl": "http://www.example.com",  
-  "source": "http://www.example.com",  
-  "location": {  
-    "type": "Polygon",  
-    "coordinates": [  
-      [  
-        [  
-          100,  
-          0  
-        ],  
-        [  
-          101,  
-          0  
-        ],  
-        [  
-          101,  
-          1  
-        ],  
-        [  
-          100,  
-          1  
-        ],  
-        [  
-          100,  
-          0  
+    "id": "urn:ngsi-ld:Building:building-a85e3da145c1",  
+    "type": "Building",  
+    "address": {  
+        "addressLocality": "London",  
+        "postalCode": "EC4N 8AF",  
+        "streetAddress": "25 Walbrook",  
+        "type": "PostalAddress"  
+    },  
+    "category": "office",  
+    "containedInPlace": {  
+        "type": "Polygon",  
+        "coordinates": [  
+            [  
+                [  
+                    100,  
+                    0  
+                ],  
+                [  
+                    101,  
+                    0  
+                ],  
+                [  
+                    101,  
+                    1  
+                ],  
+                [  
+                    100,  
+                    1  
+                ],  
+                [  
+                    100,  
+                    0  
+                ]  
+            ]  
         ]  
-      ]  
-    ]  
-  },  
-  "address": {  
-    "addressLocality": "London",  
-    "postalCode": "EC4N 8AF",  
-    "streetAddress": "25 Walbrook",  
-    "type": "PostalAddress"  
-  },  
-  "owner": [  
-    "urn:ngsi-ld::cdfd9cb8-ae2b-47cb-a43a-b9767ffd5c84",  
-    "urn:ngsi-ld::1be9cd61-ef59-421f-a326-4b6c84411ad4"  
-  ],  
-  "openingHours": [  
-    "Mo-Fr 10:00-19:00",  
-    "Sa 10:00-22:00",  
-    "Su 10:00-21:00"  
-  ],  
-  "dataProvider": "OperatorA",  
-  "containedInPlace": {  
-    "type": "Polygon",  
-    "coordinates": [  
-      [  
-        [  
-          100,  
-          0  
-        ],  
-        [  
-          101,  
-          0  
-        ],  
-        [  
-          101,  
-          1  
-        ],  
-        [  
-          100,  
-          1  
-        ],  
-        [  
-          100,  
-          0  
+    },  
+    "createdAt": "2016-08-08T10:18:16Z",  
+    "dataProvider": "OperatorA",  
+    "description": "Office block",  
+    "floorsAboveGround": 7,  
+    "floorsBelowGround": 0,  
+    "location": {  
+        "type": "Polygon",  
+        "coordinates": [  
+            [  
+                [  
+                    100,  
+                    0  
+                ],  
+                [  
+                    101,  
+                    0  
+                ],  
+                [  
+                    101,  
+                    1  
+                ],  
+                [  
+                    100,  
+                    1  
+                ],  
+                [  
+                    100,  
+                    0  
+                ]  
+            ]  
         ]  
-      ]  
+    },  
+    "mapUrl": "http://www.example.com",  
+    "modifiedAt": "2016-08-08T10:18:16Z",  
+    "occupier": [  
+        "urn:ngsi-ld:Person:9830f692-7677-11e6-838b-4f9fb3dc5a4f"  
+    ],  
+    "openingHours": [  
+        "Mo-Fr 10:00-19:00",  
+        "Sa 10:00-22:00",  
+        "Su 10:00-21:00"  
+    ],  
+    "owner": [  
+        "urn:ngsi-ld::cdfd9cb8-ae2b-47cb-a43a-b9767ffd5c84",  
+        "urn:ngsi-ld::1be9cd61-ef59-421f-a326-4b6c84411ad4"  
+    ],  
+    "source": "http://www.example.com",  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Building/master/context.jsonld"  
     ]  
-  },  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ]  
 }  
 ```  
+</details>  
 #### Bâtiment NGSI-LD normalisé Exemple  
 Voici un exemple d'un bâtiment au format JSON-LD tel que normalisé. Ce format est compatible avec NGSI-LD lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "id": "urn:ngsi-ld:Building:building-a85e3da145c1",  
-  "type": "Building",  
-  "address": {  
-    "type": "Property",  
-    "value": {  
-      "addressLocality": "London",  
-      "postalCode": "EC4N 8AF",  
-      "streetAddress": "25 Walbrook",  
-      "type": "PostalAddress"  
-    }  
-  },  
-  "category": {  
-    "type": "Property",  
-    "value": [  
-      "office"  
-    ]  
-  },  
-  "containedInPlace": {  
-    "type": "Property",  
-    "value": {  
-      "coordinates": [  
-        [  
-          [  
-            100,  
-            0  
-          ],  
-          [  
-            101,  
-            0  
-          ],  
-          [  
-            101,  
-            1  
-          ],  
-          [  
-            100,  
-            1  
-          ],  
-          [  
-            100,  
-            0  
-          ]  
+    "id": "urn:ngsi-ld:Building:building-a85e3da145c1",  
+    "type": "Building",  
+    "address": {  
+        "type": "Property",  
+        "value": {  
+            "addressLocality": "London",  
+            "postalCode": "EC4N 8AF",  
+            "streetAddress": "25 Walbrook",  
+            "type": "PostalAddress"  
+        }  
+    },  
+    "category": {  
+        "type": "Property",  
+        "value": [  
+            "office"  
         ]  
-      ],  
-      "type": "Polygon"  
-    }  
-  },  
-  "createdAt": {  
-    "type": "Property",  
-    "value": "2016-08-08T10:18:16Z"  
-  },  
-  "dataProvider": {  
-    "type": "Property",  
-    "value": "OperatorA"  
-  },  
-  "description": {  
-    "type": "Property",  
-    "value": "Office block"  
-  },  
-  "floorsAboveGround": {  
-    "type": "Property",  
-    "value": 7  
-  },  
-  "floorsBelowGround": {  
-    "type": "Property",  
-    "value": 0  
-  },  
-  "location": {  
-    "type": "Geoproperty",  
-    "value": {  
-      "type": "Polygon",  
-      "coordinates": [  
-        [  
-          [  
-            100,  
-            0  
-          ],  
-          [  
-            101,  
-            0  
-          ],  
-          [  
-            101,  
-            1  
-          ],  
-          [  
-            100,  
-            1  
-          ],  
-          [  
-            100,  
-            0  
-          ]  
+    },  
+    "containedInPlace": {  
+        "type": "Property",  
+        "value": {  
+            "coordinates": [  
+                [  
+                    [  
+                        100,  
+                        0  
+                    ],  
+                    [  
+                        101,  
+                        0  
+                    ],  
+                    [  
+                        101,  
+                        1  
+                    ],  
+                    [  
+                        100,  
+                        1  
+                    ],  
+                    [  
+                        100,  
+                        0  
+                    ]  
+                ]  
+            ],  
+            "type": "Polygon"  
+        }  
+    },  
+    "createdAt": {  
+        "type": "Property",  
+        "value": "2016-08-08T10:18:16Z"  
+    },  
+    "dataProvider": {  
+        "type": "Property",  
+        "value": "OperatorA"  
+    },  
+    "description": {  
+        "type": "Property",  
+        "value": "Office block"  
+    },  
+    "floorsAboveGround": {  
+        "type": "Property",  
+        "value": 7  
+    },  
+    "floorsBelowGround": {  
+        "type": "Property",  
+        "value": 0  
+    },  
+    "location": {  
+        "type": "Geoproperty",  
+        "value": {  
+            "type": "Polygon",  
+            "coordinates": [  
+                [  
+                    [  
+                        100,  
+                        0  
+                    ],  
+                    [  
+                        101,  
+                        0  
+                    ],  
+                    [  
+                        101,  
+                        1  
+                    ],  
+                    [  
+                        100,  
+                        1  
+                    ],  
+                    [  
+                        100,  
+                        0  
+                    ]  
+                ]  
+            ]  
+        }  
+    },  
+    "mapUrl": {  
+        "type": "Property",  
+        "value": "http://www.example.com"  
+    },  
+    "modifiedAt": {  
+        "type": "Property",  
+        "value": "2016-08-08T10:18:16Z"  
+    },  
+    "occupier": {  
+        "type": "Relationship",  
+        "object": [  
+            "urn:ngsi-ld:Person:9830f692-7677-11e6-838b-4f9fb3dc5a4f"  
         ]  
-      ]  
-    }  
-  },  
-  "mapUrl": {  
-    "type": "Property",  
-    "value": "http://www.example.com"  
-  },  
-  "modifiedAt": {  
-    "type": "Property",  
-    "value": "2016-08-08T10:18:16Z"  
-  },  
-  "occupier": {  
-    "type": "Relationship",  
-    "object": [  
-      "urn:ngsi-ld:Person:9830f692-7677-11e6-838b-4f9fb3dc5a4f"  
+    },  
+    "openingHours": {  
+        "type": "Property",  
+        "value": [  
+            "Mo-Fr 10:00-19:00",  
+            "Sa 10:00-22:00",  
+            "Su 10:00-21:00"  
+        ]  
+    },  
+    "owner": {  
+        "type": "Relationship",  
+        "object": [  
+            "urn:ngsi-ld::cdfd9cb8-ae2b-47cb-a43a-b9767ffd5c84",  
+            "urn:ngsi-ld::1be9cd61-ef59-421f-a326-4b6c84411ad4"  
+        ]  
+    },  
+    "source": {  
+        "type": "Property",  
+        "value": "http://www.example.com"  
+    },  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Building/master/context.jsonld"  
     ]  
-  },  
-  "openingHours": {  
-    "type": "Property",  
-    "value": [  
-      "Mo-Fr 10:00-19:00",  
-      "Sa 10:00-22:00",  
-      "Su 10:00-21:00"  
-    ]  
-  },  
-  "owner": {  
-    "type": "Relationship",  
-    "object": [  
-      "urn:ngsi-ld::cdfd9cb8-ae2b-47cb-a43a-b9767ffd5c84",  
-      "urn:ngsi-ld::1be9cd61-ef59-421f-a326-4b6c84411ad4"  
-    ]  
-  },  
-  "source": {  
-    "type": "Property",  
-    "value": "http://www.example.com"  
-  },  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ]  
 }  
 ```  
-Voir [FAQ 10](https://smartdatamodels.org/index.php/faqs/) pour obtenir une réponse sur la façon de traiter les unités de magnitude
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
+Voir [FAQ 10](https://smartdatamodels.org/index.php/faqs/) pour obtenir une réponse sur la façon de traiter les unités de magnitude.  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
