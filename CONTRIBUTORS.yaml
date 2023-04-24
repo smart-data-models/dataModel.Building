@@ -1,43 +1,44 @@
 description: This is a compilation list of all CONTRIBUTORS across different objects (data models) alphabetically ordered. All fields are non mandatory
 contributors:
--
- name: Jose M.
- surname: Cantera
- mail: jmcanterafonseca4github@gmail.com
- organization: CanteraFonseca.EU
- project: 
- comments:
--
- name: Dmitrii
- surname: Demin
- mail: mail@demin.co
- organization:
- project: 
- comments: 
--
- name: Marc
- surname: Fajula
- mail: marc.fajula.soldevila@everis.com
- organization: Everis
- project:
- comments:
--
- name: Jason
- surname: Fox
- mail:
- organization: FIWARE Foundation 
- project: 
- comments:
--
- name: David
- surname: Garcia Esteller
- mail: david.garcia.esteller@everis.com
- organization: Everis
- project:
- comments:
+- name: Jose M.
+  surname: Cantera
+  mail: jmcanterafonseca4github@gmail.com
+  organization: CanteraFonseca.EU
+  project: 
+  comments: 
+  year: 2022
+- name: Dmitrii
+  surname: Demin
+  mail: mail@demin.co
+  organization: 
+  project: 
+  comments: 
+  year: 2022
+- name: Marc
+  surname: Fajula
+  mail: marc.fajula.soldevila@everis.com
+  organization: Everis
+  project: 
+  comments: 
+  year: 2022
+- name: Jason
+  surname: Fox
+  mail: 
+  organization: FIWARE Foundation
+  project: 
+  comments: 
+  year: 2022
+- name: David
+  surname: Garcia Esteller
+  mail: david.garcia.esteller@everis.com
+  organization: Everis
+  project: 
+  comments: 
+  year: 2022
 - name: Francisco de la
   surname: Vega
-  mail:
+  mail: 
   organization: FICODES
   project: GSMA Iot Big data
-  comments:
+  comments: 
+  year: 2022

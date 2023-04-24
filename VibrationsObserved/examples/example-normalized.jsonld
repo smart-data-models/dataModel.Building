@@ -83,5 +83,7 @@
         "type": "Property",
         "value": "No source"
     },
-    "@context": []
+    "@context": [
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.Building/master/context.jsonld"
+    ]
 }

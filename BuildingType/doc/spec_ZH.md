@@ -1,30 +1,30 @@
 <!-- 10-Header -->  
 [![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
-Entität: GebäudeTyp  
-===================<!-- /10-Header -->  
+实体。建筑类型  
+=======<!-- /10-Header -->  
 <!-- 15-License -->  
-[Offene Lizenz](https://github.com/smart-data-models//dataModel.Building/blob/master/BuildingType/LICENSE.md)  
-[Dokument automatisch generiert](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+[开放许可](https://github.com/smart-data-models//dataModel.Building/blob/master/BuildingType/LICENSE.md)  
+[文件自动生成](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 <!-- /15-License -->  
 <!-- 20-Description -->  
-Globale Beschreibung: **Diese Einheit enthält eine harmonisierte Beschreibung eines generischen Gebäudetyps. Diese Entität ist mit den vertikalen Segmenten Smart Home, Smart Cities, Industrie und damit verbundenen IoT-Anwendungen verbunden. Der Gebäudetyp umfasst eine hierarchische Struktur, die eine flexible Gruppierung von Gebäudetypen ermöglicht.**  
-Version: 0.0.3  
+全局描述。**该实体包含一个通用建筑类型的统一描述。该实体与智能家居、智能城市、工业和相关物联网应用等垂直领域相关。该建筑类型包括一个分层结构，允许建筑类型以灵活的方式进行分组。  
+版本：0.0.3  
 <!-- /20-Description -->  
 <!-- 30-PropertiesList -->  
 
-## Liste der Eigenschaften  
+##属性列表  
 
-<sup><sub>[*] Wenn es für ein Attribut keinen Typ gibt, liegt das daran, dass es mehrere Typen oder unterschiedliche Formate/Muster haben kann</sub></sup>.  
-- `address[object]`: Die Postanschrift  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: Ein alternativer Name für diesen Artikel  - `areaServed[string]`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  . Model: [https://schema.org/Text](https://schema.org/Text)- `buildingTypeChildren[array]`: Verweis auf untergeordnete Gebäudetypen, d. h. unmittelbar unter dieser Einheit in der Hierarchie.  - `buildingTypeParent[*]`: Verweist auf alle übergeordneten Gebäudetyp-Entitäten, auf denen dieser Typ basiert.  - `dataProvider[string]`: Eine Folge von Zeichen zur Identifizierung des Anbieters der harmonisierten Dateneinheit.  - `dateCreated[string]`: Zeitstempel der Entitätserstellung. Dieser wird in der Regel von der Speicherplattform zugewiesen.  - `dateModified[string]`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `description[string]`: Eine Beschreibung dieses Artikels  - `id[*]`: Eindeutiger Bezeichner der Entität  - `location[*]`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `name[string]`: Der Name dieses Artikels.  - `owner[array]`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Kennungen der Eigentümer verweist  - `root[boolean]`: Ein logischer Indikator dafür, dass es sich um die Wurzel einer BuildingType-Hierarchie handelt. true bedeutet, dass es sich um die Wurzel handelt, false bedeutet, dass es sich nicht um die Wurzel handelt.  - `seeAlso[*]`: Liste von URLs, die auf zusätzliche Ressourcen zu dem Artikel verweisen  - `source[string]`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL des Quellobjekts.  - `type[string]`: NGSI-Kennung der Entität. Er muss BuildingType sein  <!-- /30-PropertiesList -->  
+<sup><sub>[*] 如果一个属性中没有一个类型，是因为它可能有几种类型或不同的格式/模式</sub></sup>。  
+- `address[object]`: 邮寄地址  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: 这个项目的一个替代名称  - `areaServed[string]`: 提供服务或提供项目的地理区域  . Model: [https://schema.org/Text](https://schema.org/Text)- `buildingTypeChildren[array]`: 对子建筑类型的引用，即在层次结构中紧随该实体之后。  - `buildingTypeParent[*]`: 引用该类型所基于的任何更高层次的建筑类型实体。  - `dataProvider[string]`: 一串识别统一数据实体提供者的字符。  - `dateCreated[string]`: 实体创建时间戳。这通常会由存储平台分配。  - `dateModified[string]`: 实体最后一次修改的时间戳。这通常会由存储平台分配。  - `description[string]`: 对这个项目的描述  - `id[*]`: 实体的唯一标识符  - `location[*]`: 对该项目的Geojson引用。它可以是点、线字符串、多边形、多点、多线字符串或多多边形。  - `name[string]`: 这个项目的名称。  - `owner[array]`: 一个包含JSON编码的字符序列的列表，引用所有者的唯一Ids。  - `root[boolean]`: 一个逻辑指标，表明这是BuildingType层次结构的根。True表示它是根，false表示它不是根。  - `seeAlso[*]`: 指向有关该项目的其他资源的URI列表  - `source[string]`: 一系列的字符，以URL的形式给出实体数据的原始来源。建议为源提供者的完全合格域名，或源对象的URL。  - `type[string]`: NGSI实体标识符。它必须是BuildingType  <!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
-Erforderliche Eigenschaften  
+所需属性  
 - `id`  - `type`  <!-- /35-RequiredProperties -->  
 <!-- 40-RequiredProperties -->  
-Dieses Datenmodell stammt aus dem ursprünglichen GSMA IoT-Projekt, https://www.gsma.com/iot/iot-big-data/. Es wurden einige kleinere Anpassungen vorgenommen, um den Anforderungen intelligenter Datenmodelle zu entsprechen.  
+这个数据模型来自原始项目GSMA物联网项目，https://www.gsma.com/iot/iot-big-data/。有一些小的调整，以满足智能数据模型的要求。  
 <!-- /40-RequiredProperties -->  
 <!-- 50-DataModelHeader -->  
-## Datenmodell Beschreibung der Eigenschaften  
-Alphabetisch sortiert (für Details anklicken)  
+## 数据模型的属性描述  
+按字母顺序排列（点击查看详情）。  
 <!-- /50-DataModelHeader -->  
 <!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
@@ -342,9 +342,9 @@ BuildingType:
 <!-- 70-MiddleNotes -->  
 <!-- /70-MiddleNotes -->  
 <!-- 80-Examples -->  
-## Beispiel-Nutzlasten  
-#### BuildingType NGSI-v2 key-values Beispiel  
-Hier ist ein Beispiel für einen BuildingType im JSON-LD-Format als Schlüsselwerte. Dies ist mit NGSI-v2 kompatibel, wenn `options=keyValues` verwendet wird, und liefert die Kontextdaten einer einzelnen Entität.  
+## ＃＃＃＃有效载荷的例子  
+#### BuildingType NGSI-v2 key-values 示例  
+这里是一个以JSON-LD格式作为关键值的BuildingType的例子。当使用`options=keyValues`时，这与NGSI-v2兼容，并返回单个实体的上下文数据。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -364,8 +364,8 @@ BuildingType:
 }  
 ```  
 </details>  
-#### BuildingType NGSI-v2 normalisiert Beispiel  
-Hier ist ein Beispiel für einen BuildingType im JSON-LD-Format in normalisierter Form. Dies ist kompatibel mit NGSI-v2, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
+#### BuildingType NGSI-v2规范化示例  
+下面是一个以JSON-LD格式规范化的BuildingType的例子。当不使用选项时，这与NGSI-v2兼容，并返回单个实体的上下文数据。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -406,8 +406,8 @@ BuildingType:
 }  
 ```  
 </details>  
-#### BuildingType NGSI-LD Schlüsselwerte Beispiel  
-Hier ist ein Beispiel für einen BuildingType im JSON-LD-Format als Key-Values. Dies ist mit NGSI-LD kompatibel, wenn `options=keyValues` verwendet wird und liefert die Kontextdaten einer einzelnen Entität.  
+#### BuildingType NGSI-LD key-values 示例  
+这里是一个以JSON-LD格式作为关键值的BuildingType的例子。当使用`options=keyValues`时，这与NGSI-LD兼容，并返回单个实体的上下文数据。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -431,8 +431,8 @@ BuildingType:
 }  
 ```  
 </details>  
-#### BuildingType NGSI-LD normalisiert Beispiel  
-Hier ist ein Beispiel für einen BuildingType im JSON-LD-Format in normalisierter Form. Dies ist mit NGSI-LD kompatibel, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
+#### BuildingType NGSI-LD规范化示例  
+这里是一个以JSON-LD格式规范化的BuildingType的例子。当不使用选项时，这与NGSI-LD兼容，并返回单个实体的上下文数据。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -480,7 +480,7 @@ BuildingType:
 <!-- 90-FooterNotes -->  
 <!-- /90-FooterNotes -->  
 <!-- 95-Units -->  
-Siehe [FAQ 10] (https://smartdatamodels.org/index.php/faqs/), um eine Antwort auf die Frage zu erhalten, wie man mit Größeneinheiten umgeht  
+参见[常见问题10](https://smartdatamodels.org/index.php/faqs/)，以获得关于如何处理量级单位的答案。  
 <!-- /95-Units -->  
 <!-- 97-LastFooter -->  
 ---  

@@ -1,30 +1,30 @@
 <!-- 10-Header -->  
 [![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
-Entidad: BuildingOperation  
-==========================<!-- /10-Header -->  
+实体。建筑作业  
+=======<!-- /10-Header -->  
 <!-- 15-License -->  
-[Licencia abierta](https://github.com/smart-data-models//dataModel.Building/blob/master/BuildingOperation/LICENSE.md)  
-[documento generado automáticamente](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+[开放许可](https://github.com/smart-data-models//dataModel.Building/blob/master/BuildingOperation/LICENSE.md)  
+[文件自动生成](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 <!-- /15-License -->  
 <!-- 20-Description -->  
-Descripción global: **Información sobre una determinada operación de construcción**  
-versión: 0.0.1  
+全局描述。**关于某项建筑操作的信息**。  
+版本：0.0.1  
 <!-- /20-Description -->  
 <!-- 30-PropertiesList -->  
 
-## Lista de propiedades  
+##属性列表  
 
-<sup><sub>[*] Si no hay un tipo en un atributo es porque puede tener varios tipos o diferentes formatos/patrones</sub></sup>  
-- `alternateName[string]`: Un nombre alternativo para este artículo  - `dataProvider[string]`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated[string]`: Marca de tiempo de creación de la entidad. Suele ser asignada por la plataforma de almacenamiento.  - `dateFinished[string]`: La fecha real de finalización de la operación.  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `dateModified[string]`: Marca de tiempo de la última modificación de la entidad. Normalmente será asignada por la plataforma de almacenamiento.  - `dateStarted[string]`: La fecha real de inicio de la operación.  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `description[string]`: Una descripción de este artículo  - `endDate[string]`: La fecha prevista de finalización de la operación.  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `id[*]`: Identificador único de la entidad  - `name[string]`: El nombre de este artículo.  - `operationSequence[array]`: Id de la secuencia de la operación cuando está disponible  . Model: [https://schema.org/Text](https://schema.org/Text)- `operationType[string]`: Tipo de operación en el edificio  . Model: [https://schema.org/Text](https://schema.org/Text)- `owner[array]`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios  - `refBuilding[*]`: Referencia del edificio donde se realiza la operación.  . Model: [https://schema.org/URL](https://schema.org/URL)- `refOperator[*]`: Referencia al Operador que realiza la operación en el edificio.  . Model: [https://schema.org/URL](https://schema.org/URL)- `refRelatedBuildingOperation[array]`: Referencia a otras operaciones de construcción cuando están en secuencia  - `refRelatedDeviceOperation[array]`: Dispositivos relacionados con la operación actual. Una lista de referencias a una entidad de tipo Dispositivo.  . Model: [https://schema.org/URL](https://schema.org/URL)- `result[string]`: Resultado de la operación de construcción. Enum:'ok, abortado'  . Model: [https://schema.org/Text](https://schema.org/Text)- `seeAlso[*]`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `source[string]`: Una secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen o la URL del objeto de origen.  - `startDate[string]`: La fecha prevista para el inicio de la operación.  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `status[string]`: Estado de la operación. Enum:'cancelada, terminada, en curso, prevista, programada'  . Model: [https://schema.org/Text](https://schema.org/Text)- `type[string]`: Tiene que ser BuildingOperation  <!-- /30-PropertiesList -->  
+<sup><sub>[*] 如果一个属性中没有一个类型，是因为它可能有几种类型或不同的格式/模式</sub></sup>。  
+- `alternateName[string]`: 这个项目的一个替代名称  - `dataProvider[string]`: 一串识别统一数据实体提供者的字符。  - `dateCreated[string]`: 实体创建时间戳。这通常会由存储平台分配。  - `dateFinished[string]`: 操作的实际结束日期。  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `dateModified[string]`: 实体最后一次修改的时间戳。这通常会由存储平台分配。  - `dateStarted[string]`: 操作的实际开始日期。  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `description[string]`: 对这个项目的描述  - `endDate[string]`: 行动的计划结束日期。  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `id[*]`: 实体的唯一标识符  - `name[string]`: 这个项目的名称。  - `operationSequence[array]`: 如果有的话，操作顺序的标识  . Model: [https://schema.org/Text](https://schema.org/Text)- `operationType[string]`: 建筑物上的操作类型  . Model: [https://schema.org/Text](https://schema.org/Text)- `owner[array]`: 一个包含JSON编码的字符序列的列表，引用所有者的唯一Ids。  - `refBuilding[*]`: 执行操作的建筑参考。  . Model: [https://schema.org/URL](https://schema.org/URL)- `refOperator[*]`: 指在建筑物上进行操作的操作员。  . Model: [https://schema.org/URL](https://schema.org/URL)- `refRelatedBuildingOperation[array]`: 按顺序参考其他建筑作业  - `refRelatedDeviceOperation[array]`: 与当前操作相关的设备。对类型为Device的实体的引用列表。  . Model: [https://schema.org/URL](https://schema.org/URL)- `result[string]`: 建筑操作的结果。Enum:'ok, aborted  . Model: [https://schema.org/Text](https://schema.org/Text)- `seeAlso[*]`: 指向有关该项目的其他资源的URI列表  - `source[string]`: 一系列的字符，以URL的形式给出实体数据的原始来源。建议为源提供者的完全合格域名，或源对象的URL。  - `startDate[string]`: 行动的计划开始日期。  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `status[string]`: 操作的状态。Enum:'已取消，已完成，正在进行，已计划，已安排'。  . Model: [https://schema.org/Text](https://schema.org/Text)- `type[string]`: 它必须是BuildingOperation  <!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
-Propiedades requeridas  
+所需属性  
 - `endDate`  - `id`  - `refBuilding`  - `startDate`  - `type`  <!-- /35-RequiredProperties -->  
 <!-- 40-RequiredProperties -->  
-Esta entidad contiene una descripción armonizada de una operación genérica (relacionada con los edificios inteligentes) aplicada al edificio referenciado. La operación del edificio contiene datos dinámicos comunicados por un edificio o asociados a él o a operaciones aplicables al edificio. Esta entidad está asociada a los segmentos verticales de los hogares inteligentes, las ciudades inteligentes, la industria y las aplicaciones IoT relacionadas. Este modelo de datos se ha desarrollado parcialmente en cooperación con los operadores de telefonía móvil y la [GSMA](https://www.gsma.com/iot/iot-big-data/), en comparación con el modelo de datos de la GSMA se introducen los siguientes cambios - `refRelatedDeviceOperation` sustituye a `refRelatedOperation`.  
+该实体包含对适用于被引用建筑的通用操作（与智能建筑有关）的统一描述。建筑物操作包含由建筑物或适用于建筑物的操作报告的动态数据，或与之相关的动态数据。这个实体与智能家居、智能城市、工业和相关的物联网应用等垂直领域相关。本数据模型部分是与移动运营商和[GSMA](https://www.gsma.com/iot/iot-big-data/)合作开发的，与GSMA数据模型相比，引入了以下变化 - `refRelatedDeviceOperation`取代了`refRelatedOperation`。  
 <!-- /40-RequiredProperties -->  
 <!-- 50-DataModelHeader -->  
-## Descripción del modelo de datos de las propiedades  
-Ordenados alfabéticamente (haga clic para ver los detalles)  
+## 数据模型的属性描述  
+按字母顺序排列（点击查看详情）。  
 <!-- /50-DataModelHeader -->  
 <!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
@@ -236,9 +236,9 @@ BuildingOperation:
 <!-- 70-MiddleNotes -->  
 <!-- /70-MiddleNotes -->  
 <!-- 80-Examples -->  
-## Ejemplo de carga útil  
-#### BuildingOperation NGSI-v2 key-values Ejemplo  
-Aquí hay un ejemplo de una BuildingOperation en formato JSON-LD como valores-clave. Esto es compatible con NGSI-v2 cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
+## ＃＃＃＃有效载荷的例子  
+#### BuildingOperation NGSI-v2 key-values 示例  
+这里有一个JSON-LD格式的BuildingOperation的例子，作为key-values。当使用`options=keyValues`时，这与NGSI-v2兼容，并返回单个实体的上下文数据。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -269,8 +269,8 @@ BuildingOperation:
 }  
 ```  
 </details>  
-#### BuildingOperation NGSI-v2 normalizado Ejemplo  
-He aquí un ejemplo de una BuildingOperation en formato JSON-LD normalizado. Esto es compatible con NGSI-v2 cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
+#### BuildingOperation NGSI-v2规范化示例  
+下面是一个规范化的JSON-LD格式的BuildingOperation的例子。当不使用选项时，这与NGSI-v2兼容，并返回单个实体的上下文数据。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -342,8 +342,8 @@ BuildingOperation:
 }  
 ```  
 </details>  
-#### BuildingOperation NGSI-LD key-values Ejemplo  
-Aquí hay un ejemplo de una BuildingOperation en formato JSON-LD como valores-clave. Esto es compatible con NGSI-LD cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
+#### BuildingOperation NGSI-LD key-values 示例  
+这里是一个以JSON-LD格式作为key-values的BuildingOperation的例子。当使用`options=keyValues`时，这与NGSI-LD兼容，并返回单个实体的上下文数据。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -435,8 +435,8 @@ BuildingOperation:
 }  
 ```  
 </details>  
-#### BuildingOperation NGSI-LD normalizado Ejemplo  
-He aquí un ejemplo de una BuildingOperation en formato JSON-LD normalizado. Esto es compatible con NGSI-LD cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
+#### BuildingOperation NGSI-LD规范化示例  
+这里有一个JSON-LD格式的BuildingOperation的例子，是规范化的。当不使用选项时，这与NGSI-LD兼容，并返回单个实体的上下文数据。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -489,7 +489,7 @@ BuildingOperation:
 <!-- 90-FooterNotes -->  
 <!-- /90-FooterNotes -->  
 <!-- 95-Units -->  
-Consulte [FAQ 10](https://smartdatamodels.org/index.php/faqs/) para obtener una respuesta sobre cómo tratar las unidades de magnitud  
+参见[常见问题10](https://smartdatamodels.org/index.php/faqs/)，以获得关于如何处理量级单位的答案。  
 <!-- /95-Units -->  
 <!-- 97-LastFooter -->  
 ---  

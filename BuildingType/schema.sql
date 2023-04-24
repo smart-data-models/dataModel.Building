@@ -1,0 +1,3 @@
+/* (Beta) Export of data model BuildingType of the subject dataModel.Building for a postgreSQL database. Pending translation of enumerations and multityped attributes */
+CREATE TYPE BuildingType_type AS ENUM ('BuildingType');
+CREATE TABLE BuildingType (address json, alternateName text, areaServed text, buildingTypeChildren json, buildingTypeParent text, dataProvider text, dateCreated timestamp, dateModified timestamp, description text, id text, location json, name text, owner json, root text, seeAlso json, source text, type BuildingType_type);

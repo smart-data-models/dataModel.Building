@@ -1,37 +1,43 @@
 <!-- 10-Header -->  
 [![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
-Entität: GebäudeTyp  
-===================<!-- /10-Header -->  
+实体。观察到的振动  
+=========<!-- /10-Header -->  
 <!-- 15-License -->  
-[Offene Lizenz](https://github.com/smart-data-models//dataModel.Building/blob/master/BuildingType/LICENSE.md)  
-[Dokument automatisch generiert](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+[开放许可](https://github.com/smart-data-models//dataModel.Building/blob/master/VibrationsObserved/LICENSE.md)  
+[文件自动生成](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 <!-- /15-License -->  
 <!-- 20-Description -->  
-Globale Beschreibung: **Diese Einheit enthält eine harmonisierte Beschreibung eines generischen Gebäudetyps. Diese Entität ist mit den vertikalen Segmenten Smart Home, Smart Cities, Industrie und damit verbundenen IoT-Anwendungen verbunden. Der Gebäudetyp umfasst eine hierarchische Struktur, die eine flexible Gruppierung von Gebäudetypen ermöglicht.**  
-Version: 0.0.3  
+全球描述。**在一个特定的地方观察到的振动**。  
+版本：0.0.1  
 <!-- /20-Description -->  
 <!-- 30-PropertiesList -->  
 
-## Liste der Eigenschaften  
+##属性列表  
 
-<sup><sub>[*] Wenn es für ein Attribut keinen Typ gibt, liegt das daran, dass es mehrere Typen oder unterschiedliche Formate/Muster haben kann</sub></sup>.  
-- `address[object]`: Die Postanschrift  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: Ein alternativer Name für diesen Artikel  - `areaServed[string]`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  . Model: [https://schema.org/Text](https://schema.org/Text)- `buildingTypeChildren[array]`: Verweis auf untergeordnete Gebäudetypen, d. h. unmittelbar unter dieser Einheit in der Hierarchie.  - `buildingTypeParent[*]`: Verweist auf alle übergeordneten Gebäudetyp-Entitäten, auf denen dieser Typ basiert.  - `dataProvider[string]`: Eine Folge von Zeichen zur Identifizierung des Anbieters der harmonisierten Dateneinheit.  - `dateCreated[string]`: Zeitstempel der Entitätserstellung. Dieser wird in der Regel von der Speicherplattform zugewiesen.  - `dateModified[string]`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `description[string]`: Eine Beschreibung dieses Artikels  - `id[*]`: Eindeutiger Bezeichner der Entität  - `location[*]`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `name[string]`: Der Name dieses Artikels.  - `owner[array]`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Kennungen der Eigentümer verweist  - `root[boolean]`: Ein logischer Indikator dafür, dass es sich um die Wurzel einer BuildingType-Hierarchie handelt. true bedeutet, dass es sich um die Wurzel handelt, false bedeutet, dass es sich nicht um die Wurzel handelt.  - `seeAlso[*]`: Liste von URLs, die auf zusätzliche Ressourcen zu dem Artikel verweisen  - `source[string]`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL des Quellobjekts.  - `type[string]`: NGSI-Kennung der Entität. Er muss BuildingType sein  <!-- /30-PropertiesList -->  
+<sup><sub>[*] 如果一个属性中没有一个类型，是因为它可能有几种类型或不同的格式/模式</sub></sup>。  
+- `accelerationMeasured[number]`: 观察到的振动的大小（如地震）或其他地板的移动  . Model: [https://schema.org/Number](https://schema.org/Number)- `address[object]`: 邮寄地址  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: 这个项目的一个替代名称  - `areaServed[string]`: 提供服务或提供项目的地理区域  . Model: [https://schema.org/Text](https://schema.org/Text)- `dataProvider[string]`: 一串识别统一数据实体提供者的字符。  - `dateCreated[string]`: 实体创建时间戳。这通常会由存储平台分配。  - `dateModified[string]`: 实体最后一次修改的时间戳。这通常会由存储平台分配。  - `dateObserved[string]`: 观察的日期和时间，以ISO8601表示  - `description[string]`: 对这个项目的描述  - `id[*]`: 实体的唯一标识符  - `location[*]`: 对该项目的Geojson引用。它可以是点、线字符串、多边形、多点、多线字符串或多多边形。  - `name[string]`: 这个项目的名称。  - `owner[array]`: 一个包含JSON编码的字符序列的列表，引用所有者的唯一Ids。  - `seeAlso[*]`: 指向有关该项目的其他资源的URI列表  - `source[string]`: 一系列的字符，以URL的形式给出实体数据的原始来源。建议为源提供者的完全合格域名，或源对象的URL。  - `type[string]`: NGSI-LD实体类型。它必须是VibrationsObserved。  <!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
-Erforderliche Eigenschaften  
-- `id`  - `type`  <!-- /35-RequiredProperties -->  
+所需属性  
+- `accelerationMeasured`  - `dateObserved`  - `id`  <!-- /35-RequiredProperties -->  
 <!-- 40-RequiredProperties -->  
-Dieses Datenmodell stammt aus dem ursprünglichen GSMA IoT-Projekt, https://www.gsma.com/iot/iot-big-data/. Es wurden einige kleinere Anpassungen vorgenommen, um den Anforderungen intelligenter Datenmodelle zu entsprechen.  
 <!-- /40-RequiredProperties -->  
 <!-- 50-DataModelHeader -->  
-## Datenmodell Beschreibung der Eigenschaften  
-Alphabetisch sortiert (für Details anklicken)  
+## 数据模型的属性描述  
+按字母顺序排列（点击查看详情）。  
 <!-- /50-DataModelHeader -->  
 <!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
-BuildingType:    
-  description: 'This entity contains a harmonised description of a generic building type. This entity is associated with the vertical segments of smart home, smart cities, industry and related IoT applications. The building type includes a hierarchical structure that allows building types to be grouped in a flexible way.'    
+VibrationsObserved:    
+  description: 'The vibrations observed in a specific place.'    
   properties:    
+    accelerationMeasured:    
+      description: 'Magnitude of the vibrations observed (e.g. Earthquake) or other floor movements'    
+      type: number    
+      x-ngsi:    
+        model: https://schema.org/Number    
+        type: Property    
+        units: m/s2    
     address:    
       description: 'The mailing address'    
       properties:    
@@ -68,34 +74,6 @@ BuildingType:
       x-ngsi:    
         model: https://schema.org/Text    
         type: Property    
-    buildingTypeChildren:    
-      description: 'Reference to child building types i.e. immediately below this entity in the hierarchy.'    
-      items:    
-        anyOf:    
-          - description: 'Property. Identifier format of any NGSI entity'    
-            maxLength: 256    
-            minLength: 1    
-            pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
-            type: string    
-          - description: 'Property. Identifier format of any NGSI entity'    
-            format: uri    
-            type: string    
-      type: array    
-      x-ngsi:    
-        type: Relationship    
-    buildingTypeParent:    
-      anyOf:    
-        - description: 'Property. Identifier format of any NGSI entity'    
-          maxLength: 256    
-          minLength: 1    
-          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!:\\]+$    
-          type: string    
-        - description: 'Property. Identifier format of any NGSI entity'    
-          format: uri    
-          type: string    
-      description: 'References any higher level Building Type entities that this type is based on.'    
-      x-ngsi:    
-        type: Relationship    
     dataProvider:    
       description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
       type: string    
@@ -113,13 +91,19 @@ BuildingType:
       type: string    
       x-ngsi:    
         type: Property    
+    dateObserved:    
+      description: 'Date and time of the observation in ISO8601'    
+      format: date-time    
+      type: string    
+      x-ngsi:    
+        type: Property    
     description:    
       description: 'A description of this item'    
       type: string    
       x-ngsi:    
         type: Property    
     id:    
-      anyOf: &buildingtype_-_properties_-_owner_-_items_-_anyof    
+      anyOf: &vibrationsobserved_-_properties_-_owner_-_items_-_anyof    
         - description: 'Property. Identifier format of any NGSI entity'    
           maxLength: 256    
           minLength: 1    
@@ -292,14 +276,9 @@ BuildingType:
     owner:    
       description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
       items:    
-        anyOf: *buildingtype_-_properties_-_owner_-_items_-_anyof    
+        anyOf: *vibrationsobserved_-_properties_-_owner_-_items_-_anyof    
         description: 'Property. Unique identifier of the entity'    
       type: array    
-      x-ngsi:    
-        type: Property    
-    root:    
-      description: 'A logical indicator that this is the root of a BuildingType hierarchy.True indicates it is the root, false indicates that it is not the root.'    
-      type: boolean    
       x-ngsi:    
         type: Property    
     seeAlso:    
@@ -320,158 +299,259 @@ BuildingType:
       x-ngsi:    
         type: Property    
     type:    
-      description: 'NGSI Entity identifier. It has to be BuildingType'    
+      description: 'NGSI-LD Entity Type. It has to be VibrationsObserved'    
       enum:    
-        - BuildingType    
+        - VibrationsObserved    
       type: string    
       x-ngsi:    
         type: Property    
   required:    
     - id    
-    - type    
+    - dateObserved    
+    - accelerationMeasured    
   type: object    
   x-derived-from: ""    
   x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
-  x-license-url: https://github.com/smart-data-models/dataModel.Building/blob/master/BuildingType/LICENSE.md    
-  x-model-schema: https://smart-data-models.github.io/dataModel.Building/BuildingType/schema.json    
-  x-model-tags: GSMA    
-  x-version: 0.0.3    
+  x-license-url: https://github.com/smart-data-models/dataModel.Building/blob/master/VibrationsObserved/LICENSE.md    
+  x-model-schema: https://smart-data-models.github.io/dataModel.Building/VibrationsObserved/schema.json    
+  x-model-tags: ""    
+  x-version: 0.0.1    
 ```  
 </details>    
 <!-- /60-ModelYaml -->  
 <!-- 70-MiddleNotes -->  
 <!-- /70-MiddleNotes -->  
 <!-- 80-Examples -->  
-## Beispiel-Nutzlasten  
-#### BuildingType NGSI-v2 key-values Beispiel  
-Hier ist ein Beispiel für einen BuildingType im JSON-LD-Format als Schlüsselwerte. Dies ist mit NGSI-v2 kompatibel, wenn `options=keyValues` verwendet wird, und liefert die Kontextdaten einer einzelnen Entität.  
+## ＃＃＃＃有效载荷的例子  
+#### VibrationsObserved NGSI-v2 key-values 示例  
+下面是一个以JSON-LD格式作为key-values的VibrationsObserved的例子。当使用`options=keyValues`时，这与NGSI-v2兼容，并返回单个实体的上下文数据。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "id": "urn:ngsi-ld:BuildingType:57b912ab-eb47-4cd5-bc9d-73abece1f1b3",  
-  "type": "BuildingType",  
-  "source": "https://source.example.com",  
-  "dataProvider": "https://provider.example.com",  
-  "name": "House",  
-  "description": "Standard building type definition for a domestic house",  
-  "root": false,  
-  "buildingTypeParent": "urn:ngsi-ld:BuildingType:4146335f-839f-4ff9-a575-6b4e6232b734",  
-  "buildingTypeChildren": [  
-    "urn:ngsi-ld:BuildingType:e4291e84-58f8-11e8-84c3-77e4f1f8c4f1",  
-    "urn:ngsi-ld:BuildingType:a71c7a08-58f9-11e8-a41e-4bcb7249360e",  
-    "urn:ngsi-ld:BuildingType:afac9bbc-58f9-11e8-b587-1f0d57b81bb4"  
-  ]  
+  "id": "VibrationsObserved-Sevilla-1",  
+  "type": "VibrationsObserved",  
+  "name": "Sevilla vibrations",  
+  "address": {  
+    "addressCountry": "ES",  
+    "addressLocality": "Sevilla"  
+  },  
+  "location": {  
+    "type": "Point",  
+    "coordinates": [  
+      37.3984759,  
+      -5.9904124  
+    ]  
+  },  
+  "dataProvider": "IMU-Station-123",  
+  "dateObserved": "2021-03-08T09:45:00Z",  
+  "accelerationMeasured": 1.3  
 }  
 ```  
 </details>  
-#### BuildingType NGSI-v2 normalisiert Beispiel  
-Hier ist ein Beispiel für einen BuildingType im JSON-LD-Format in normalisierter Form. Dies ist kompatibel mit NGSI-v2, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
+#### VibrationsObserved NGSI-v2 normalized Example  
+下面是一个以JSON-LD格式规范化的VibrationsObserved的例子。当不使用选项时，这与NGSI-v2兼容，并返回单个实体的上下文数据。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "id": "urn:ngsi-ld:BuildingType:57b912ab-eb47-4cd5-bc9d-73abece1f1b3",  
-  "type": "BuildingType",  
-  "source": {  
-    "type": "URL",  
-    "value": "https://source.example.com"  
+  "id": "urn:ngsi-ld:VibrationsObserved:id:IPZH:79807295",  
+"type": "VibrationsObserved",  
+  "dateCreated": {  
+    "type": "DateTime",  
+    "value": "2021-03-08T09:45:00Z"  
   },  
-  "dataProvider": {  
-    "type": "URL",  
-    "value": "https://provider.example.com"  
+  "dateModified": {  
+    "type": "DateTime",  
+    "value": "2021-03-08T09:45:00Z"  
+  },  
+  "source": {  
+    "type": "Text",  
+    "value": "No source"  
   },  
   "name": {  
     "type": "Text",  
-    "value": "House"  
+    "value": "Sevilla vibrations"  
+  },  
+  "alternateName": {  
+    "type": "Text",  
+    "value": ""  
   },  
   "description": {  
     "type": "Text",  
-    "value": "Standard building type definition for a domestic house"  
+    "value": "Sevilla vibrations"  
   },  
-  "root": {  
-    "type": "Boolean",  
-    "value": false  
+  "dataProvider": {  
+    "type": "Text",  
+    "value": ""  
   },  
-  "buildingTypeParent": {  
-    "type": "Relationship",  
-    "object": "urn:ngsi-ld:BuildingType:4146335f-839f-4ff9-a575-6b4e6232b734"  
-  },  
-  "buildingTypeChildren": {  
-    "type": "Relationship",  
-    "object": [  
-      "urn:ngsi-ld:BuildingType:e4291e84-58f8-11e8-84c3-77e4f1f8c4f1",  
-      "urn:ngsi-ld:BuildingType:a71c7a08-58f9-11e8-a41e-4bcb7249360e",  
-      "urn:ngsi-ld:BuildingType:afac9bbc-58f9-11e8-b587-1f0d57b81bb4"  
+  "owner": {  
+    "type": "Text",  
+    "value": [  
+      "urn:ngsi-ld:VibrationsObserved:items:ENTK:59457468",  
+      "urn:ngsi-ld:VibrationsObserved:items:DDNB:10988523"  
     ]  
+  },  
+  "seeAlso": {  
+    "type": "Text",  
+    "value": [  
+    ]  
+  },  
+  "location": {  
+    "type": "geo:json",  
+    "value": {  
+      "type": "Point",  
+      "coordinates": [  
+        37.3984759,  
+        -5.9904124  
+      ]  
+    }  
+  },  
+  "address": {  
+    "type": "StructuredValue",  
+    "value": {  
+      "streetAddress": "C/Torre del Oro",  
+      "addressLocality": "Seville",  
+      "addressRegion": "Andalucia",  
+      "addressCountry": "ES",  
+      "postalCode": "41410",  
+      "postOfficeBoxNumber": "",  
+      "areaServed": ""  
+    }  
+  },  
+  "areaServed": {  
+    "type": "Text",  
+    "value": ""  
+  },  
+  "dateObserved": {  
+    "type": "DateTime",  
+    "value": "2021-03-08T09:45:00Z"  
+  },  
+  "accelerationMeasured": {  
+    "type": "Number",  
+    "value": 1.3  
   }  
 }  
 ```  
 </details>  
-#### BuildingType NGSI-LD Schlüsselwerte Beispiel  
-Hier ist ein Beispiel für einen BuildingType im JSON-LD-Format als Key-Values. Dies ist mit NGSI-LD kompatibel, wenn `options=keyValues` verwendet wird und liefert die Kontextdaten einer einzelnen Entität.  
+#### VibrationsObserved NGSI-LD key-values 示例  
+这里是一个以JSON-LD格式作为key-values的VibrationsObserved的例子。当使用`options=keyValues`时，这与NGSI-LD兼容，并返回单个实体的上下文数据。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-    "id": "urn:ngsi-ld:BuildingType:57b912ab-eb47-4cd5-bc9d-73abece1f1b3",  
-    "type": "BuildingType",  
-    "buildingTypeChildren": [  
-        "urn:ngsi-ld:BuildingType:e4291e84-58f8-11e8-84c3-77e4f1f8c4f1",  
-        "urn:ngsi-ld:BuildingType:a71c7a08-58f9-11e8-a41e-4bcb7249360e",  
-        "urn:ngsi-ld:BuildingType:afac9bbc-58f9-11e8-b587-1f0d57b81bb4"  
-    ],  
-    "buildingTypeParent": "urn:ngsi-ld:BuildingType:4146335f-839f-4ff9-a575-6b4e6232b734",  
-    "dataProvider": "https://provider.example.com",  
-    "description": "Standard building type definition for a domestic house",  
-    "name": "House",  
-    "root": false,  
-    "source": "https://source.example.com",  
+    "id": "urn:ngsi-ld:VibrationsObserved-Sevilla-1",  
+    "type": "VibrationsObserved",  
+    "accelerationMeasured": 1.3,  
+    "address": {  
+        "addressCountry": "ES",  
+        "addressLocality": "Sevilla"  
+    },  
+    "dataProvider": "IMU-Station-123",  
+    "dateObserved": "2021-03-08T09:45:00Z",  
+    "location": {  
+        "type": "Point",  
+        "coordinates": [  
+            37.3984759,  
+            -5.9904124  
+        ]  
+    },  
+    "name": "Sevilla vibrations",  
     "@context": [  
-        "https://smart-data-models.github.io/dataModel.Building/context.jsonld",  
+        "https://schema.lab.fiware.org/ld/context",  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
         "https://raw.githubusercontent.com/smart-data-models/dataModel.Building/master/context.jsonld"  
     ]  
 }  
 ```  
 </details>  
-#### BuildingType NGSI-LD normalisiert Beispiel  
-Hier ist ein Beispiel für einen BuildingType im JSON-LD-Format in normalisierter Form. Dies ist mit NGSI-LD kompatibel, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
+#### VibrationsObserved NGSI-LD normalized Example  
+下面是一个以JSON-LD格式规范化的VibrationsObserved的例子。当不使用选项时，这与NGSI-LD兼容，并返回单个实体的上下文数据。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-    "id": "urn:ngsi-ld:BuildingType:57b912ab-eb47-4cd5-bc9d-73abece1f1b3",  
-    "type": "BuildingType",  
-    "buildingTypeChildren": {  
-        "type": "Relationship",  
-        "object": [  
-            "urn:ngsi-ld:BuildingType:e4291e84-58f8-11e8-84c3-77e4f1f8c4f1",  
-            "urn:ngsi-ld:BuildingType:a71c7a08-58f9-11e8-a41e-4bcb7249360e",  
-            "urn:ngsi-ld:BuildingType:afac9bbc-58f9-11e8-b587-1f0d57b81bb4"  
-        ]  
+    "id": "urn:ngsi-ld:VibrationsObserved:id:IPZH:79807295",  
+    "type": "VibrationsObserved",  
+    "accelerationMeasured": {  
+        "type": "Property",  
+        "value": 1.3  
     },  
-    "buildingTypeParent": {  
-        "type": "Relationship",  
-        "object": "urn:ngsi-ld:BuildingType:4146335f-839f-4ff9-a575-6b4e6232b734"  
+    "address": {  
+        "type": "Property",  
+        "value": {  
+            "streetAddress": "C/Torre del Oro",  
+            "addressLocality": "Seville",  
+            "addressRegion": "Andalucia",  
+            "addressCountry": "ES",  
+            "postalCode": "41410",  
+            "postOfficeBoxNumber": "",  
+            "areaServed": ""  
+        }  
+    },  
+    "alternateName": {  
+        "type": "Property",  
+        "value": ""  
+    },  
+    "areaServed": {  
+        "type": "Property",  
+        "value": ""  
     },  
     "dataProvider": {  
         "type": "Property",  
-        "value": "https://provider.example.com"  
+        "value": ""  
+    },  
+    "dateCreated": {  
+        "type": "Property",  
+        "value": {  
+            "@type": "DateTime",  
+            "@value": "2021-03-08T09:45:00Z"  
+        }  
+    },  
+    "dateModified": {  
+        "type": "Property",  
+        "value": {  
+            "@type": "DateTime",  
+            "@value": "2021-03-08T09:45:00Z"  
+        }  
+    },  
+    "dateObserved": {  
+        "type": "Property",  
+        "value": {  
+            "@type": "DateTime",  
+            "@value": "2021-03-08T09:45:00Z"  
+        }  
     },  
     "description": {  
         "type": "Property",  
-        "value": "Standard building type definition for a domestic house"  
+        "value": "Sevilla vibrations"  
+    },  
+    "location": {  
+        "type": "Property",  
+        "value": {  
+            "type": "Point",  
+            "coordinates": [  
+                37.3984759,  
+                -5.9904124  
+            ]  
+        }  
     },  
     "name": {  
         "type": "Property",  
-        "value": "House"  
+        "value": "Sevilla vibrations"  
     },  
-    "root": {  
+    "owner": {  
         "type": "Property",  
-        "value": false  
+        "value": [  
+            "urn:ngsi-ld:VibrationsObserved:items:ENTK:59457468",  
+            "urn:ngsi-ld:VibrationsObserved:items:DDNB:10988523"  
+        ]  
+    },  
+    "seeAlso": {  
+        "type": "Property",  
+        "value": []  
     },  
     "source": {  
         "type": "Property",  
-        "value": "https://source.example.com"  
+        "value": "No source"  
     },  
     "@context": [  
-        "https://smart-data-models.github.io/dataModel.Building/context.jsonld",  
         "https://raw.githubusercontent.com/smart-data-models/dataModel.Building/master/context.jsonld"  
     ]  
 }  
@@ -480,7 +560,7 @@ BuildingType:
 <!-- 90-FooterNotes -->  
 <!-- /90-FooterNotes -->  
 <!-- 95-Units -->  
-Siehe [FAQ 10] (https://smartdatamodels.org/index.php/faqs/), um eine Antwort auf die Frage zu erhalten, wie man mit Größeneinheiten umgeht  
+参见[常见问题10](https://smartdatamodels.org/index.php/faqs/)，以获得关于如何处理量级单位的答案。  
 <!-- /95-Units -->  
 <!-- 97-LastFooter -->  
 ---  

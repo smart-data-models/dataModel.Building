@@ -1,5 +1,9 @@
 {
     "@context": {
+        "Building": "https://smartdatamodels.org/dataModel.Building/Building",
+        "BuildingOperation": "https://smartdatamodels.org/dataModel.Building/BuildingOperation",
+        "BuildingType": "https://smartdatamodels.org/dataModel.Building/BuildingType",
+        "VibrationsObserved": "https://smartdatamodels.org/dataModel.Building/VibrationsObserved",
         "accelerationMeasured": "https://smartdatamodels.org/dataModel.Building/accelerationMeasured",
         "address": "https://smartdatamodels.org/address",
         "alternateName": "https://smartdatamodels.org/alternateName",
@@ -24,7 +28,7 @@
         "name": "https://smartdatamodels.org/name",
         "ngsi-ld": "https://uri.etsi.org/ngsi-ld/",
         "occupier": "https://smartdatamodels.org/dataModel.Building/occupier",
-        "openingHours": "https://smartdatamodels.org/dataModel.Building/openingHours",
+        "openingHours": "https://smartdatamodels.org/openingHours",
         "operationSequence": "https://smartdatamodels.org/dataModel.Building/operationSequence",
         "operationType": "https://smartdatamodels.org/dataModel.Building/operationType",
         "owner": "https://smartdatamodels.org/owner",

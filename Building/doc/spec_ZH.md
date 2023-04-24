@@ -1,30 +1,30 @@
 <!-- 10-Header -->  
 [![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
-Entité : Building  
-=================<!-- /10-Header -->  
+实体。建筑物  
+======<!-- /10-Header -->  
 <!-- 15-License -->  
-[Licence ouverte] (https://github.com/smart-data-models//dataModel.Building/blob/master/Building/LICENSE.md)  
-[document généré automatiquement] (https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+[开放许可](https://github.com/smart-data-models//dataModel.Building/blob/master/Building/LICENSE.md)  
+[文件自动生成](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 <!-- /15-License -->  
 <!-- 20-Description -->  
-Description globale : **Information sur un bâtiment donné**  
-version : 0.0.2  
+全局描述。**关于特定建筑的信息**。  
+版本：0.0.2  
 <!-- /20-Description -->  
 <!-- 30-PropertiesList -->  
 
-## Liste des propriétés  
+##属性列表  
 
-<sup><sub>[*] S'il n'y a pas de type dans un attribut, c'est parce qu'il pourrait avoir plusieurs types ou différents formats/modèles</sub></sup>.  
-- `address[object]`: L'adresse postale  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: Un nom alternatif pour cet élément  - `areaServed[string]`: La zone géographique où un service ou un article offert est fourni  . Model: [https://schema.org/Text](https://schema.org/Text)- `category[array]`: Catégorie du bâtiment. Enum :'appartements, fournil, grange, pont, bungalow, bunker, cathédrale, cabane, abri de voiture, chapelle, église, civique, commercial, conservatoire, construction, étable, détaché, digesteur, dortoir, ferme, ferme_auxiliaire, garage, garages, abri à bagages, tribune, serre, hangar, hôpital, hôtel, maison, bateau-maison, cabane, industriel, jardin d'enfants, kiosque, mosquée, bureau, parking, pavillon, public, résidentiel, commerce de détail, manège, toit, ruines, école, service, hangar, sanctuaire, écurie, stade, caravane statique, stylo, synagogue, temple, terrasse, gare, tour de transformateur, transport, université, entrepôt, château d'eau'.  - `collapseRisk[number]`: Probabilité d'effondrement total du bâtiment.  . Model: [https://schema.org/Number](https://schema.org/Number)- `containedInPlace[*]`: Référence Geojson à l'élément. Il peut s'agir d'un point, d'une ligne, d'un polygone, d'un point multiple, d'une ligne multiple ou d'un polygone multiple.  - `dataProvider[string]`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated[string]`: Horodatage de la création de l'entité. Celui-ci sera généralement attribué par la plateforme de stockage.  - `dateModified[string]`: Horodatage de la dernière modification de l'entité. Il sera généralement attribué par la plateforme de stockage.  - `description[string]`: Une description de cet article  - `floorsAboveGround[integer]`: Étages au-dessus du niveau du sol  . Model: [https://schema.org/Number](https://schema.org/Number)- `floorsBelowGround[integer]`: Étages sous le niveau du sol  . Model: [https://schema.org/Number](https://schema.org/Number)- `id[*]`: Identifiant unique de l'entité  - `location[*]`: Référence Geojson à l'élément. Il peut s'agir d'un point, d'une ligne, d'un polygone, d'un point multiple, d'une ligne multiple ou d'un polygone multiple.  - `name[string]`: Le nom de cet élément.  - `occupier[array]`: Personne ou entité utilisant le bâtiment  . Model: [https://schema.org/URL](https://schema.org/URL)- `openingHours[array]`: Heures d'ouverture de ce bâtiment.  . Model: [https://schema.org/openingHours](https://schema.org/openingHours)- `owner[array]`: Une liste contenant une séquence de caractères codée en JSON référençant les identifiants uniques du ou des propriétaires.  - `peopleCapacity[number]`: Personnes autorisées présentes dans le bâtiment  . Model: [https://schema.org/Number](https://schema.org/Number)- `peopleOccupancy[number]`: Personnes présentes dans le bâtiment  . Model: [https://schema.org/Number](https://schema.org/Number)- `refMap[*]`: Référence à la carte contenant le bâtiment  - `seeAlso[*]`: liste d'uri pointant vers des ressources supplémentaires sur l'article  - `source[string]`: Une séquence de caractères donnant la source originale des données de l'entité sous forme d'URL. Il est recommandé d'utiliser le nom de domaine entièrement qualifié du fournisseur source ou l'URL de l'objet source.  - `type[string]`: NGSI Type d'entité  <!-- /30-PropertiesList -->  
+<sup><sub>[*] 如果一个属性中没有一个类型，是因为它可能有几种类型或不同的格式/模式</sub></sup>。  
+- `address[object]`: 邮寄地址  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: 这个项目的一个替代名称  - `areaServed[string]`: 提供服务或提供项目的地理区域  . Model: [https://schema.org/Text](https://schema.org/Text)- `category[array]`: 建筑物的类别。枚举。'公寓, bakehouse, 谷仓, 桥梁, 平房, 地堡, 大教堂, 小木屋, 车棚, 教堂, 公民, 商业, 音乐厅, 建筑, 牛棚, 独立, 沼气池, 宿舍, 农场, 农场辅助设施, 车库, 车库_棚, 看台, 温室, 飞机库, 医院, 酒店, 房屋, 船屋, 小屋。工业，幼儿园，亭子，清真寺，办公室，停车场，亭子，公共，住宅，零售，骑马厅，屋顶，废墟，学校，服务，棚子，神社，马厩，体育场，静态房车，风格，犹太教堂，寺庙，露台，火车站，变压器塔，运输，大学，仓库，水塔'  - `collapseRisk[number]`: 建筑物完全倒塌的概率。  . Model: [https://schema.org/Number](https://schema.org/Number)- `containedInPlace[*]`: 对该项目的Geojson引用。它可以是点、线字符串、多边形、多点、多线字符串或多多边形。  - `dataProvider[string]`: 一串识别统一数据实体提供者的字符。  - `dateCreated[string]`: 实体创建时间戳。这通常会由存储平台分配。  - `dateModified[string]`: 实体最后一次修改的时间戳。这通常会由存储平台分配。  - `description[string]`: 对这个项目的描述  - `floorsAboveGround[integer]`: 高于地面的楼层  . Model: [https://schema.org/Number](https://schema.org/Number)- `floorsBelowGround[integer]`: 地面以下的楼层  . Model: [https://schema.org/Number](https://schema.org/Number)- `id[*]`: 实体的唯一标识符  - `location[*]`: 对该项目的Geojson引用。它可以是点、线字符串、多边形、多点、多线字符串或多多边形。  - `name[string]`: 这个项目的名称。  - `occupier[array]`: 使用该建筑的个人或实体  . Model: [https://schema.org/URL](https://schema.org/URL)- `openingHours[array]`: 该建筑的开放时间。  . Model: [https://schema.org/openingHours](https://schema.org/openingHours)- `owner[array]`: 一个包含JSON编码的字符序列的列表，引用所有者的唯一Ids。  - `peopleCapacity[number]`: 允许在建筑物内的人  . Model: [https://schema.org/Number](https://schema.org/Number)- `peopleOccupancy[number]`: 在场的人  . Model: [https://schema.org/Number](https://schema.org/Number)- `refMap[*]`: 参考包含该建筑的地图  - `seeAlso[*]`: 指向有关该项目的其他资源的URI列表  - `source[string]`: 提供实体数据原始来源的一连串字符，作为一个URL。建议为源提供者的完全合格域名，或源对象的URL。  - `type[string]`: NGSI 实体类型  <!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
-Propriétés requises  
+所需属性  
 - `address`  - `category`  - `id`  - `type`  <!-- /35-RequiredProperties -->  
 <!-- 40-RequiredProperties -->  
-Cette entité contient une description harmonisée d'un bâtiment. Cette entité est associée aux segments verticaux des maisons intelligentes, des villes intelligentes, de l'industrie et des applications IoT connexes. Ce modèle de données a été partiellement développé en coopération avec les opérateurs mobiles et le [GSMA] (https://www.gsma.com/iot/iot-big-data/). Les modifications suivantes ont été apportées au modèle de données du GSMA la référence au `BuildingType` est supprimée, car l'attribut `BuildingType` comparé à l'attribut `category` n'introduit pas d'informations significatives. L'attribut `category` est obligatoire. L'attribut `openingHours` a été introduit conformément au modèle de données schema.org, afin de permettre une granularité fine des heures d'ouverture des bâtiments. La GSMA l'a soutenu en tant que texte libre dans l'attribut `notes` (supprimé également). `refSubscriptionService` n'est pas pris en charge, car le modèle `SubscriptionService` ne l'est pas actuellement.  
+该实体包含对建筑物的统一描述。该实体与智能家居、智能城市、工业和相关物联网应用等垂直领域相关。这个数据模型部分是与移动运营商和[GSMA](https://www.gsma.com/iot/iot-big-data/)合作开发的，与GSMA数据模型相比，引入了以下变化 移除对 "BuildingType "的引用，因为 "BuildingType "与 "category "属性相比并没有引入重要信息。`类别'属性是必需的。根据schema.org数据模型引入 "openingHours"，允许对建筑物的开放时间进行细化。GSMA支持在`notes`属性中作为自由文本（也被删除）。不支持`refSubscriptionService`，因为目前不支持`SubscriptionService`模型。  
 <!-- /40-RequiredProperties -->  
 <!-- 50-DataModelHeader -->  
-## Description des propriétés du modèle de données  
-Classés par ordre alphabétique (cliquez pour plus de détails)  
+## 数据模型的属性描述  
+按字母顺序排列（点击查看详情）。  
 <!-- /50-DataModelHeader -->  
 <!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
@@ -453,9 +453,9 @@ Building:
 <!-- 70-MiddleNotes -->  
 <!-- /70-MiddleNotes -->  
 <!-- 80-Examples -->  
-## Exemples de charges utiles  
-#### Exemple de construction de valeurs clés NGSI-v2  
-Voici un exemple d'un bâtiment au format JSON-LD en tant que valeurs-clés. Ceci est compatible avec NGSI-v2 en utilisant `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
+## ＃＃＃＃有效载荷的例子  
+#### 构建NGSI-v2密钥值的例子  
+这里是一个以JSON-LD格式作为key-values的Building的例子。当使用`options=keyValues`时，这与NGSI-v2兼容，并返回单个实体的上下文数据。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -546,8 +546,8 @@ Building:
 }  
 ```  
 </details>  
-#### Construction de la NGSI-v2 normalisée Exemple  
-Voici un exemple d'un bâtiment au format JSON-LD tel que normalisé. Ce format est compatible avec NGSI-v2 lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
+#### 建立NGSI-v2规范化的例子  
+下面是一个以JSON-LD格式规范化的Building的例子。当不使用选项时，这与NGSI-v2兼容，并返回单个实体的上下文数据。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -683,8 +683,8 @@ Building:
 }  
 ```  
 </details>  
-#### Construction de valeurs clés NGSI-LD Exemple  
-Voici un exemple d'un bâtiment au format JSON-LD en tant que valeurs-clés. Ceci est compatible avec NGSI-LD lorsque vous utilisez `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
+#### 构建NGSI-LD密钥值的例子  
+这里是一个以JSON-LD格式作为key-values的Building的例子。当使用`options=keyValues`时，这与NGSI-LD兼容，并返回单个实体的上下文数据。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -778,8 +778,8 @@ Building:
 }  
 ```  
 </details>  
-#### Bâtiment NGSI-LD normalisé Exemple  
-Voici un exemple d'un bâtiment au format JSON-LD tel que normalisé. Ce format est compatible avec NGSI-LD lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
+#### 建立NGSI-LD规范化的例子  
+下面是一个以JSON-LD格式规范化的Building的例子。当不使用选项时，这与NGSI-LD兼容，并返回单个实体的上下文数据。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -923,7 +923,7 @@ Building:
 <!-- 90-FooterNotes -->  
 <!-- /90-FooterNotes -->  
 <!-- 95-Units -->  
-Voir [FAQ 10](https://smartdatamodels.org/index.php/faqs/) pour obtenir une réponse sur la façon de traiter les unités de magnitude.  
+参见[常见问题10](https://smartdatamodels.org/index.php/faqs/)，以获得关于如何处理量级单位的答案。  
 <!-- /95-Units -->  
 <!-- 97-LastFooter -->  
 ---  
