@@ -34,7 +34,7 @@
                             "description": "Property. Identifier format of any NGSI entity"
                         }
                     ],
-                    "description": "Relationship. Model:'https://schema.org/URL'. Building reference where the operation is performed."
+                    "description": "Relationship. Model:'https://schema.org/URL'. Building reference where the operation is performed"
                 },
                 "refOperator": {
                     "anyOf": [
@@ -51,7 +51,7 @@
                             "description": "Property. Identifier format of any NGSI entity"
                         }
                     ],
-                    "description": "Relationship. Model:'https://schema.org/URL'. Reference to the Operator doing the operation on the building."
+                    "description": "Relationship. Model:'https://schema.org/URL'. Reference to the Operator doing the operation on the building"
                 },
                 "operationType": {
                     "type": "string",
@@ -68,22 +68,22 @@
                 "startDate": {
                     "type": "string",
                     "format": "date-time",
-                    "description": "Property. Model:'https://schema.org/DateTime'. The planned start date for the operation."
+                    "description": "Property. Model:'https://schema.org/DateTime'. The planned start date for the operation"
                 },
                 "endDate": {
                     "type": "string",
                     "format": "date-time",
-                    "description": "Property. Model:'https://schema.org/DateTime'. The planned end date for the operation."
+                    "description": "Property. Model:'https://schema.org/DateTime'. The planned end date for the operation"
                 },
                 "dateStarted": {
                     "type": "string",
                     "format": "date-time",
-                    "description": "Property. Model:'https://schema.org/DateTime'. The actual start date for the operation."
+                    "description": "Property. Model:'https://schema.org/DateTime'. The actual start date for the operation"
                 },
                 "dateFinished": {
                     "type": "string",
                     "format": "date-time",
-                    "description": "Property. Model:'https://schema.org/DateTime'. The actual end date for the operation."
+                    "description": "Property. Model:'https://schema.org/DateTime'. The actual end date for the operation"
                 },
                 "status": {
                     "type": "string",
@@ -112,7 +112,7 @@
                 },
                 "refRelatedDeviceOperation": {
                     "type": "array",
-                    "description": "Relationship. Devices related to the current operation. Model:'https://schema.org/URL'. A list of references to an entity of type Device.",
+                    "description": "Relationship. Devices related to the current operation. Model:'https://schema.org/URL'. A list of references to an entity of type Device",
                     "items": {
                         "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType"
                     }
