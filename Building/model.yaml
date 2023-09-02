@@ -159,10 +159,10 @@ Building:
               minItems: 2
               type: array
             type:
-              enum: &properties_-_type_-_enum
+              enum:
                 - Point
               type: string
-          required: &required
+          required:
             - type
             - coordinates
           title: GeoJSON Point
@@ -185,10 +185,10 @@ Building:
               minItems: 2
               type: array
             type:
-              enum: &properties_-_type_-_enum
+              enum:
                 - LineString
               type: string
-          required: &required
+          required:
             - type
             - coordinates
           title: GeoJSON LineString
@@ -213,10 +213,10 @@ Building:
                 type: array
               type: array
             type:
-              enum: &properties_-_type_-_enum
+              enum:
                 - Polygon
               type: string
-          required: &required
+          required:
             - type
             - coordinates
           title: GeoJSON Polygon
@@ -238,10 +238,10 @@ Building:
                 type: array
               type: array
             type:
-              enum: &properties_-_type_-_enum
+              enum:
                 - MultiPoint
               type: string
-          required: &required
+          required:
             - type
             - coordinates
           title: GeoJSON MultiPoint
@@ -266,10 +266,10 @@ Building:
                 type: array
               type: array
             type:
-              enum: &properties_-_type_-_enum
+              enum:
                 - MultiLineString
               type: string
-          required: &required
+          required:
             - type
             - coordinates
           title: GeoJSON MultiLineString
@@ -296,10 +296,10 @@ Building:
                 type: array
               type: array
             type:
-              enum: &properties_-_type_-_enum
+              enum:
                 - MultiPolygon
               type: string
-          required: &required
+          required:
             - type
             - coordinates
           title: GeoJSON MultiPolygon
@@ -375,9 +375,12 @@ Building:
               minItems: 2
               type: array
             type:
-              enum: *properties_-_type_-_enum
+              enum:
+                - Point
               type: string
-          required: *required
+          required:
+            - type
+            - coordinates
           title: GeoJSON Point
           type: object
           x-ngsi:
@@ -398,9 +401,12 @@ Building:
               minItems: 2
               type: array
             type:
-              enum: *properties_-_type_-_enum
+              enum:
+                - LineString
               type: string
-          required: *required
+          required:
+            - type
+            - coordinates
           title: GeoJSON LineString
           type: object
           x-ngsi:
@@ -423,9 +429,12 @@ Building:
                 type: array
               type: array
             type:
-              enum: *properties_-_type_-_enum
+              enum:
+                - Polygon
               type: string
-          required: *required
+          required:
+            - type
+            - coordinates
           title: GeoJSON Polygon
           type: object
           x-ngsi:
@@ -445,9 +454,12 @@ Building:
                 type: array
               type: array
             type:
-              enum: *properties_-_type_-_enum
+              enum:
+                - MultiPoint
               type: string
-          required: *required
+          required:
+            - type
+            - coordinates
           title: GeoJSON MultiPoint
           type: object
           x-ngsi:
@@ -470,9 +482,12 @@ Building:
                 type: array
               type: array
             type:
-              enum: *properties_-_type_-_enum
+              enum:
+                - MultiLineString
               type: string
-          required: *required
+          required:
+            - type
+            - coordinates
           title: GeoJSON MultiLineString
           type: object
           x-ngsi:
@@ -497,9 +512,12 @@ Building:
                 type: array
               type: array
             type:
-              enum: *properties_-_type_-_enum
+              enum:
+                - MultiPolygon
               type: string
-          required: *required
+          required:
+            - type
+            - coordinates
           title: GeoJSON MultiPolygon
           type: object
           x-ngsi:
