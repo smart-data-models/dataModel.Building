@@ -15,7 +15,7 @@
 ## Elenco delle proprietà  
 
 <sup><sub>[*] Se non c'è un tipo in un attributo è perché potrebbe avere diversi tipi o diversi formati/modelli</sub></sup>.  
-- `alternateName[string]`: Un nome alternativo per questa voce  - `dataProvider[string]`: Una sequenza di caratteri che identifica il fornitore dell'entità di dati armonizzata.  - `dateCreated[string]`: Timestamp di creazione dell'entità. Di solito viene assegnato dalla piattaforma di archiviazione.  - `dateFinished[string]`: La data di fine effettiva dell'operazione.  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `dateModified[string]`: Timestamp dell'ultima modifica dell'entità. Di solito viene assegnato dalla piattaforma di archiviazione.  - `dateStarted[string]`: La data di inizio effettivo dell'operazione.  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `description[string]`: Descrizione dell'articolo  - `endDate[string]`: La data di fine prevista per l'operazione.  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `id[*]`: Identificatore univoco dell'entità  - `name[string]`: Il nome di questo elemento.  - `operationSequence[array]`: Id della sequenza dell'operazione, se disponibile  . Model: [https://schema.org/Text](https://schema.org/Text)- `operationType[string]`: Tipo di intervento sull'edificio  . Model: [https://schema.org/Text](https://schema.org/Text)- `owner[array]`: Un elenco contenente una sequenza di caratteri codificata JSON che fa riferimento agli ID univoci dei proprietari.  - `refBuilding[*]`: Riferimento all'edificio in cui viene eseguita l'operazione.  . Model: [https://schema.org/URL](https://schema.org/URL)- `refOperator[*]`: Riferimento all'Operatore che esegue l'operazione sull'edificio.  . Model: [https://schema.org/URL](https://schema.org/URL)- `refRelatedBuildingOperation[array]`: Riferimento ad altre operazioni edilizie in sequenza  - `refRelatedDeviceOperation[array]`: Dispositivi relativi all'operazione corrente. Un elenco di riferimenti a un'entità di tipo Dispositivo.  . Model: [https://schema.org/URL](https://schema.org/URL)- `result[string]`: Risultato dell'operazione di costruzione. Enum:'ok, interrotta'.  . Model: [https://schema.org/Text](https://schema.org/Text)- `seeAlso[*]`: elenco di uri che puntano a risorse aggiuntive sull'elemento  - `source[string]`: Una sequenza di caratteri che indica la fonte originale dei dati dell'entità come URL. Si consiglia di utilizzare il nome di dominio completamente qualificato del provider di origine o l'URL dell'oggetto di origine.  - `startDate[string]`: La data di inizio prevista per l'operazione.  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `status[string]`: Stato dell'operazione. Enum:'annullata, terminata, in corso, pianificata, programmata'.  . Model: [https://schema.org/Text](https://schema.org/Text)- `type[string]`: Deve essere BuildingOperation  <!-- /30-PropertiesList -->  
+- `alternateName[string]`: Un nome alternativo per questa voce  - `dataProvider[string]`: una sequenza di caratteri che identifica il fornitore dell'entità di dati armonizzata  - `dateCreated[date-time]`: Timestamp di creazione dell'entità. Di solito viene assegnato dalla piattaforma di archiviazione  - `dateFinished[date-time]`: La data di fine effettiva dell'operazione  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `dateModified[date-time]`: Timestamp dell'ultima modifica dell'entità. Di solito viene assegnato dalla piattaforma di archiviazione  - `dateStarted[date-time]`: La data di inizio effettivo dell'operazione  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `description[string]`: Descrizione dell'articolo  - `endDate[date-time]`: La data prevista per la fine dell'operazione  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `id[*]`: Identificatore univoco dell'entità  - `name[string]`: Il nome di questo elemento  - `operationSequence[array]`: Id della sequenza dell'operazione, se disponibile  . Model: [https://schema.org/Text](https://schema.org/Text)- `operationType[string]`: Tipo di intervento sull'edificio  . Model: [https://schema.org/Text](https://schema.org/Text)- `owner[array]`: Un elenco contenente una sequenza di caratteri codificata JSON che fa riferimento agli ID univoci dei proprietari.  - `refBuilding[*]`: Riferimento all'edificio in cui viene eseguita l'operazione  . Model: [https://schema.org/URL](https://schema.org/URL)- `refOperator[*]`: Riferimento all'Operatore che esegue l'operazione sull'edificio  . Model: [https://schema.org/URL](https://schema.org/URL)- `refRelatedBuildingOperation[array]`: Riferimento ad altre operazioni edilizie in sequenza  - `refRelatedDeviceOperation[array]`: Dispositivi relativi all'operazione corrente. Un elenco di riferimenti a un'entità di tipo Dispositivo  . Model: [https://schema.org/URL](https://schema.org/URL)- `result[string]`: Risultato dell'operazione di costruzione. Enum:'ok, interrotto'.  . Model: [https://schema.org/Text](https://schema.org/Text)- `seeAlso[*]`: elenco di uri che puntano a risorse aggiuntive sull'elemento  - `source[string]`: Una sequenza di caratteri che indica la fonte originale dei dati dell'entità come URL. Si consiglia di utilizzare il nome di dominio completamente qualificato del provider di origine o l'URL dell'oggetto di origine.  - `startDate[date-time]`: La data di inizio prevista per l'operazione  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `status[string]`: Stato dell'operazione. Enum:'annullata, terminata, in corso, pianificata, programmata'.  . Model: [https://schema.org/Text](https://schema.org/Text)- `type[string]`: Deve essere BuildingOperation  <!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 Proprietà richieste  
 - `endDate`  - `id`  - `refBuilding`  - `startDate`  - `type`  <!-- /35-RequiredProperties -->  
@@ -30,76 +30,80 @@
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 BuildingOperation:    
-  description: 'Information on a given Building Operation'    
+  description: Information on a given Building Operation    
   properties:    
     alternateName:    
-      description: 'An alternative name for this item'    
+      description: An alternative name for this item    
       type: string    
       x-ngsi:    
         type: Property    
     dataProvider:    
-      description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
+      description: A sequence of characters identifying the provider of the harmonised data entity    
       type: string    
       x-ngsi:    
         type: Property    
     dateCreated:    
-      description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'    
+      description: Entity creation timestamp. This will usually be allocated by the storage platform    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     dateFinished:    
-      description: 'The actual end date for the operation.'    
+      description: The actual end date for the operation    
       format: date-time    
       type: string    
       x-ngsi:    
         model: https://schema.org/DateTime    
         type: Property    
     dateModified:    
-      description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'    
+      description: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     dateStarted:    
-      description: 'The actual start date for the operation.'    
+      description: The actual start date for the operation    
       format: date-time    
       type: string    
       x-ngsi:    
         model: https://schema.org/DateTime    
         type: Property    
     description:    
-      description: 'A description of this item'    
+      description: A description of this item    
       type: string    
       x-ngsi:    
         type: Property    
     endDate:    
-      description: 'The planned end date for the operation.'    
+      description: The planned end date for the operation    
       format: date-time    
       type: string    
       x-ngsi:    
         model: https://schema.org/DateTime    
         type: Property    
     id:    
-      anyOf: &buildingoperation_-_properties_-_owner_-_items_-_anyof    
-        - description: 'Property. Identifier format of any NGSI entity'    
+      anyOf:    
+        - description: Identifier format of any NGSI entity    
           maxLength: 256    
           minLength: 1    
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
           type: string    
-        - description: 'Property. Identifier format of any NGSI entity'    
+          x-ngsi:    
+            type: Property    
+        - description: Identifier format of any NGSI entity    
           format: uri    
           type: string    
-      description: 'Unique identifier of the entity'    
+          x-ngsi:    
+            type: Property    
+      description: Unique identifier of the entity    
       x-ngsi:    
         type: Property    
     name:    
-      description: 'The name of this item.'    
+      description: The name of this item    
       type: string    
       x-ngsi:    
         type: Property    
     operationSequence:    
-      description: 'Id of the sequence of the operation when available'    
+      description: Id of the sequence of the operation when available    
       items:    
         type: string    
       type: array    
@@ -107,60 +111,110 @@ BuildingOperation:
         model: https://schema.org/Text    
         type: Property    
     operationType:    
-      description: 'Type of the operation on the building'    
+      description: Type of the operation on the building    
       type: string    
       x-ngsi:    
         model: https://schema.org/Text    
         type: Property    
     owner:    
-      description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
+      description: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)    
       items:    
-        anyOf: *buildingoperation_-_properties_-_owner_-_items_-_anyof    
-        description: 'Property. Unique identifier of the entity'    
+        anyOf:    
+          - description: Identifier format of any NGSI entity    
+            maxLength: 256    
+            minLength: 1    
+            pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+            type: string    
+            x-ngsi:    
+              type: Property    
+          - description: Identifier format of any NGSI entity    
+            format: uri    
+            type: string    
+            x-ngsi:    
+              type: Property    
+        description: Unique identifier of the entity    
+        x-ngsi:    
+          type: Property    
       type: array    
       x-ngsi:    
         type: Property    
     refBuilding:    
       anyOf:    
-        - description: 'Property. Identifier format of any NGSI entity'    
+        - description: Identifier format of any NGSI entity    
           maxLength: 256    
           minLength: 1    
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
           type: string    
-        - description: 'Property. Identifier format of any NGSI entity'    
+          x-ngsi:    
+            type: Property    
+        - description: Identifier format of any NGSI entity    
           format: uri    
           type: string    
-      description: 'Building reference where the operation is performed.'    
+          x-ngsi:    
+            type: Property    
+      description: Building reference where the operation is performed    
       x-ngsi:    
         model: https://schema.org/URL    
         type: Relationship    
     refOperator:    
       anyOf:    
-        - description: 'Property. Identifier format of any NGSI entity'    
+        - description: Identifier format of any NGSI entity    
           maxLength: 256    
           minLength: 1    
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
           type: string    
-        - description: 'Property. Identifier format of any NGSI entity'    
+          x-ngsi:    
+            type: Property    
+        - description: Identifier format of any NGSI entity    
           format: uri    
           type: string    
-      description: 'Reference to the Operator doing the operation on the building.'    
+          x-ngsi:    
+            type: Property    
+      description: Reference to the Operator doing the operation on the building    
       x-ngsi:    
         model: https://schema.org/URL    
         type: Relationship    
     refRelatedBuildingOperation:    
-      description: 'Reference to other building operations when in sequence'    
+      description: Reference to other building operations when in sequence    
       items:    
-        anyOf: *buildingoperation_-_properties_-_owner_-_items_-_anyof    
-        description: 'Property. Unique identifier of the entity'    
+        anyOf:    
+          - description: Identifier format of any NGSI entity    
+            maxLength: 256    
+            minLength: 1    
+            pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+            type: string    
+            x-ngsi:    
+              type: Property    
+          - description: Identifier format of any NGSI entity    
+            format: uri    
+            type: string    
+            x-ngsi:    
+              type: Property    
+        description: Unique identifier of the entity    
+        x-ngsi:    
+          type: Property    
       type: array    
       x-ngsi:    
         type: Relationship    
     refRelatedDeviceOperation:    
-      description: 'Devices related to the current operation. A list of references to an entity of type Device.'    
+      description: Devices related to the current operation. A list of references to an entity of type Device    
       items:    
-        anyOf: *buildingoperation_-_properties_-_owner_-_items_-_anyof    
-        description: 'Property. Unique identifier of the entity'    
+        anyOf:    
+          - description: Identifier format of any NGSI entity    
+            maxLength: 256    
+            minLength: 1    
+            pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+            type: string    
+            x-ngsi:    
+              type: Property    
+          - description: Identifier format of any NGSI entity    
+            format: uri    
+            type: string    
+            x-ngsi:    
+              type: Property    
+        description: Unique identifier of the entity    
+        x-ngsi:    
+          type: Property    
       type: array    
       x-ngsi:    
         model: https://schema.org/URL    
@@ -175,7 +229,7 @@ BuildingOperation:
         model: https://schema.org/Text    
         type: Property    
     seeAlso:    
-      description: 'list of uri pointing to additional resources about the item'    
+      description: list of uri pointing to additional resources about the item    
       oneOf:    
         - items:    
             format: uri    
@@ -187,12 +241,12 @@ BuildingOperation:
       x-ngsi:    
         type: Property    
     source:    
-      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
+      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object'    
       type: string    
       x-ngsi:    
         type: Property    
     startDate:    
-      description: 'The planned start date for the operation.'    
+      description: The planned start date for the operation    
       format: date-time    
       type: string    
       x-ngsi:    
@@ -211,7 +265,7 @@ BuildingOperation:
         model: https://schema.org/Text    
         type: Property    
     type:    
-      description: 'It has to be BuildingOperation'    
+      description: It has to be BuildingOperation    
       enum:    
         - BuildingOperation    
       type: string    
@@ -225,7 +279,7 @@ BuildingOperation:
     - endDate    
   type: object    
   x-derived-from: ""    
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.Building/blob/master/BuildingOperation/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.Building/BuildingOperation/schema.json    
   x-model-tags: ""    
@@ -237,7 +291,7 @@ BuildingOperation:
 <!-- /70-MiddleNotes -->  
 <!-- 80-Examples -->  
 ## Esempi di payload  
-#### BuildingOperation NGSI-v2 valori-chiave Esempio  
+#### BuildingOperation Valori-chiave NGSI-v2 Esempio  
 Ecco un esempio di BuildingOperation in formato JSON-LD come valori-chiave. Questo è compatibile con NGSI-v2 quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
@@ -277,6 +331,7 @@ BuildingOperation:
   "id": "57b912ab-eb47-4cd5-bc9d-73abece1f1b3",  
   "type": "BuildingOperation",  
   "status": {  
+    "type": "Text",  
     "value": "finished"  
   },  
   "startDate": {  
@@ -284,17 +339,22 @@ BuildingOperation:
     "value": "2016-08-08T10:18:16Z"  
   },  
   "operationSequence": {  
-    "value": ["fan_power%3D0", "set_temperature%3D24"]  
+    "type": "array",  
+    "value": [  
+      "fan_power%3D0",  
+      "set_temperature%3D24"  
+    ]  
   },  
   "endDate": {  
     "type": "DateTime",  
     "value": "2016-08-20T10:18:16Z"  
   },  
   "description": {  
+    "type": "Text",  
     "value": "Air conditioning levels reduced due to out of hours"  
   },  
   "refRelatedDeviceOperation": {  
-    "type": "Relationship",  
+    "type": "array",  
     "value": [  
       "36744245-6716-4a28-84c7-0e3d7520f143",  
       "33b2b713-9223-40a5-87a0-3f80a1264a6c"  
@@ -309,23 +369,26 @@ BuildingOperation:
     "value": "2016-08-08T10:18:16Z"  
   },  
   "refRelatedBuildingOperation": {  
-    "type": "Relationship",  
+    "type": "array",  
     "value": [  
       "b4fb8bff-1a8f-455f-8cc0-ca43c069f865",  
       "55c24793-3437-4157-9bda-667c9e1531fc"  
     ]  
   },  
   "source": {  
+    "type": "URL",  
     "value": "http://www.example.com"  
   },  
   "refBuilding": {  
-    "type": "Relationship",  
+    "type": "URI",  
     "value": "building-a85e3da145c1"  
   },  
   "result": {  
+    "type": "Text",  
     "value": "ok"  
   },  
   "operationType": {  
+    "type": "Text",  
     "value": "airConditioning"  
   },  
   "dateStarted": {  
@@ -337,6 +400,7 @@ BuildingOperation:
     "value": "2016-08-20T10:18:16Z"  
   },  
   "dataProvider": {  
+    "type": "Text",  
     "value": "OperatorA"  
   }  
 }  
@@ -344,99 +408,6 @@ BuildingOperation:
 </details>  
 #### CostruireOperazione Valori chiave NGSI-LD Esempio  
 Ecco un esempio di BuildingOperation in formato JSON-LD come valori-chiave. Questo è compatibile con NGSI-LD quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
-<details><summary><strong>show/hide example</strong></summary>    
-```json  
-{  
-    "id": "urn:ngsi-ld:BuildingOperation:57b912ab-eb47-4cd5-bc9d-73abece1f1b3",  
-    "type": "BuildingOperation",  
-    "createdAt": "2016-08-08T10:18:16Z",  
-    "dataProvider": {  
-        "type": "Property",  
-        "value": "OperatorA"  
-    },  
-    "dateFinished": {  
-        "type": "Property",  
-        "value": {  
-            "@type": "DateTime",  
-            "@value": "2016-08-20T10:18:16Z"  
-        }  
-    },  
-    "dateStarted": {  
-        "type": "Property",  
-        "value": {  
-            "@type": "DateTime",  
-            "@value": "2016-08-08T10:18:16Z"  
-        }  
-    },  
-    "description": {  
-        "type": "Property",  
-        "value": "Air conditioning levels reduced due to out of hours"  
-    },  
-    "endDate": {  
-        "type": "Property",  
-        "value": {  
-            "@type": "DateTime",  
-            "@value": "2016-08-20T10:18:16Z"  
-        }  
-    },  
-    "modifiedAt": "2016-08-08T10:18:16Z",  
-    "operationSequence": {  
-        "type": "Property",  
-        "value": [  
-            "fan_power%3D0",  
-            "set_temperature%3D24"  
-        ]  
-    },  
-    "operationType": {  
-        "type": "Property",  
-        "value": "airConditioning"  
-    },  
-    "refBuilding": {  
-        "type": "Relationship",  
-        "object": "urn:ngsi-ld:Building:building-a85e3da145c1"  
-    },  
-    "refRelatedBuildingOperation": {  
-        "type": "Relationship",  
-        "object": [  
-            "urn:ngsi-ld:BuildingOperation:b4fb8bff-1a8f-455f-8cc0-ca43c069f865",  
-            "urn:ngsi-ld:BuildingOperation:55c24793-3437-4157-9bda-667c9e1531fc"  
-        ]  
-    },  
-    "refRelatedDeviceOperation": {  
-        "type": "Relationship",  
-        "object": [  
-            "urn:ngsi-ld:DeviceOperation:36744245-6716-4a28-84c7-0e3d7520f143",  
-            "urn:ngsi-ld:DeviceOperation:33b2b713-9223-40a5-87a0-3f80a1264a6c"  
-        ]  
-    },  
-    "result": {  
-        "type": "Property",  
-        "value": "ok"  
-    },  
-    "source": {  
-        "type": "Property",  
-        "value": "http://www.example.com"  
-    },  
-    "startDate": {  
-        "type": "Property",  
-        "value": {  
-            "@type": "DateTime",  
-            "@value": "2016-08-08T10:18:16Z"  
-        }  
-    },  
-    "status": {  
-        "type": "Property",  
-        "value": "finished"  
-    },  
-    "@context": [  
-        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
-        "https://raw.githubusercontent.com/smart-data-models/dataModel.Building/master/context.jsonld"  
-    ]  
-}  
-```  
-</details>  
-#### EdificioOperazione NGSI-LD normalizzato Esempio  
-Ecco un esempio di BuildingOperation in formato JSON-LD normalizzato. Questo è compatibile con NGSI-LD quando non si utilizzano opzioni e restituisce i dati di contesto di una singola entità.  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -480,9 +451,100 @@ BuildingOperation:
     },  
     "status": "finished",  
     "@context": [  
-        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
         "https://raw.githubusercontent.com/smart-data-models/dataModel.Building/master/context.jsonld"  
     ]  
+}  
+```  
+</details>  
+#### EdificioOperazione NGSI-LD normalizzato Esempio  
+Ecco un esempio di BuildingOperation in formato JSON-LD normalizzato. Questo è compatibile con NGSI-LD quando non si utilizzano opzioni e restituisce i dati di contesto di una singola entità.  
+<details><summary><strong>show/hide example</strong></summary>    
+```json  
+{  
+  "id": "urn:ngsi-ld:BuildingOperation:57b912ab-eb47-4cd5-bc9d-73abece1f1b3",  
+  "type": "BuildingOperation",  
+  "createdAt": "2016-08-08T10:18:16Z",  
+  "dataProvider": {  
+    "type": "Property",  
+    "value": "OperatorA"  
+  },  
+  "dateFinished": {  
+    "type": "Property",  
+    "value": {  
+      "@type": "DateTime",  
+      "@value": "2016-08-20T10:18:16Z"  
+    }  
+  },  
+  "dateStarted": {  
+    "type": "Property",  
+    "value": {  
+      "@type": "DateTime",  
+      "@value": "2016-08-08T10:18:16Z"  
+    }  
+  },  
+  "description": {  
+    "type": "Property",  
+    "value": "Air conditioning levels reduced due to out of hours"  
+  },  
+  "endDate": {  
+    "type": "Property",  
+    "value": {  
+      "@type": "DateTime",  
+      "@value": "2016-08-20T10:18:16Z"  
+    }  
+  },  
+  "modifiedAt": "2016-08-08T10:18:16Z",  
+  "operationSequence": {  
+    "type": "Property",  
+    "value": [  
+      "fan_power%3D0",  
+      "set_temperature%3D24"  
+    ]  
+  },  
+  "operationType": {  
+    "type": "Property",  
+    "value": "airConditioning"  
+  },  
+  "refBuilding": {  
+    "type": "Relationship",  
+    "object": "urn:ngsi-ld:Building:building-a85e3da145c1"  
+  },  
+  "refRelatedBuildingOperation": {  
+    "type": "Relationship",  
+    "object": [  
+      "urn:ngsi-ld:BuildingOperation:b4fb8bff-1a8f-455f-8cc0-ca43c069f865",  
+      "urn:ngsi-ld:BuildingOperation:55c24793-3437-4157-9bda-667c9e1531fc"  
+    ]  
+  },  
+  "refRelatedDeviceOperation": {  
+    "type": "Relationship",  
+    "object": [  
+      "urn:ngsi-ld:DeviceOperation:36744245-6716-4a28-84c7-0e3d7520f143",  
+      "urn:ngsi-ld:DeviceOperation:33b2b713-9223-40a5-87a0-3f80a1264a6c"  
+    ]  
+  },  
+  "result": {  
+    "type": "Property",  
+    "value": "ok"  
+  },  
+  "source": {  
+    "type": "Property",  
+    "value": "http://www.example.com"  
+  },  
+  "startDate": {  
+    "type": "Property",  
+    "value": {  
+      "@type": "DateTime",  
+      "@value": "2016-08-08T10:18:16Z"  
+    }  
+  },  
+  "status": {  
+    "type": "Property",  
+    "value": "finished"  
+  },  
+  "@context": [  
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.Building/master/context.jsonld"  
+  ]  
 }  
 ```  
 </details><!-- /80-Examples -->  
