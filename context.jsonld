@@ -11,11 +11,19 @@
         "addressRegion": "https://smartdatamodels.org/addressRegion",
         "alternateName": "https://smartdatamodels.org/alternateName",
         "areaServed": "https://smartdatamodels.org/areaServed",
+        "bbox": {
+            "@container": "@list",
+            "@id": "geojson:bbox"
+        },
         "buildingTypeChildren": "https://smartdatamodels.org/dataModel.Building/buildingTypeChildren",
         "buildingTypeParent": "https://smartdatamodels.org/dataModel.Building/buildingTypeParent",
         "category": "https://smartdatamodels.org/dataModel.Building/category",
         "collapseRisk": "https://smartdatamodels.org/dataModel.Building/collapseRisk",
         "containedInPlace": "https://smartdatamodels.org/dataModel.Building/containedInPlace",
+        "coordinates": {
+            "@container": "@list",
+            "@id": "geojson:coordinates"
+        },
         "dataProvider": "https://smartdatamodels.org/dataProvider",
         "dateCreated": "https://smartdatamodels.org/dateCreated",
         "dateFinished": "https://smartdatamodels.org/dataModel.Building/dateFinished",
