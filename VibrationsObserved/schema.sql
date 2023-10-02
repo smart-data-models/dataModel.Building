@@ -1,3 +1,3 @@
-/* (Beta) Export of data model VibrationsObserved of the subject dataModel.Building for a postgreSQL database. Pending translation of enumerations and multityped attributes */
+/* (Beta) Export of data model VibrationsObserved of the subject dataModel.Building for a PostgreSQL database. Pending translation of enumerations and multityped attributes */
 CREATE TYPE VibrationsObserved_type AS ENUM ('VibrationsObserved');
-CREATE TABLE VibrationsObserved (accelerationMeasured text, address json, alternateName text, areaServed text, dataProvider text, dateCreated timestamp, dateModified timestamp, dateObserved timestamp, description text, id text, location json, name text, owner json, seeAlso json, source text, type VibrationsObserved_type);
+CREATE TABLE VibrationsObserved (accelerationMeasured NUMERIC, address JSON, alternateName TEXT, areaServed TEXT, dataProvider TEXT, dateCreated TIMESTAMP, dateModified TIMESTAMP, dateObserved TIMESTAMP, description TEXT, name TEXT, owner JSON, source TEXT, type VibrationsObserved_type);
