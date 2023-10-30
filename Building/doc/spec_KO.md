@@ -571,25 +571,22 @@ Building:
     occupier:    
       description: Person or entity using the building    
       items:    
-        oneOf:    
-          - format: uri    
+        anyOf:    
+          - description: Identifier format of any NGSI entity    
+            maxLength: 256    
+            minLength: 1    
+            pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
             type: string    
-          - anyOf:    
-              - description: Identifier format of any NGSI entity    
-                maxLength: 256    
-                minLength: 1    
-                pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
-                type: string    
-                x-ngsi:    
-                  type: Property    
-              - description: Identifier format of any NGSI entity    
-                format: uri    
-                type: string    
-                x-ngsi:    
-                  type: Property    
-            description: Unique identifier of the entity    
             x-ngsi:    
               type: Property    
+          - description: Identifier format of any NGSI entity    
+            format: uri    
+            type: string    
+            x-ngsi:    
+              type: Property    
+        description: Unique identifier of the entity    
+        x-ngsi:    
+          type: Property    
       type: array    
       x-ngsi:    
         model: https://schema.org/URL    
@@ -698,7 +695,7 @@ Building:
 <!-- /70-MiddleNotes -->  
 <!-- 80-Examples -->  
 ## 페이로드 예시  
-#### NGSI-v2 키 값 구축 예시  
+#### NGSI-v2 키 값 구축 예제  
 다음은 키-값으로 JSON-LD 형식의 건물 예제입니다. 이는 `옵션=키값`을 사용할 때 NGSI-v2와 호환되며 개별 엔티티의 컨텍스트 데이터를 반환합니다.  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
@@ -1164,7 +1161,7 @@ Building:
 <!-- 90-FooterNotes -->  
 <!-- /90-FooterNotes -->  
 <!-- 95-Units -->  
-[FAQ 10](https://smartdatamodels.org/index.php/faqs/)을 참조하여 규모 단위를 다루는 방법에 대한 답변을 확인하세요.  
+10](https://smartdatamodels.org/index.php/faqs/)를 참조하여 규모 단위를 다루는 방법에 대한 답변을 확인하세요.  
 <!-- /95-Units -->  
 <!-- 97-LastFooter -->  
 ---  
