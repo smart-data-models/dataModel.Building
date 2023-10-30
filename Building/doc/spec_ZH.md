@@ -22,12 +22,13 @@
 	- `postOfficeBoxNumber[string]`: 用于邮政信箱地址的邮政信箱号码。例如：03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)  
 	- `postalCode[string]`: 邮政编码。例如：24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)  
 	- `streetAddress[string]`: 街道地址  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)  
+	- `streetNr[string]`: 标识公共街道上特定房产的编号    
 - `alternateName[string]`: 该项目的替代名称  - `areaServed[string]`: 提供服务或提供物品的地理区域  . Model: [https://schema.org/Text](https://schema.org/Text)- `category[array]`: 建筑物类别。枚举：'公寓、烤房、谷仓、桥梁、平房、碉堡、大教堂、小屋、车棚、教堂、教堂、公民、商业、温室、建筑、牛棚、独立式、沼气池、宿舍、农场、农场辅助设施、车库、车库、垃圾棚、看台、温室、飞机库、医院、旅馆、房屋、船屋、小屋、工业、幼儿园、小卖部、清真寺、办公室、停车场、亭子、公共建筑、住宅、零售、骑马厅、屋顶、废墟、学校、服务设施、棚屋、神龛、马厩、体育场、静态房车、风格、犹太教堂、寺庙、露台、火车站、变压器塔、运输工具、大学、仓库、水塔'。  - `collapseRisk[number]`: 建筑物完全倒塌的概率  . Model: [https://schema.org/Number](https://schema.org/Number)- `containedInPlace[*]`: 项目的 Geojson 引用。它可以是点、线条字符串、多边形、多点、多线条字符串或多多边形  - `dataProvider[string]`: 标识统一数据实体提供者的字符序列  - `dateCreated[date-time]`: 实体创建时间戳。通常由存储平台分配  - `dateModified[date-time]`: 实体最后一次修改的时间戳。通常由存储平台分配  - `description[string]`: 项目描述  - `floorsAboveGround[number]`: 地面以上楼层  . Model: [https://schema.org/Number](https://schema.org/Number)- `floorsBelowGround[number]`: 地面以下楼层  . Model: [https://schema.org/Number](https://schema.org/Number)- `id[*]`: 实体的唯一标识符  - `location[*]`: 项目的 Geojson 引用。它可以是点、线条字符串、多边形、多点、多线条字符串或多多边形  - `name[string]`: 该项目的名称  - `occupier[array]`: 使用建筑物的个人或实体  . Model: [https://schema.org/URL](https://schema.org/URL)- `openingHours[array]`: 该建筑的开放时间  . Model: [https://schema.org/openingHours](https://schema.org/openingHours)- `owner[array]`: 包含一个 JSON 编码字符序列的列表，其中引用了所有者的唯一 Ids  - `peopleCapacity[number]`: 大楼内允许的人员  . Model: [https://schema.org/Number](https://schema.org/Number)- `peopleOccupancy[number]`: 楼内人员  . Model: [https://schema.org/Number](https://schema.org/Number)- `refMap[*]`: 包含建筑物的地图参考  - `seeAlso[*]`: 指向有关该项目的其他资源的 uri 列表  - `source[string]`: 以 URL 形式给出实体数据原始来源的字符串。建议使用源提供者的完全合格域名或源对象的 URL  - `type[string]`: NGSI 实体类型  <!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 所需属性  
 - `address`  - `category`  - `id`  - `type`  <!-- /35-RequiredProperties -->  
 <!-- 40-RequiredProperties -->  
-该实体包含对建筑物的统一描述。该实体与智能家居、智能城市、工业和相关物联网应用的垂直细分市场相关联。本数据模型部分是与移动运营商和[GSMA](https://www.gsma.com/iot/iot-big-data/)合作开发的，与 GSMA 数据模型相比，引入了以下变化 删除了 "BuildingType"，因为与 "category "属性相比，"BuildingType "没有引入重要信息。类别 "属性是必需的。根据 schema.org 数据模型引入了 `openingHours` 属性，以便对建筑物的开放时间进行细化。GSMA 支持在 `notes` 属性中将其作为自由文本（也已删除）。由于目前不支持 `SubscriptionService` 模型，因此不支持 `refSubscriptionService` 属性。  
+该实体包含对建筑物的统一描述。该实体与智能家居、智能城市、工业和相关物联网应用的垂直细分市场相关联。本数据模型部分是与移动运营商和[GSMA](https://www.gsma.com/iot/iot-big-data/)合作开发的，与 GSMA 数据模型相比，引入了以下变化 删除了对 "BuildingType "的引用，因为与 "category "属性相比，"BuildingType "没有引入重要信息。类别 "属性是必需的。根据 schema.org 数据模型引入了 `openingHours` 属性，以便对建筑物的开放时间进行细化。GSMA 支持在 `notes` 属性中将其作为自由文本（也已删除）。由于目前不支持 `SubscriptionService` 模型，因此不支持 `refSubscriptionService` 属性。  
 <!-- /40-RequiredProperties -->  
 <!-- 50-DataModelHeader -->  
 ## 属性的数据模型描述  
@@ -570,25 +571,22 @@ Building:
     occupier:    
       description: Person or entity using the building    
       items:    
-        oneOf:    
-          - format: uri    
+        anyOf:    
+          - description: Identifier format of any NGSI entity    
+            maxLength: 256    
+            minLength: 1    
+            pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
             type: string    
-          - anyOf:    
-              - description: Identifier format of any NGSI entity    
-                maxLength: 256    
-                minLength: 1    
-                pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
-                type: string    
-                x-ngsi:    
-                  type: Property    
-              - description: Identifier format of any NGSI entity    
-                format: uri    
-                type: string    
-                x-ngsi:    
-                  type: Property    
-            description: Unique identifier of the entity    
             x-ngsi:    
               type: Property    
+          - description: Identifier format of any NGSI entity    
+            format: uri    
+            type: string    
+            x-ngsi:    
+              type: Property    
+        description: Unique identifier of the entity    
+        x-ngsi:    
+          type: Property    
       type: array    
       x-ngsi:    
         model: https://schema.org/URL    
