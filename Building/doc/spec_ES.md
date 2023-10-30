@@ -22,12 +22,13 @@
 	- `postOfficeBoxNumber[string]`: El número del apartado de correos para las direcciones de apartados postales. Por ejemplo, 03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)  
 	- `postalCode[string]`: El código postal. Por ejemplo, 24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)  
 	- `streetAddress[string]`: La dirección  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)  
-- `alternateName[string]`: Un nombre alternativo para este artículo  - `areaServed[string]`: La zona geográfica en la que se presta un servicio o se ofrece un artículo  . Model: [https://schema.org/Text](https://schema.org/Text)- `category[array]`: Categoría del edificio. Enum:'apartments, bakehouse, barn, bridge, bungalow, bunker, cathedral, cabin, carport, chapel, church, civic, commercial, conservatory, construction, cowshed, detached, digester, dormitory, farm, farm_auxiliary, garage, garages, garbage_shed, grandstand, greenhouse, hangar, hospital, hotel, house, houseboat, hut, industrial, guardería, quiosco, mezquita, oficina, aparcamiento, pabellón, público, residencial, comercio minorista, picadero, tejado, ruinas, escuela, servicio, cobertizo, santuario, establo, estadio, caravana_estática, establo, sinagoga, templo, terraza, estación_de_tren, torre_transformadora, transporte, universidad, almacén, torre_de_agua".  - `collapseRisk[number]`: Probabilidad de colapso total del edificio  . Model: [https://schema.org/Number](https://schema.org/Number)- `containedInPlace[*]`: Referencia Geojson al elemento. Puede ser Point, LineString, Polygon, MultiPoint, MultiLineString o MultiPolygon.  - `dataProvider[string]`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada  - `dateCreated[date-time]`: Fecha de creación de la entidad. Normalmente será asignada por la plataforma de almacenamiento  - `dateModified[date-time]`: Marca de tiempo de la última modificación de la entidad. Suele ser asignada por la plataforma de almacenamiento  - `description[string]`: Descripción de este artículo  - `floorsAboveGround[number]`: Plantas por encima del nivel del suelo  . Model: [https://schema.org/Number](https://schema.org/Number)- `floorsBelowGround[number]`: Plantas por debajo del nivel del suelo  . Model: [https://schema.org/Number](https://schema.org/Number)- `id[*]`: Identificador único de la entidad  - `location[*]`: Referencia Geojson al elemento. Puede ser Point, LineString, Polygon, MultiPoint, MultiLineString o MultiPolygon.  - `name[string]`: El nombre de este artículo  - `occupier[array]`: Persona o entidad usuaria del edificio  . Model: [https://schema.org/URL](https://schema.org/URL)- `openingHours[array]`: Horario de apertura de este edificio  . Model: [https://schema.org/openingHours](https://schema.org/openingHours)- `owner[array]`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios.  - `peopleCapacity[number]`: Personas autorizadas presentes en el edificio  . Model: [https://schema.org/Number](https://schema.org/Number)- `peopleOccupancy[number]`: Personas presentes en el edificio  . Model: [https://schema.org/Number](https://schema.org/Number)- `refMap[*]`: Referencia al mapa que contiene el edificio  - `seeAlso[*]`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `source[string]`: Secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen o la URL del objeto de origen.  - `type[string]`: NGSI Tipo de entidad  <!-- /30-PropertiesList -->  
+	- `streetNr[string]`: Número que identifica una propiedad específica en una vía pública    
+- `alternateName[string]`: Un nombre alternativo para este artículo  - `areaServed[string]`: La zona geográfica en la que se presta un servicio o se ofrece un artículo  . Model: [https://schema.org/Text](https://schema.org/Text)- `category[array]`: Categoría del edificio. Enum:'apartments, bakehouse, barn, bridge, bungalow, bunker, cathedral, cabin, carport, chapel, church, civic, commercial, conservatory, construction, cowshed, detached, digester, dormitory, farm, farm_auxiliary, garage, garages, garbage_shed, grandstand, greenhouse, hangar, hospital, hotel, house, houseboat, hut, industrial, guardería, quiosco, mezquita, oficina, aparcamiento, pabellón, público, residencial, comercio minorista, picadero, tejado, ruinas, escuela, servicio, cobertizo, santuario, establo, estadio, caravana_estática, establo, sinagoga, templo, terraza, estación_de_tren, torre_transformadora, transporte, universidad, almacén, torre_de_agua".  - `collapseRisk[number]`: Probabilidad de colapso total del edificio  . Model: [https://schema.org/Number](https://schema.org/Number)- `containedInPlace[*]`: Referencia Geojson al elemento. Puede ser Point, LineString, Polygon, MultiPoint, MultiLineString o MultiPolygon.  - `dataProvider[string]`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada  - `dateCreated[date-time]`: Fecha de creación de la entidad. Normalmente será asignada por la plataforma de almacenamiento  - `dateModified[date-time]`: Marca de tiempo de la última modificación de la entidad. Suele ser asignada por la plataforma de almacenamiento  - `description[string]`: Descripción de este artículo  - `floorsAboveGround[number]`: Plantas por encima del nivel del suelo  . Model: [https://schema.org/Number](https://schema.org/Number)- `floorsBelowGround[number]`: Plantas por debajo del nivel del suelo  . Model: [https://schema.org/Number](https://schema.org/Number)- `id[*]`: Identificador único de la entidad  - `location[*]`: Referencia Geojson al elemento. Puede ser Point, LineString, Polygon, MultiPoint, MultiLineString o MultiPolygon.  - `name[string]`: El nombre de este artículo  - `occupier[array]`: Persona o entidad usuaria del edificio  . Model: [https://schema.org/URL](https://schema.org/URL)- `openingHours[array]`: Horario de apertura de este edificio  . Model: [https://schema.org/openingHours](https://schema.org/openingHours)- `owner[array]`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios.  - `peopleCapacity[number]`: Personas autorizadas presentes en el edificio  . Model: [https://schema.org/Number](https://schema.org/Number)- `peopleOccupancy[number]`: Personas presentes en el edificio  . Model: [https://schema.org/Number](https://schema.org/Number)- `refMap[*]`: Referencia al mapa que contiene el edificio  - `source[string]`: Secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen o la URL del objeto de origen.  - `type[string]`: NGSI Tipo de entidad  <!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 Propiedades requeridas  
 - `address`  - `category`  - `id`  - `type`  <!-- /35-RequiredProperties -->  
 <!-- 40-RequiredProperties -->  
-Esta entidad contiene una descripción armonizada de un edificio. Esta entidad está asociada a los segmentos verticales de hogares inteligentes, ciudades inteligentes, industria y aplicaciones IoT relacionadas. Este modelo de datos se ha desarrollado parcialmente en cooperación con operadores móviles y la [GSMA](https://www.gsma.com/iot/iot-big-data/), en comparación con el modelo de datos de la GSMA se introducen los siguientes cambios se elimina la referencia a "BuildingType", ya que el atributo "BuildingType" en comparación con "category" no introduce información significativa. El atributo "categoría" es obligatorio. Se introduce "openeningHours" siguiendo el modelo de datos de schema.org para permitir un control preciso de los horarios de apertura de los edificios. La GSMA lo apoyaba como texto libre en el atributo `notes` (también eliminado). No se admite `refSubscriptionService`, ya que el modelo `SubscriptionService` no se admite actualmente.  
+Esta entidad contiene una descripción armonizada de un edificio. Esta entidad está asociada a los segmentos verticales de hogares inteligentes, ciudades inteligentes, industria y aplicaciones IoT relacionadas. Este modelo de datos se ha desarrollado parcialmente en cooperación con operadores móviles y la [GSMA](https://www.gsma.com/iot/iot-big-data/), en comparación con el modelo de datos de la GSMA se introducen los siguientes cambios se elimina la referencia a "BuildingType", ya que "BuildingType" en comparación con el atributo "category" no introduce información significativa. El atributo "categoría" es obligatorio. Se introduce "openeningHours" siguiendo el modelo de datos de schema.org para permitir un control preciso de los horarios de apertura de los edificios. La GSMA lo apoyaba como texto libre en el atributo `notes` (también eliminado). No se admite `refSubscriptionService`, ya que el modelo `SubscriptionService` no se admite actualmente.  
 <!-- /40-RequiredProperties -->  
 <!-- 50-DataModelHeader -->  
 ## Descripción de las propiedades del modelo de datos  
@@ -570,25 +571,22 @@ Building:
     occupier:    
       description: Person or entity using the building    
       items:    
-        oneOf:    
-          - format: uri    
+        anyOf:    
+          - description: Identifier format of any NGSI entity    
+            maxLength: 256    
+            minLength: 1    
+            pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
             type: string    
-          - anyOf:    
-              - description: Identifier format of any NGSI entity    
-                maxLength: 256    
-                minLength: 1    
-                pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
-                type: string    
-                x-ngsi:    
-                  type: Property    
-              - description: Identifier format of any NGSI entity    
-                format: uri    
-                type: string    
-                x-ngsi:    
-                  type: Property    
-            description: Unique identifier of the entity    
             x-ngsi:    
               type: Property    
+          - description: Identifier format of any NGSI entity    
+            format: uri    
+            type: string    
+            x-ngsi:    
+              type: Property    
+        description: Unique identifier of the entity    
+        x-ngsi:    
+          type: Property    
       type: array    
       x-ngsi:    
         model: https://schema.org/URL    
@@ -1021,7 +1019,7 @@ Building:
 ```  
 </details>  
 #### Edificio NGSI-LD normalizado Ejemplo  
-He aquí un ejemplo de una construcción en formato JSON-LD normalizado. Esto es compatible con NGSI-LD cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
+He aquí un ejemplo de una Construcción en formato JSON-LD normalizado. Esto es compatible con NGSI-LD cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
