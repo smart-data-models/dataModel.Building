@@ -100,15 +100,7 @@
                     "type": "array",
                     "description": "Relationship. Person or entity using the building. Model:'https://schema.org/URL'",
                     "items": {
-                        "oneOf": [
-                            {
-                                "type": "string",
-                                "format": "uri"
-                            },
-                            {
-                                "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType"
-                            }
-                        ]
+                        "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType"
                     }
                 },
                 "floorsAboveGround": {
