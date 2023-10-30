@@ -22,6 +22,7 @@
 	- `postOfficeBoxNumber[string]`: Il numero di casella postale per gli indirizzi di casella postale. Ad esempio, 03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)  
 	- `postalCode[string]`: Il codice postale. Ad esempio, 24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)  
 	- `streetAddress[string]`: L'indirizzo stradale  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)  
+	- `streetNr[string]`: Numero che identifica una proprietà specifica su una strada pubblica    
 - `alternateName[string]`: Un nome alternativo per questa voce  - `areaServed[string]`: L'area geografica in cui viene fornito il servizio o l'articolo offerto.  . Model: [https://schema.org/Text](https://schema.org/Text)- `category[array]`: Categoria dell'edificio. Enum:'appartamenti, forno, fienile, ponte, bungalow, bunker, cattedrale, cabina, tettoia, cappella, chiesa, civico, commerciale, serra, costruzione, stalla, staccata, digestore, dormitorio, fattoria, fattoria_ausiliaria, garage, garbage_shed, tribuna, serra, hangar, ospedale, hotel, casa, casa galleggiante, capanna, industriale, asilo, chiosco, moschea, ufficio, parcheggio, padiglione, pubblico, residenziale, vendita al dettaglio, maneggio, tetto, rovine, scuola, servizio, capannone, santuario, scuderia, stadio, roulotte_statica, stalla, sinagoga, tempio, terrazza, stazione ferroviaria, torre_di_trasformazione, trasporto, università, magazzino, torre_d'acqua".  - `collapseRisk[number]`: Probabilità di crollo totale dell'edificio  . Model: [https://schema.org/Number](https://schema.org/Number)- `containedInPlace[*]`: Riferimento geojson all'elemento. Può essere un punto, una stringa di linea, un poligono, un multi-punto, una stringa di linea o un poligono multiplo.  - `dataProvider[string]`: una sequenza di caratteri che identifica il fornitore dell'entità di dati armonizzata  - `dateCreated[date-time]`: Timestamp di creazione dell'entità. Di solito viene assegnato dalla piattaforma di archiviazione  - `dateModified[date-time]`: Timestamp dell'ultima modifica dell'entità. Di solito viene assegnato dalla piattaforma di archiviazione  - `description[string]`: Descrizione dell'articolo  - `floorsAboveGround[number]`: Piani sopra il livello del suolo  . Model: [https://schema.org/Number](https://schema.org/Number)- `floorsBelowGround[number]`: Piani sotto il livello del suolo  . Model: [https://schema.org/Number](https://schema.org/Number)- `id[*]`: Identificatore univoco dell'entità  - `location[*]`: Riferimento geojson all'elemento. Può essere un punto, una stringa di linea, un poligono, un multi-punto, una stringa di linea o un poligono multiplo.  - `name[string]`: Il nome di questo elemento  - `occupier[array]`: Persona o ente che utilizza l'edificio  . Model: [https://schema.org/URL](https://schema.org/URL)- `openingHours[array]`: Orari di apertura di questo edificio  . Model: [https://schema.org/openingHours](https://schema.org/openingHours)- `owner[array]`: Un elenco contenente una sequenza di caratteri codificata JSON che fa riferimento agli ID univoci dei proprietari.  - `peopleCapacity[number]`: Persone ammesse presenti nell'edificio  . Model: [https://schema.org/Number](https://schema.org/Number)- `peopleOccupancy[number]`: Persone presenti nell'edificio  . Model: [https://schema.org/Number](https://schema.org/Number)- `refMap[*]`: Riferimento alla mappa contenente l'edificio  - `seeAlso[*]`: elenco di uri che puntano a risorse aggiuntive sull'elemento  - `source[string]`: Una sequenza di caratteri che indica la fonte originale dei dati dell'entità come URL. Si consiglia di utilizzare il nome di dominio completamente qualificato del provider di origine o l'URL dell'oggetto di origine.  - `type[string]`: NGSI Tipo di entità  <!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 Proprietà richieste  
@@ -570,25 +571,22 @@ Building:
     occupier:    
       description: Person or entity using the building    
       items:    
-        oneOf:    
-          - format: uri    
+        anyOf:    
+          - description: Identifier format of any NGSI entity    
+            maxLength: 256    
+            minLength: 1    
+            pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
             type: string    
-          - anyOf:    
-              - description: Identifier format of any NGSI entity    
-                maxLength: 256    
-                minLength: 1    
-                pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
-                type: string    
-                x-ngsi:    
-                  type: Property    
-              - description: Identifier format of any NGSI entity    
-                format: uri    
-                type: string    
-                x-ngsi:    
-                  type: Property    
-            description: Unique identifier of the entity    
             x-ngsi:    
               type: Property    
+          - description: Identifier format of any NGSI entity    
+            format: uri    
+            type: string    
+            x-ngsi:    
+              type: Property    
+        description: Unique identifier of the entity    
+        x-ngsi:    
+          type: Property    
       type: array    
       x-ngsi:    
         model: https://schema.org/URL    
