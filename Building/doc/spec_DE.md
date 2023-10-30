@@ -22,7 +22,8 @@
 	- `postOfficeBoxNumber[string]`: Die Postfachnummer für Postfachadressen. Zum Beispiel, 03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)  
 	- `postalCode[string]`: Die Postleitzahl. Zum Beispiel, 24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)  
 	- `streetAddress[string]`: Die Straßenanschrift  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)  
-- `alternateName[string]`: Ein alternativer Name für diesen Artikel  - `areaServed[string]`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  . Model: [https://schema.org/Text](https://schema.org/Text)- `category[array]`: Kategorie des Gebäudes. Enum:Wohnungen, Backhaus, Scheune, Brücke, Bungalow, Bunker, Kathedrale, Hütte, Carport, Kapelle, Kirche, Gewerbehaus, Wintergarten, Bau, Kuhstall, freistehend, Faulbehälter, Schlafsaal, Bauernhof, Bauernhof_Hilfsgebäude, Garage, Garagen, Garagenschuppen, Tribüne, Gewächshaus, Hangar, Krankenhaus, Hotel, Haus, Hausboot, Hütte, Industrie, Kindergarten, Kiosk, Moschee, Büro, Parkplatz, Pavillon, öffentlich, Wohnhaus, Einzelhandel, Reithalle, Dach, Ruine, Schule, Service, Schuppen, Schrein, Stall, Stadion, Wohnwagen, Stall, Synagoge, Tempel, Terrasse, Bahnhof, Trafoturm, Transport, Universität, Lager, Wasserturm'  - `collapseRisk[number]`: Wahrscheinlichkeit des vollständigen Einsturzes des Gebäudes  . Model: [https://schema.org/Number](https://schema.org/Number)- `containedInPlace[*]`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `dataProvider[string]`: Eine Folge von Zeichen zur Identifizierung des Anbieters der harmonisierten Dateneinheit  - `dateCreated[date-time]`: Zeitstempel der Entitätserstellung. Dieser wird normalerweise von der Speicherplattform zugewiesen  - `dateModified[date-time]`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben  - `description[string]`: Eine Beschreibung dieses Artikels  - `floorsAboveGround[number]`: Stockwerke über dem Erdgeschoss  . Model: [https://schema.org/Number](https://schema.org/Number)- `floorsBelowGround[number]`: Stockwerke unter dem Bodenniveau  . Model: [https://schema.org/Number](https://schema.org/Number)- `id[*]`: Eindeutiger Bezeichner der Entität  - `location[*]`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `name[string]`: Der Name dieses Artikels  - `occupier[array]`: Person oder Organisation, die das Gebäude nutzt  . Model: [https://schema.org/URL](https://schema.org/URL)- `openingHours[array]`: Öffnungszeiten des Gebäudes  . Model: [https://schema.org/openingHours](https://schema.org/openingHours)- `owner[array]`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Kennungen der Eigentümer verweist  - `peopleCapacity[number]`: Erlaubte Personen, die im Gebäude anwesend sind  . Model: [https://schema.org/Number](https://schema.org/Number)- `peopleOccupancy[number]`: Im Gebäude anwesende Personen  . Model: [https://schema.org/Number](https://schema.org/Number)- `refMap[*]`: Verweis auf die Karte, auf der das Gebäude verzeichnet ist  - `seeAlso[*]`: Liste von URLs, die auf zusätzliche Ressourcen zu dem Artikel verweisen  - `source[string]`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL des Quellobjekts.  - `type[string]`: NGSI Entitätstyp  <!-- /30-PropertiesList -->  
+	- `streetNr[string]`: Nummer zur Identifizierung eines bestimmten Grundstücks an einer öffentlichen Straße    
+- `alternateName[string]`: Ein alternativer Name für diesen Artikel  - `areaServed[string]`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  . Model: [https://schema.org/Text](https://schema.org/Text)- `category[array]`: Kategorie des Gebäudes. Enum:Wohnungen, Backhaus, Scheune, Brücke, Bungalow, Bunker, Kathedrale, Hütte, Carport, Kapelle, Kirche, Gewerbehaus, Wintergarten, Bau, Kuhstall, freistehend, Faulbehälter, Schlafsaal, Bauernhof, Bauernhof_Hilfsgebäude, Garage, Garagen, Garagenschuppen, Tribüne, Gewächshaus, Hangar, Krankenhaus, Hotel, Haus, Hausboot, Hütte, Industrie, Kindergarten, Kiosk, Moschee, Büro, Parkplatz, Pavillon, öffentlich, Wohnhaus, Einzelhandel, Reithalle, Dach, Ruine, Schule, Service, Schuppen, Schrein, Stall, Stadion, Wohnwagen, Stall, Synagoge, Tempel, Terrasse, Bahnhof, Trafoturm, Transport, Universität, Lager, Wasserturm'  - `collapseRisk[number]`: Wahrscheinlichkeit des vollständigen Einsturzes des Gebäudes  . Model: [https://schema.org/Number](https://schema.org/Number)- `containedInPlace[*]`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `dataProvider[string]`: Eine Folge von Zeichen zur Identifizierung des Anbieters der harmonisierten Dateneinheit  - `dateCreated[date-time]`: Zeitstempel der Entitätserstellung. Dieser wird in der Regel von der Speicherplattform zugewiesen  - `dateModified[date-time]`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben  - `description[string]`: Eine Beschreibung dieses Artikels  - `floorsAboveGround[number]`: Stockwerke über dem Erdgeschoss  . Model: [https://schema.org/Number](https://schema.org/Number)- `floorsBelowGround[number]`: Stockwerke unterhalb des Erdgeschosses  . Model: [https://schema.org/Number](https://schema.org/Number)- `id[*]`: Eindeutiger Bezeichner der Entität  - `location[*]`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `name[string]`: Der Name dieses Artikels  - `occupier[array]`: Person oder Organisation, die das Gebäude nutzt  . Model: [https://schema.org/URL](https://schema.org/URL)- `openingHours[array]`: Öffnungszeiten des Gebäudes  . Model: [https://schema.org/openingHours](https://schema.org/openingHours)- `owner[array]`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Kennungen der Eigentümer verweist  - `peopleCapacity[number]`: Erlaubte Personen, die im Gebäude anwesend sind  . Model: [https://schema.org/Number](https://schema.org/Number)- `peopleOccupancy[number]`: Im Gebäude anwesende Personen  . Model: [https://schema.org/Number](https://schema.org/Number)- `refMap[*]`: Verweis auf die Karte, auf der das Gebäude verzeichnet ist  - `seeAlso[*]`: Liste von URLs, die auf zusätzliche Ressourcen zu dem Artikel verweisen  - `source[string]`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL des Quellobjekts.  - `type[string]`: NGSI Entitätstyp  <!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 Erforderliche Eigenschaften  
 - `address`  - `category`  - `id`  - `type`  <!-- /35-RequiredProperties -->  
@@ -570,25 +571,22 @@ Building:
     occupier:    
       description: Person or entity using the building    
       items:    
-        oneOf:    
-          - format: uri    
+        anyOf:    
+          - description: Identifier format of any NGSI entity    
+            maxLength: 256    
+            minLength: 1    
+            pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
             type: string    
-          - anyOf:    
-              - description: Identifier format of any NGSI entity    
-                maxLength: 256    
-                minLength: 1    
-                pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
-                type: string    
-                x-ngsi:    
-                  type: Property    
-              - description: Identifier format of any NGSI entity    
-                format: uri    
-                type: string    
-                x-ngsi:    
-                  type: Property    
-            description: Unique identifier of the entity    
             x-ngsi:    
               type: Property    
+          - description: Identifier format of any NGSI entity    
+            format: uri    
+            type: string    
+            x-ngsi:    
+              type: Property    
+        description: Unique identifier of the entity    
+        x-ngsi:    
+          type: Property    
       type: array    
       x-ngsi:    
         model: https://schema.org/URL    
