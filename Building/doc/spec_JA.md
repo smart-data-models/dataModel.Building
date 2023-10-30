@@ -22,6 +22,7 @@
 	- `postOfficeBoxNumber[string]`: 私書箱の住所のための私書箱番号。例：03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)  
 	- `postalCode[string]`: 郵便番号。例：24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)  
 	- `streetAddress[string]`: 番地  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)  
+	- `streetNr[string]`: 公道上の特定の物件を特定する番号    
 - `alternateName[string]`: この項目の別名  - `areaServed[string]`: サービスまたは提供品が提供される地理的地域  . Model: [https://schema.org/Text](https://schema.org/Text)- `category[array]`: 建物のカテゴリー。列挙する：'apartments, bakehouse, barn, bridge, bungalow, bunker, cathedral, cabin, carport, chapel, church, civic, commercial, conservatory, construction, cowshed, detached, digester, dormitory, farm, farm_auxiliary, garage, garages, garbage_shed, grandstand, greenhouse, hangar, hospital, hotel, house, houseboat, hut、工業、幼稚園、キオスク、モスク、オフィス、駐車場、パビリオン、公共、住宅、小売、乗馬ホール、屋根、廃墟、学校、サービス、小屋、神社、厩舎、スタジアム、静態キャラバン、スタイ、シナゴーグ、寺院、テラス、駅、変圧器タワー、輸送、大学、倉庫、給水塔'  - `collapseRisk[number]`: 建物の全壊確率  . Model: [https://schema.org/Number](https://schema.org/Number)- `containedInPlace[*]`: アイテムへの Geojson 参照。Point、LineString、Polygon、MultiPoint、MultiLineString、MultiPolygon のいずれか。  - `dataProvider[string]`: ハーモナイズされたデータ・エンティティの提供者を識別する一連の文字。  - `dateCreated[date-time]`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `dateModified[date-time]`: エンティティの最終変更のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description[string]`: この商品の説明  - `floorsAboveGround[number]`: 地上階  . Model: [https://schema.org/Number](https://schema.org/Number)- `floorsBelowGround[number]`: 地上階より下の階  . Model: [https://schema.org/Number](https://schema.org/Number)- `id[*]`: エンティティの一意識別子  - `location[*]`: アイテムへの Geojson 参照。Point、LineString、Polygon、MultiPoint、MultiLineString、MultiPolygon のいずれか。  - `name[string]`: このアイテムの名前  - `occupier[array]`: 建物を使用する個人または団体  . Model: [https://schema.org/URL](https://schema.org/URL)- `openingHours[array]`: 営業時間  . Model: [https://schema.org/openingHours](https://schema.org/openingHours)- `owner[array]`: 所有者の固有IDを参照するJSONエンコードされた文字列を含むリスト。  - `peopleCapacity[number]`: 入場可能人数  . Model: [https://schema.org/Number](https://schema.org/Number)- `peopleOccupancy[number]`: 建物にいる人々  . Model: [https://schema.org/Number](https://schema.org/Number)- `refMap[*]`: 建物を含む地図への言及  - `seeAlso[*]`: アイテムに関する追加リソースを指すURIのリスト  - `source[string]`: エンティティ・データの元のソースを URL として示す一連の文字。ソース・プロバイダの完全修飾ドメイン名、またはソース・オブジェクトの URL を推奨する。  - `type[string]`: NGSIエンティティタイプ  <!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 必須プロパティ  
@@ -570,25 +571,22 @@ Building:
     occupier:    
       description: Person or entity using the building    
       items:    
-        oneOf:    
-          - format: uri    
+        anyOf:    
+          - description: Identifier format of any NGSI entity    
+            maxLength: 256    
+            minLength: 1    
+            pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
             type: string    
-          - anyOf:    
-              - description: Identifier format of any NGSI entity    
-                maxLength: 256    
-                minLength: 1    
-                pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
-                type: string    
-                x-ngsi:    
-                  type: Property    
-              - description: Identifier format of any NGSI entity    
-                format: uri    
-                type: string    
-                x-ngsi:    
-                  type: Property    
-            description: Unique identifier of the entity    
             x-ngsi:    
               type: Property    
+          - description: Identifier format of any NGSI entity    
+            format: uri    
+            type: string    
+            x-ngsi:    
+              type: Property    
+        description: Unique identifier of the entity    
+        x-ngsi:    
+          type: Property    
       type: array    
       x-ngsi:    
         model: https://schema.org/URL    
