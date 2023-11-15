@@ -14,7 +14,10 @@
   "dateStarted": "2016-08-08T10:18:16Z",
   "dateFinished": "2016-08-20T10:18:16Z",
   "status": "finished",
-  "operationSequence": ["fan_power%3D0", "set_temperature%3D24"],
+  "operationSequence": [
+    "fan_power%3D0",
+    "set_temperature%3D24"
+  ],
   "refRelatedBuildingOperation": [
     "b4fb8bff-1a8f-455f-8cc0-ca43c069f865",
     "55c24793-3437-4157-9bda-667c9e1531fc"
