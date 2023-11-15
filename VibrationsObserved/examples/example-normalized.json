@@ -1,6 +1,6 @@
 {
   "id": "urn:ngsi-ld:VibrationsObserved:id:IPZH:79807295",
-"type": "VibrationsObserved",
+  "type": "VibrationsObserved",
   "dateCreated": {
     "type": "DateTime",
     "value": "2021-03-08T09:45:00Z"
@@ -30,15 +30,10 @@
     "value": ""
   },
   "owner": {
-    "type": "Text",
+    "type": "StructuredValue",
     "value": [
       "urn:ngsi-ld:VibrationsObserved:items:ENTK:59457468",
       "urn:ngsi-ld:VibrationsObserved:items:DDNB:10988523"
-    ]
-  },
-  "seeAlso": {
-    "type": "Text",
-    "value": [
     ]
   },
   "location": {
@@ -67,15 +62,12 @@
     "type": "Text",
     "value": ""
   },
-
   "dateObserved": {
     "type": "DateTime",
     "value": "2021-03-08T09:45:00Z"
-
   },
   "accelerationMeasured": {
     "type": "Number",
     "value": 1.3
   }
 }
-
