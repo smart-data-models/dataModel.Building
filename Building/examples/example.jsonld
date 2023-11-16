@@ -7,7 +7,9 @@
     "streetAddress": "25 Walbrook",
     "type": "PostalAddress"
   },
-  "category": "office",
+  "category": [
+    "office"
+  ],
   "containedInPlace": {
     "type": "Polygon",
     "coordinates": [
