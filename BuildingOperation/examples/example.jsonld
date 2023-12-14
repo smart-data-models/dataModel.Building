@@ -1,13 +1,11 @@
 {
   "id": "urn:ngsi-ld:BuildingOperation:57b912ab-eb47-4cd5-bc9d-73abece1f1b3",
   "type": "BuildingOperation",
-  "createdAt": "2016-08-08T10:18:16Z",
   "dataProvider": "OperatorA",
   "dateFinished": "2016-08-20T10:18:16Z",
   "dateStarted": "2016-08-08T10:18:16Z",
   "description": "Air conditioning levels reduced due to out of hours",
   "endDate": "2016-08-20T10:18:16Z",
-  "modifiedAt": "2016-08-08T10:18:16Z",
   "operationSequence": [
     "fan_power%3D0",
     "set_temperature%3D24"
