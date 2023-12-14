@@ -75,10 +75,6 @@
             "urn:ngsi-ld:VibrationsObserved:items:DDNB:10988523"
         ]
     },
-    "seeAlso": {
-        "type": "Property",
-        "value": []
-    },
     "source": {
         "type": "Property",
         "value": "No source"
