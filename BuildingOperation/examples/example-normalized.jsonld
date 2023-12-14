@@ -1,7 +1,6 @@
 {
   "id": "urn:ngsi-ld:BuildingOperation:57b912ab-eb47-4cd5-bc9d-73abece1f1b3",
   "type": "BuildingOperation",
-  "createdAt": "2016-08-08T10:18:16Z",
   "dataProvider": {
     "type": "Property",
     "value": "OperatorA"
@@ -31,7 +30,6 @@
       "@value": "2016-08-20T10:18:16Z"
     }
   },
-  "modifiedAt": "2016-08-08T10:18:16Z",
   "operationSequence": {
     "type": "Property",
     "value": [
