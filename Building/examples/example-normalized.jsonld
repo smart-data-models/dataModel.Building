@@ -45,7 +45,7 @@
       "type": "Polygon"
     }
   },
-  "createdAt": {
+  "dateCreated": {
     "type": "Property",
     "value": "2016-08-08T10:18:16Z"
   },
@@ -99,7 +99,7 @@
     "type": "Property",
     "value": "http://www.example.com"
   },
-  "modifiedAt": {
+  "dateModified": {
     "type": "Property",
     "value": "2016-08-08T10:18:16Z"
   },
