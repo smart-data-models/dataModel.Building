@@ -45,10 +45,6 @@
       "type": "Polygon"
     }
   },
-  "dateCreated": {
-    "type": "Property",
-    "value": "2016-08-08T10:18:16Z"
-  },
   "dataProvider": {
     "type": "Property",
     "value": "OperatorA"
@@ -98,10 +94,6 @@
   "mapUrl": {
     "type": "Property",
     "value": "http://www.example.com"
-  },
-  "dateModified": {
-    "type": "Property",
-    "value": "2016-08-08T10:18:16Z"
   },
   "occupier": {
     "type": "Relationship",
