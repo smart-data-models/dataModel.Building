@@ -89,6 +89,11 @@
             "displayName": "location"
         },
         {
+            "name": "mapUrl",
+            "writable": true,
+            "displayName": "mapUrl"
+        },
+        {
             "name": "name",
             "writable": true,
             "displayName": "name",
@@ -111,11 +116,6 @@
             "@type": "Property",
             "schema": "long",
             "comment": "People present at the building"
-        },
-        {
-            "name": "refMap",
-            "writable": true,
-            "displayName": "refMap"
         },
         {
             "name": "seeAlso",
