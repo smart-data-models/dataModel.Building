@@ -37,7 +37,6 @@
       ]
     ]
   },
-  "createdAt": "2016-08-08T10:18:16Z",
   "dataProvider": "OperatorA",
   "description": "Office block",
   "floorsAboveGround": 7,
@@ -70,7 +69,6 @@
     ]
   },
   "mapUrl": "http://www.example.com",
-  "modifiedAt": "2016-08-08T10:18:16Z",
   "occupier": [
     "urn:ngsi-ld:Person:9830f692-7677-11e6-838b-4f9fb3dc5a4f"
   ],
