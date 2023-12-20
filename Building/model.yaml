@@ -524,6 +524,23 @@ Building:
             type: GeoProperty
       x-ngsi:
         type: GeoProperty
+    mapUrl:
+      anyOf:
+        - description: Identifier format of any NGSI entity
+          maxLength: 256
+          minLength: 1
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
+          type: string
+          x-ngsi:
+            type: Property
+        - description: Identifier format of any NGSI entity
+          format: uri
+          type: string
+          x-ngsi:
+            type: Property
+      description: Reference to the map containing the building
+      x-ngsi:
+        type: Relationship
     name:
       description: The name of this item
       type: string
@@ -596,23 +613,6 @@ Building:
       x-ngsi:
         model: https://schema.org/Number
         type: Property
-    refMap:
-      anyOf:
-        - description: Identifier format of any NGSI entity
-          maxLength: 256
-          minLength: 1
-          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
-          type: string
-          x-ngsi:
-            type: Property
-        - description: Identifier format of any NGSI entity
-          format: uri
-          type: string
-          x-ngsi:
-            type: Property
-      description: Reference to the map containing the building
-      x-ngsi:
-        type: Relationship
     seeAlso:
       description: list of uri pointing to additional resources about the item
       oneOf:
@@ -644,8 +644,8 @@ Building:
     - address
   type: object
   x-derived-from: ""
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2023 Contributors to Smart Data Models Program'
   x-license-url: https://github.com/smart-data-models/dataModel.Building/blob/master/Building/LICENSE.md
   x-model-schema: https://smart-data-models.github.io/dataModel.Building/Building/schema.json
   x-model-tags: ""
-  x-version: 0.0.2
+  x-version: 0.0.3
