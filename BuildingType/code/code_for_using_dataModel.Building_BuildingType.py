@@ -24,25 +24,30 @@
 #         curl -X GET http://localhost:1026/ngsi-ld/v1/entities?local=true&limit=1000
 #         
 #         # now the python code you can use to insert some value in the context broker according to the data model
+#         # Version Warning! 
+#         # This code is designed to work with the version 0.8 of pysmartdatamodels or later
+#         # to work with earlier version you need to replace the import instruction for
+#         # from pysmartdatamodels import pysmartdatamodels as sdm
 #         
-from pysmartdatamodels import pysmartdatamodels as sdm
+#         
+import pysmartdatamodels as sdm
 import subprocess
 serverUrl = "http://localhost:1026" # supposed that your broker is installed in localhost. Edit to match your configuration
 dataModel = "BuildingType"
 subject = "dataModel.Building"
-buildingTypeChildren = {'type': 'Relationship', 'object': ['urn:ngsi-ld:BuildingType:e4291e84-58f8-11e8-84c3-77e4f1f8c4f1', 'urn:ngsi-ld:BuildingType:a71c7a08-58f9-11e8-a41e-4bcb7249360e', 'urn:ngsi-ld:BuildingType:afac9bbc-58f9-11e8-b587-1f0d57b81bb4']}
+buildingTypeChildren = ['urn:ngsi-ld:BuildingType:e4291e84-58f8-11e8-84c3-77e4f1f8c4f1', 'urn:ngsi-ld:BuildingType:a71c7a08-58f9-11e8-a41e-4bcb7249360e', 'urn:ngsi-ld:BuildingType:afac9bbc-58f9-11e8-b587-1f0d57b81bb4']
 attribute = "buildingTypeChildren"
 value = buildingTypeChildren
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-buildingTypeParent = "{'type': 'Relationship', 'object': 'urn:ngsi-ld:BuildingType:4146335f-839f-4ff9-a575-6b4e6232b734'}"
+buildingTypeParent = "urn:ngsi-ld:BuildingType:4146335f-839f-4ff9-a575-6b4e6232b734"
 attribute = "buildingTypeParent"
 value = buildingTypeParent
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-root = {'type': 'Property', 'value': False}
+root = False
 attribute = "root"
 value = root
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
