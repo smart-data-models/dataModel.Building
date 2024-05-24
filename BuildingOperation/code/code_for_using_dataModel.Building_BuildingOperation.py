@@ -24,31 +24,36 @@
 #         curl -X GET http://localhost:1026/ngsi-ld/v1/entities?local=true&limit=1000
 #         
 #         # now the python code you can use to insert some value in the context broker according to the data model
+#         # Version Warning! 
+#         # This code is designed to work with the version 0.8 of pysmartdatamodels or later
+#         # to work with earlier version you need to replace the import instruction for
+#         # from pysmartdatamodels import pysmartdatamodels as sdm
 #         
-from pysmartdatamodels import pysmartdatamodels as sdm
+#         
+import pysmartdatamodels as sdm
 import subprocess
 serverUrl = "http://localhost:1026" # supposed that your broker is installed in localhost. Edit to match your configuration
 dataModel = "BuildingOperation"
 subject = "dataModel.Building"
-dateFinished = "{'type': 'Property', 'value': {'@type': 'DateTime', '@value': '2016-08-20T10:18:16Z'}}"
+dateFinished = "2016-08-20T10:18:16Z"
 attribute = "dateFinished"
 value = dateFinished
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-dateStarted = "{'type': 'Property', 'value': {'@type': 'DateTime', '@value': '2016-08-08T10:18:16Z'}}"
+dateStarted = "2016-08-08T10:18:16Z"
 attribute = "dateStarted"
 value = dateStarted
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-endDate = "{'type': 'Property', 'value': {'@type': 'DateTime', '@value': '2016-08-20T10:18:16Z'}}"
+endDate = "2016-08-20T10:18:16Z"
 attribute = "endDate"
 value = endDate
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-operationSequence = {'type': 'Property', 'value': ['fan_power%3D0', 'set_temperature%3D24']}
+operationSequence = ['fan_power%3D0', 'set_temperature%3D24']
 attribute = "operationSequence"
 value = operationSequence
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
