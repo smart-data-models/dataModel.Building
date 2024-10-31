@@ -13,7 +13,7 @@
         "areaServed": "https://smartdatamodels.org/areaServed",
         "bbox": {
             "@container": "@list",
-            "@id": "geojson:bbox"
+            "@id": "https://purl.org/geojson/vocab#bbox"
         },
         "buildingTypeChildren": "https://smartdatamodels.org/dataModel.Building/buildingTypeChildren",
         "buildingTypeParent": "https://smartdatamodels.org/dataModel.Building/buildingTypeParent",
@@ -22,7 +22,7 @@
         "containedInPlace": "https://smartdatamodels.org/dataModel.Building/containedInPlace",
         "coordinates": {
             "@container": "@list",
-            "@id": "geojson:coordinates"
+            "@id": "https://purl.org/geojson/vocab#coordinates"
         },
         "dataProvider": "https://smartdatamodels.org/dataProvider",
         "dateCreated": "https://smartdatamodels.org/dateCreated",
@@ -36,7 +36,8 @@
         "floorsAboveGround": "https://smartdatamodels.org/dataModel.Building/floorsAboveGround",
         "floorsBelowGround": "https://smartdatamodels.org/dataModel.Building/floorsBelowGround",
         "id": "@id",
-        "location": "ngsi-ld:location",
+        "location": "https://uri.etsi.org/ngsi-ld/location",
+        "mapUrl": "https://smartdatamodels.org/dataModel.Building/mapUrl",
         "name": "https://smartdatamodels.org/name",
         "ngsi-ld": "https://uri.etsi.org/ngsi-ld/",
         "occupier": "https://smartdatamodels.org/dataModel.Building/occupier",
@@ -49,7 +50,6 @@
         "postOfficeBoxNumber": "https://smartdatamodels.org/postOfficeBoxNumber",
         "postalCode": "https://smartdatamodels.org/postalCode",
         "refBuilding": "https://smartdatamodels.org/dataModel.Building/refBuilding",
-        "refMap": "https://smartdatamodels.org/dataModel.Building/refMap",
         "refOperator": "https://smartdatamodels.org/dataModel.Building/refOperator",
         "refRelatedBuildingOperation": "https://smartdatamodels.org/dataModel.Building/refRelatedBuildingOperation",
         "refRelatedDeviceOperation": "https://smartdatamodels.org/dataModel.Building/refRelatedDeviceOperation",
@@ -58,7 +58,7 @@
         "seeAlso": "https://smartdatamodels.org/seeAlso",
         "source": "https://smartdatamodels.org/source",
         "startDate": "https://smartdatamodels.org/startDate",
-        "status": "ngsi-ld:status",
+        "status": "https://uri.etsi.org/ngsi-ld/status",
         "streetAddress": "https://smartdatamodels.org/streetAddress",
         "streetNr": "https://smartdatamodels.org/streetNr",
         "type": "@type"
