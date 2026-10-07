@@ -1,6 +1,6 @@
 /* (Beta) Export of data model BuildingOperation of the subject dataModel.Building for a PostgreSQL database. Pending translation of enumerations and multityped attributes */
-CREATE TYPE result_type AS ENUM ('ok', 'aborted');
-CREATE TYPE status_type AS ENUM ('cancelled', 'finished', 'ongoing', 'planned', 'scheduled');
+CREATE TYPE BuildingOperation_result_type AS ENUM ('ok', 'aborted');
+CREATE TYPE BuildingOperation_status_type AS ENUM ('cancelled', 'finished', 'ongoing', 'planned', 'scheduled');
 CREATE TYPE BuildingOperation_type AS ENUM ('BuildingOperation');
 CREATE TABLE BuildingOperation (
   "alternateName" TEXT,
@@ -20,10 +20,10 @@ CREATE TABLE BuildingOperation (
   "refOperator" JSON,
   "refRelatedBuildingOperation" JSON,
   "refRelatedDeviceOperation" JSON,
-  "result" result_type,
+  "result" BuildingOperation_result_type,
   "seeAlso" JSON,
   "source" TEXT,
   "startDate" TIMESTAMP,
-  "status" status_type,
+  "status" BuildingOperation_status_type,
   "type" BuildingOperation_type
 );
